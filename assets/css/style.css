@@ -5,9 +5,31 @@ body{
 }
 
 #game-board {
-    height: 920px;
+    height: 900px;
     width: 80%;
     text-align: center;
     margin: auto;
     background-color: blue;
+}
+
+#icons {
+    position: relative;
+}
+
+#login {
+    position: absolute;
+    right: 20%;
+    top: 50px;
+}
+
+#personal-best {
+    position: absolute;
+    right: 20%;
+    top: 100px;
+}
+
+#instructions {
+    position: absolute;
+    left: 20%;
+    top: 50px;
 }
