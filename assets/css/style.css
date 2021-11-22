@@ -38,3 +38,25 @@ body{
     left: 20%;
     top: 50px;
 }
+
+#button-header {
+    font-weight: bold;
+}
+
+#difficulty-buttons{
+    width: 60%;
+    height: 40px;
+    margin: auto;
+    padding-top: 10px;
+}
+
+#difficulty-position > h2 {
+    margin-top: 0;
+}
+
+#difficulty-position > p {
+width: 20%;
+font-size: 25px;
+display: inline;
+padding:0 20px;
+}
