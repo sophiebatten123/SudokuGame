@@ -25,18 +25,48 @@ body{
     position: absolute;
     right: 20%;
     top: 50px;
+    text-align: center;
+}
+
+#login i {
+    font-size: 30px;
+}
+
+#login i:hover {
+    cursor: pointer;
+    font-size: 40px;
 }
 
 #personal-best {
     position: absolute;
     right: 20%;
-    top: 100px;
+    top: 150px;
+    text-align: center;
+}
+
+#personal-best i {
+    font-size: 30px;
+}
+
+#personal-best i:hover {
+    cursor: pointer;
+    font-size: 40px;
 }
 
 #instructions {
     position: absolute;
     left: 20%;
     top: 50px;
+    text-align: center;
+}
+
+#instructions i {
+    font-size: 30px;
+}
+
+#instructions i:hover {
+    cursor: pointer;
+    font-size: 40px;
 }
 
 #button-header {
