@@ -72,24 +72,30 @@ function runGame() {
     var hard = document.getElementById("hard");
 
     if (easy.checked==true) {
-        runEasyGame();
+        runEasyGame(medium, hard);
     } else if (medium.checked==true) {
-        runMediumGame();
+        runMediumGame(easy, hard);
     } else if (hard.checked==true) {
-        runHardGame();
+        runHardGame(easy, medium);
     }
 }
 
 
-function runEasyGame() {
+function runEasyGame(medium, hard) {
+    medium.disabled = true;   
+    hard.disabled = true;  
     alert("easy");
 }
 
-function runMediumGame() {
+function runMediumGame(easy, hard) {
+    easy.disabled = true;   
+    hard.disabled = true;
     alert("medium");
 }
 
-function runHardGame() {
+function runHardGame(easy, medium) {
+    easy.disabled = true;   
+    medium.disabled = true;
     alert("hard");
 }
 
