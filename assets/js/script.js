@@ -167,6 +167,32 @@ function runMediumGame(easy, hard, counter) {
     }
 }
 
+function checkAnswersMedium(value, index, active) {
+    let correct = document.getElementById('correct');
+    let incorrect = document.getElementById('incorrect')
+    
+       if (value === mediumGameSolution[index]) {
+          active.contentEditable = false;
+          active.style.backgroundColor = "green";
+          correct.style.opacity = "1";
+          correct.style.pointerEvents = "auto";
+          setTimeout(function () {
+             correct.style.opacity="0";
+          }, 1000);
+       } else {
+          active.style.backgroundColor = "red";
+          setTimeout(function () {
+             active.style.backgroundColor = "#bbb";
+          }, 1000)
+          active.innerText = "";
+          incorrect.style.opacity = "1";
+          incorrect.style.pointerEvents = "auto";
+          setTimeout(function () {
+             incorrect.style.opacity="0";
+          }, 1000);
+       }
+    }
+
 //Runs the HARDGAME
 
 function runHardGame(easy, medium, counter) {
