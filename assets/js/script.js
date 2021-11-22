@@ -81,7 +81,7 @@ function runGame() {
     }
 }
 
-//Runs the EASYGAME
+//Runs the EASYGAME and Checks Answers
 
 function runEasyGame(medium, hard, counter) {
     medium.disabled = true;   
@@ -137,7 +137,7 @@ function checkAnswersEasy(value, index, active) {
        }
     }
 
-//Runs the MEDIUMGAME
+//Runs the MEDIUMGAME and Checks Answers
 
 function runMediumGame(easy, hard, counter) {
     easy.disabled = true;   
@@ -193,7 +193,7 @@ function checkAnswersMedium(value, index, active) {
        }
     }
 
-//Runs the HARDGAME
+//Runs the HARDGAME and Checks Answers
 
 function runHardGame(easy, medium, counter) {
     easy.disabled = true;   
@@ -251,5 +251,18 @@ function checkAnswersHard(value, index, active) {
 
 // Reset game will delete all previously inputtted numbers allowing the user to start again
 function resetGame() {
-    alert("Game Reset")
+    let number = document.getElementsByClassName('number');
+
+    document.getElementById("easy").checked = false;
+    document.getElementById("medium").checked = false;
+    document.getElementById("hard").checked = false;
+
+    document.getElementById("easy").disabled = false;
+    document.getElementById("medium").disabled = false;
+    document.getElementById("hard").disabled = false;
+
+    for (i=0; i < number.length; i++) {
+       number[i].innerText = "";
+       number[i].style.backgroundColor = "white";
+    }
 }
