@@ -36,3 +36,28 @@ document.addEventListener("DOMContentLoaded", function() {
         resetGame();
     })
 })
+
+// User login section of the website allowing credentials to be entered by the user
+function loginUser() {
+    alert("Login")
+}
+
+// Instructions section will display instructions to the user upon click
+function displayInstructions() {
+    alert("Instructions")
+}
+
+// Highscores section will allow the user to view previously obtained scores
+function viewHighScores() {
+    alert("Highscores")
+}
+
+// Run game will generate a board based upon the selection of difficulty
+function runGame() {
+    alert("Game Begun")
+}
+
+// Reset game will delete all previously inputtted numbers allowing the user to start again
+function resetGame() {
+    alert("Game Reset")
+}
