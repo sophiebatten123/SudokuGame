@@ -84,6 +84,7 @@ function runGame() {
 //Runs the EASYGAME and Checks Answers
 
 function runEasyGame(medium, hard, counter) {
+    startTimer();
     medium.disabled = true;   
     hard.disabled = true;  
     
@@ -140,6 +141,7 @@ function checkAnswersEasy(value, index, active) {
 //Runs the MEDIUMGAME and Checks Answers
 
 function runMediumGame(easy, hard, counter) {
+    startTimer();
     easy.disabled = true;   
     hard.disabled = true;
     
@@ -196,6 +198,7 @@ function checkAnswersMedium(value, index, active) {
 //Runs the HARDGAME and Checks Answers
 
 function runHardGame(easy, medium, counter) {
+    startTimer();
     easy.disabled = true;   
     medium.disabled = true;
     
@@ -265,4 +268,23 @@ function resetGame() {
        number[i].innerText = "";
        number[i].style.backgroundColor = "white";
     }
+}
+
+function startTimer() {
+    var timer = document.getElementById("timer").innerHTML;
+    var arr = timer.split(":");
+    var minutes = arr[0];
+    var seconds = arr[1];
+
+    if (seconds == 59) {
+        minutes++;
+        seconds = 0;
+        if (minutes < 10) minutes = "0" + minutes;
+    } else {
+        seconds++;
+        if (seconds < 10) seconds = "0" + seconds;
+    }
+
+    document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+    setTimeout(startTimer, 1000);
 }
