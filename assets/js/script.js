@@ -65,7 +65,32 @@ function viewHighScores() {
 
 // Run game will generate a board based upon the selection of difficulty
 function runGame() {
-    alert("Game Begun")
+
+    //Assigns the radio buttons to variables for targetting
+    var easy = document.getElementById("easy");
+    var medium = document.getElementById("medium");
+    var hard = document.getElementById("hard");
+
+    if (easy.checked==true) {
+        runEasyGame();
+    } else if (medium.checked==true) {
+        runMediumGame();
+    } else if (hard.checked==true) {
+        runHardGame();
+    }
+}
+
+
+function runEasyGame() {
+    alert("easy");
+}
+
+function runMediumGame() {
+    alert("medium");
+}
+
+function runHardGame() {
+    alert("hard");
 }
 
 // Reset game will delete all previously inputtted numbers allowing the user to start again
