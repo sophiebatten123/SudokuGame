@@ -17,7 +17,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let highScores = document.getElementById("personal-best");
     let playButton = document.getElementById("play");
     let resetButton = document.getElementById("reset");
-    let close = document.getElementById("close");
 
     userLogin.addEventListener("click", function() {
         loginUser();
@@ -29,10 +28,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
     highScores.addEventListener("click", function() {
         viewHighScores();
-    })
-
-    close.addEventListener("click", function() {
-        closePopUp();
     })
 
     playButton.addEventListener("click", function() {
@@ -54,16 +49,18 @@ function loginUser() {
 
 // Instructions section will display instructions to the user upon click
 function displayInstructions() {
-    alert("Instructions")
+    let instructionsPopUp = document.getElementById("instructionspopup");
+
+    instructionsPopUp.style.opacity = "1";
+    instructionsPopUp.style.pointerEvents = "auto";
 }
 
 // Highscores section will allow the user to view previously obtained scores
 function viewHighScores() {
-    alert("Highscores")
-}
+    let highscoresPopUp = document.getElementById("highscorespopup");
 
-function closePopUp() {
-    alert("closing")
+    highscoresPopUp.style.opacity = "1";
+    highscoresPopUp.style.pointerEvents = "auto";
 }
 
 // Run game will generate a board based upon the selection of difficulty
