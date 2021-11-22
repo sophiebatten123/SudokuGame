@@ -66,34 +66,62 @@ function viewHighScores() {
 // Run game will generate a board based upon the selection of difficulty
 function runGame() {
 
-    //Assigns the radio buttons to variables for targetting
+    let counter=-1;
+
     var easy = document.getElementById("easy");
     var medium = document.getElementById("medium");
     var hard = document.getElementById("hard");
 
     if (easy.checked==true) {
-        runEasyGame(medium, hard);
+        runEasyGame(medium, hard, counter);
     } else if (medium.checked==true) {
-        runMediumGame(easy, hard);
+        runMediumGame(easy, hard, counter);
     } else if (hard.checked==true) {
-        runHardGame(easy, medium);
+        runHardGame(easy, medium, counter);
     }
 }
 
+//Runs the EASYGAME
 
-function runEasyGame(medium, hard) {
+function runEasyGame(medium, hard, counter) {
     medium.disabled = true;   
     hard.disabled = true;  
-    alert("easy");
+    
+    for (i=0; i < easyGame.length; i++) {
+        let number = document.getElementsByClassName('number');
+           for (i=0; i < number.length; i++) {
+             if (easyGame[i] === '') {
+                number[i].setAttribute("contenteditable", true);
+                number[i].classList.add("userInput");
+                number[i].dataset.index = ++counter;
+                number[i].addEventListener('keyup', event => {
+                   if (isNaN(event.target.innerText)) {
+                      alert('You must only input numbers');
+                      event.target.innerText = "";
+                   } else {
+                   checkAnswersEasy(event.target.innerText, event.target.dataset.index, event.target)
+                   }
+                })
+                number[i].style.backgroundColor = '#bbb';
+             }
+             else {
+                number[i].innerHTML = easyGame[i];
+            }   
+        }
+    }
 }
 
-function runMediumGame(easy, hard) {
+//Runs the MEDIUMGAME
+
+function runMediumGame(easy, hard, counter) {
     easy.disabled = true;   
     hard.disabled = true;
     alert("medium");
 }
 
-function runHardGame(easy, medium) {
+//Runs the HARDGAME
+
+function runHardGame(easy, medium, counter) {
     easy.disabled = true;   
     medium.disabled = true;
     alert("hard");
