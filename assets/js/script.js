@@ -116,7 +116,29 @@ function runEasyGame(medium, hard, counter) {
 function runMediumGame(easy, hard, counter) {
     easy.disabled = true;   
     hard.disabled = true;
-    alert("medium");
+    
+    for (i=0; i < mediumGame.length; i++) {
+        let number = document.getElementsByClassName('number');
+           for (i=0; i < number.length; i++) {
+             if (mediumGame[i] === '') {
+                number[i].setAttribute("contenteditable", true);
+                number[i].classList.add("userInput");
+                number[i].dataset.index = ++counter;
+                number[i].addEventListener('keyup', event => {
+                   if (isNaN(event.target.innerText)) {
+                      alert('You must only input numbers');
+                      event.target.innerText = "";
+                   } else {
+                   checkAnswersMedium(event.target.innerText, event.target.dataset.index, event.target)
+                   }
+                })
+                number[i].style.backgroundColor = '#bbb';
+             }
+             else {
+                number[i].innerHTML = mediumGame[i];
+            }   
+        }
+    }
 }
 
 //Runs the HARDGAME
@@ -124,7 +146,29 @@ function runMediumGame(easy, hard, counter) {
 function runHardGame(easy, medium, counter) {
     easy.disabled = true;   
     medium.disabled = true;
-    alert("hard");
+    
+    for (i=0; i < hardGame.length; i++) {
+        let number = document.getElementsByClassName('number');
+           for (i=0; i < number.length; i++) {
+             if (hardGame[i] === '') {
+                number[i].setAttribute("contenteditable", true);
+                number[i].classList.add("userInput");
+                number[i].dataset.index = ++counter;
+                number[i].addEventListener('keyup', event => {
+                   if (isNaN(event.target.innerText)) {
+                      alert('You must only input numbers');
+                      event.target.innerText = "";
+                   } else {
+                   checkAnswersHard(event.target.innerText, event.target.dataset.index, event.target)
+                   }
+                })
+                number[i].style.backgroundColor = '#bbb';
+             }
+             else {
+                number[i].innerHTML = hardGame[i];
+            }   
+        }
+    }
 }
 
 // Reset game will delete all previously inputtted numbers allowing the user to start again
