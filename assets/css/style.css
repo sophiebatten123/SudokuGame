@@ -233,3 +233,34 @@ padding:0 20px;
     font-size: 40px;
 }
 
+/* Login and register */
+
+#login-form {
+    text-align: left;
+}
+
+.login-position {
+    width: 100%;
+    padding-top: 15px;
+}
+
+#login-form input {
+    font-size: 25px;
+    float: right;
+    width: 80%;
+}
+
+#login-form label {
+    font-size: 20px;
+}
+
+#login-button-position {
+    padding-top: 15px;
+}
+
+#new-account:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+
