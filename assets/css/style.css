@@ -3,3 +3,11 @@
 body{
     font-family:'Montserrat', sans-serif;
 }
+
+#game-board {
+    height: 920px;
+    width: 80%;
+    text-align: center;
+    margin: auto;
+    background-color: blue;
+}
