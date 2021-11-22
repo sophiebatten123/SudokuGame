@@ -42,25 +42,40 @@ document.addEventListener("DOMContentLoaded", function() {
 // User login section of the website allowing credentials to be entered by the user
 function loginUser() {
     let userLoginPopUp = document.getElementById("loginpopup");
+    let close = document.getElementById("close-login");
 
     userLoginPopUp.style.opacity = "1";
     userLoginPopUp.style.pointerEvents = "auto";
+
+    close.addEventListener("click", function(){
+        userLoginPopUp.style.opacity = "0";
+    })
 }
 
 // Instructions section will display instructions to the user upon click
 function displayInstructions() {
     let instructionsPopUp = document.getElementById("instructionspopup");
+    let close = document.getElementById("close-instructions");
 
     instructionsPopUp.style.opacity = "1";
     instructionsPopUp.style.pointerEvents = "auto";
+
+    close.addEventListener("click", function(){
+        instructionsPopUp.style.opacity = "0";
+    })
 }
 
 // Highscores section will allow the user to view previously obtained scores
 function viewHighScores() {
     let highscoresPopUp = document.getElementById("highscorespopup");
+    let close = document.getElementById("close-highscores");
 
     highscoresPopUp.style.opacity = "1";
     highscoresPopUp.style.pointerEvents = "auto";
+
+    close.addEventListener("click", function(){
+        highscoresPopUp.style.opacity = "0";
+    })
 }
 
 // Run game will generate a board based upon the selection of difficulty
