@@ -283,6 +283,8 @@ function resetGame() {
        number[i].innerText = "";
        number[i].style.backgroundColor = "white";
     }
+
+    resetTimer();
 }
 
 function startTimer() {
@@ -302,4 +304,12 @@ function startTimer() {
 
     document.getElementById("timer").innerHTML = minutes + ":" + seconds;
     setTimeout(startTimer, 1000);
+}
+
+function resetTimer() {
+    var minutes = "0";
+    var seconds = "00";
+
+    document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+    setTimeout(resetTimer,0);
 }
