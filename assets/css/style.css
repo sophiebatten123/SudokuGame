@@ -241,6 +241,11 @@ body{
     pointer-events: none;
 }
 
+#incorrect-user {
+    z-index: -1;
+    pointer-events: none;
+}
+
 .close:hover{
     cursor: pointer;
     font-size: 40px;

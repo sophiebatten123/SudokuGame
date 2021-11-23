@@ -92,6 +92,7 @@ function loginUser() {
 function accessLoginInformation() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
+    let incorrectUser = document.getElementById("incorrect-user");
 
     for (i=0; i < userDetails.length; i++) {
         if (username == userDetails[i].username && password == userDetails[i].password) {
@@ -101,7 +102,7 @@ function accessLoginInformation() {
         }
     }
     console.log("incorrect username or password");
-    alert("yay")
+    incorrectUser.style.zIndex = 1;
 }
 
 function displayUserDetails(username) {
