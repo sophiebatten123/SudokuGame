@@ -311,15 +311,14 @@ body{
 
 #registration-form {
     text-align: left;
+    height: 250px;
     position: relative;
-    height: 300px;
 }
 
 #registration-form input {
     font-size: 25px;
     float: right;
-    width: 80%;
-    margin: 10px 0;
+    width: 70%;
 }
 
 #registration-form label {
@@ -327,5 +326,23 @@ body{
 }
 
 .registration-position {
-    margin: 20px 0;
+   height: 400px;
 }
+
+#submit-button {
+    margin: auto;
+    position: absolute;
+    bottom: 10%;
+    left: 35%;
+    height: 40px;
+    width: 200px;
+    background-color: lightblue;
+    border-radius: 4px;
+    font-size: 20px;
+}
+
+.label-register {
+    height: 50px;
+    padding: 5px;
+}
+ 
