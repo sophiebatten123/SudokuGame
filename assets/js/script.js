@@ -15,11 +15,6 @@ let hardGameSolution = ['6','8','4','1','5','9','7','3','7','5','1','8','3','2',
 let timer;
 let lastGameTime = "No games played yet";
 
-var time = document.getElementById("timer").innerHTML;
-    var arr = time.split(":");
-    var minutes = arr[0];
-    var seconds = arr[1];
-
 document.addEventListener("DOMContentLoaded", function() {
     let userLogin = document.getElementById("login");
     let instructionsManual = document.getElementById("instructions");
@@ -166,7 +161,7 @@ function checkAnswersEasy(value, index, active) {
           setTimeout(function () {
              correct.style.opacity="0";
           }, 1000);
-          wellDone();
+          console.log(active);
        } else {
           active.style.backgroundColor = "red";
           setTimeout(function () {
@@ -322,6 +317,10 @@ function resetGame() {
 }
 
 function startTimer() {
+    var time = document.getElementById("timer").innerHTML;
+    var arr = time.split(":");
+    var minutes = arr[0];
+    var seconds = arr[1];
 
     if (seconds == 59) {
         minutes++;
