@@ -13,6 +13,12 @@ let hardGameSolution = ['6','8','4','1','5','9','7','3','7','5','1','8','3','2',
 
 // Timer Element
 let timer;
+let lastGameTime = "No games played yet";
+
+var time = document.getElementById("timer").innerHTML;
+    var arr = time.split(":");
+    var minutes = arr[0];
+    var seconds = arr[1];
 
 document.addEventListener("DOMContentLoaded", function() {
     let userLogin = document.getElementById("login");
@@ -160,6 +166,7 @@ function checkAnswersEasy(value, index, active) {
           setTimeout(function () {
              correct.style.opacity="0";
           }, 1000);
+          wellDone();
        } else {
           active.style.backgroundColor = "red";
           setTimeout(function () {
@@ -310,15 +317,11 @@ function resetGame() {
        number[i].innerText = "";
        number[i].style.backgroundColor = "white";
     }
-
+    
     resetTimer();
 }
 
 function startTimer() {
-    var timer = document.getElementById("timer").innerHTML;
-    var arr = timer.split(":");
-    var minutes = arr[0];
-    var seconds = arr[1];
 
     if (seconds == 59) {
         minutes++;
@@ -339,4 +342,19 @@ function resetTimer() {
     var seconds = "00";
 
     document.getElementById("timer").innerHTML = minutes + ":" + seconds;
+}
+
+function wellDone() {
+    let congratulationsPopUp = document.getElementById("winnerpopup");
+    let close = document.getElementById("close-winner");
+
+    congratulationsPopUp.style.opacity = "1";
+    congratulationsPopUp.style.pointerEvents = "auto";
+
+    close.addEventListener("click", function(){
+        congratulationsPopUp.style.opacity = "0";
+    })
+
+    lastGameTime = `${minutes}:${seconds}`;
+    console.log("Well done you have won! You completed the sudoku in " + lastGameTime);
 }

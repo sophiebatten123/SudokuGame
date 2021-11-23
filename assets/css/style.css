@@ -88,10 +88,10 @@ body{
 }
 
 #difficulty-position > p {
-width: 20%;
-font-size: 25px;
-display: inline;
-padding:0 20px;
+    width: 20%;
+    font-size: 25px;
+    display: inline;
+    padding:0 20px;
 }
 
 #main-game-buttons {
@@ -226,6 +226,14 @@ padding:0 20px;
 #winnerpopup {
     opacity: 0;
     pointer-events: none;
+}
+
+.winnerpopup i {
+    font-size: 30px;
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
 }
 
 #difficultypopup {
