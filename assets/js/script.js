@@ -11,14 +11,28 @@ let easyGameSolution = ['2','6','8','9','3','1','7','8','1','5','2','7','5','6',
 let mediumGameSolution = ['3','4','7','8','7','6','2','4','9','3','4','9','7','5','6','4','2','6','9','8','7','1','4','6','3','5','5','9','2','1','1','5','8','7','6','7','6','5','4','2','9','3','9','4','3','1','2','5'];
 let hardGameSolution = ['6','8','4','1','5','9','7','3','7','5','1','8','3','2','6','9','2','6','7','4','1','8','1','6','8','5','2','1','7','6','9','3','3','4','2','5','1','2','3','9','4','5','1','8','5','1','6','8','3','4','7','7','2','1','9'];
 
-// Timer Element
+// Final Solution
+let easyFinalSolution = ['2','6','4','8','5','9','3','1','7','9','8','1','7','3','4','6','5','2','7','5','3','6','2','1','8','4','9','1','3','5','2','7','4','8','6','8','9','2','5','4','6','7','3','1','4','7','6','3','1','8','9','2','5','3','1','8','9','7','5','2','6','4','6','4','9','1','8','2','5','7','3','5','2','7','4','6','3','1','9','8']
+
+// Timer Elements
 let timer;
 let lastGameTime = "No games played yet";
-
 var time;
 var arr;
 var minutes;
 var seconds;
+
+//User login details
+var userDetails = [
+    {
+        username: "sophie",
+        password: "tom"
+    },
+    {
+        username: "tom",
+        password: "sophie"
+    },
+]
 
 document.addEventListener("DOMContentLoaded", function() {
     let userLogin = document.getElementById("login");
@@ -72,8 +86,13 @@ function accessLoginInformation() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    console.log("Hi " + username + " your password is " + password);
-    alert("Hi " + username);
+    for (i=0; i < userDetails.length; i++) {
+        if (username == userDetails[i].username && password == userDetails[i].password) {
+            console.log(username + "is logged in");
+        } else {
+            console.log("incorrect username or password");
+        }
+    }
 }
 
 // Instructions section will display instructions to the user upon click
@@ -142,7 +161,7 @@ function runEasyGame(medium, hard, counter) {
                       alert('You must only input numbers');
                       event.target.innerText = "";
                    } else {
-                   checkAnswersEasy(event.target.innerText, event.target.dataset.index, event.target)
+                   checkAnswersEasy(event.target.innerText, event.target.dataset.index, event.target, number)
                    }
                 })
                 number[i].style.backgroundColor = '#bbb';
@@ -154,7 +173,7 @@ function runEasyGame(medium, hard, counter) {
     }
 }
 
-function checkAnswersEasy(value, index, active) {
+function checkAnswersEasy(value, index, active, number) {
     let correct = document.getElementById('correct');
     let incorrect = document.getElementById('incorrect')
     
@@ -166,7 +185,6 @@ function checkAnswersEasy(value, index, active) {
           setTimeout(function () {
              correct.style.opacity="0";
           }, 1000);
-          console.log(active);
        } else {
           active.style.backgroundColor = "red";
           setTimeout(function () {
@@ -179,7 +197,15 @@ function checkAnswersEasy(value, index, active) {
              incorrect.style.opacity="0";
           }, 1000);
        }
-    }
+
+       //for (i=0; i < easyGame.length; i++) {
+        //if (easyGame[i] === easyFinalSolution[i]) {
+            //wellDone();
+        //} else {
+           //console.log("continue play")
+        //}
+    //}
+}
 
 //Runs the MEDIUMGAME and Checks Answers
 
