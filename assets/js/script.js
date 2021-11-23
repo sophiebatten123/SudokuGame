@@ -108,6 +108,7 @@ function displayUserDetails(username) {
 
 function registerDetails() {
     let registrationPopUp = document.getElementById("registerpopup")
+    let close = document.getElementById("close-registration");
 
     registrationPopUp.style.opacity = "1";
     registrationPopUp.style.pointerEvents = "auto";
