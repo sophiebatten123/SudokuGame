@@ -394,3 +394,17 @@ body{
         margin-bottom: 10%;
     }
 }
+
+@media screen and (max-width: 450px) {
+    .number {
+        width: 30px;
+        height: 30px;
+    }
+    .row {
+        height: 30px;
+    }
+    #board {
+        height: 270px;
+        width: 270px;
+    }
+}

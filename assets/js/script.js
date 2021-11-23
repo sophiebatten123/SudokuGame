@@ -170,6 +170,10 @@ function runGame() {
 //Runs the EASYGAME and Checks Answers
 
 function runEasyGame(medium, hard, counter) {
+    if (timer) {
+        resetTimer();
+    }
+
     timer = setInterval(function(){
         startTimer();
     }, 1000);
@@ -392,6 +396,7 @@ function resetGame() {
 }
 
 function startTimer() {
+
     var time = document.getElementById("timer").innerHTML;
     var arr = time.split(":");
     var minutes = arr[0];
