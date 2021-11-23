@@ -15,6 +15,11 @@ let hardGameSolution = ['6','8','4','1','5','9','7','3','7','5','1','8','3','2',
 let timer;
 let lastGameTime = "No games played yet";
 
+var time;
+var arr;
+var minutes;
+var seconds;
+
 document.addEventListener("DOMContentLoaded", function() {
     let userLogin = document.getElementById("login");
     let instructionsManual = document.getElementById("instructions");
@@ -344,6 +349,11 @@ function resetTimer() {
 }
 
 function wellDone() {
+    var time = document.getElementById("timer").innerHTML;
+    var arr = time.split(":");
+    var minutes = arr[0];
+    var seconds = arr[1];
+
     lastGameTime = `${minutes}:${seconds}`;
 
     let congratulationsPopUp = document.getElementById("winnerpopup");
