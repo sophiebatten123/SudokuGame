@@ -364,3 +364,60 @@ body{
         left: 15%;
     }
 }
+
+@media screen and (max-width: 1100px) {
+    #game-board {
+        width: 95%;
+    }
+    #login {
+        right: 5%;
+    }
+    #personal-best {
+        right: 5%;
+    }
+    #instructions {
+        left: 5%;
+    }
+    .popup-box {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #login i {
+        font-size: 25px;
+    }
+    #personal-best i {
+        font-size: 25px;
+    }
+    #instructions i {
+        font-size: 25px;
+    }
+    #login {
+        font-size: 12px;
+    }
+    #personal-best {
+        font-size: 12px;
+    }
+    #instructions {
+        font-size: 12px;
+    }
+    #header {
+        font-size: 15px;
+    }
+    #button-header {
+        font-size: 20px;
+    }
+    #difficulty-position > p {
+        font-size: 20px;
+    }
+    #difficulty-buttons {
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    #difficulty-position > p {
+        padding: 0 10px;
+    }
+}
