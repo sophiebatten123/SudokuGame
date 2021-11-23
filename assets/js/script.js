@@ -47,8 +47,6 @@ document.addEventListener("DOMContentLoaded", function() {
     })
 
     loginButton.addEventListener("click", function() {
-        console.log("You are logging in");
-        alert("login");
         accessLoginInformation();
     })
 
@@ -89,10 +87,11 @@ function accessLoginInformation() {
     for (i=0; i < userDetails.length; i++) {
         if (username == userDetails[i].username && password == userDetails[i].password) {
             console.log(username + "is logged in");
-        } else {
-            console.log("incorrect username or password");
+            return
         }
     }
+    console.log("incorrect username or password");
+    alert("yay")
 }
 
 // Instructions section will display instructions to the user upon click
