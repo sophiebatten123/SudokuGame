@@ -17,9 +17,16 @@ document.addEventListener("DOMContentLoaded", function() {
     let highScores = document.getElementById("personal-best");
     let playButton = document.getElementById("play");
     let resetButton = document.getElementById("reset");
+    let loginButton = document.getElementById("login-button");
 
     userLogin.addEventListener("click", function() {
         loginUser();
+    })
+
+    loginButton.addEventListener("click", function() {
+        console.log("You are logging in");
+        alert("login");
+        accessLoginInformation();
     })
 
     instructionsManual.addEventListener("click", function() {
@@ -50,6 +57,11 @@ function loginUser() {
     close.addEventListener("click", function(){
         userLoginPopUp.style.opacity = "0";
     })
+}
+
+function accessLoginInformation() {
+    console.log("Yay your logged in!");
+    alert("Hi Bob")
 }
 
 // Instructions section will display instructions to the user upon click
