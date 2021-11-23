@@ -242,6 +242,7 @@ padding:0 20px;
 
 #login-form {
     text-align: left;
+    position: relative;
 }
 
 .login-position {
@@ -260,7 +261,7 @@ padding:0 20px;
 }
 
 #login-button-position {
-    padding-top: 15px;
+    padding-top: 60px;
 }
 
 #new-account:hover {
@@ -268,4 +269,22 @@ padding:0 20px;
     text-decoration: underline;
 }
 
+#login-button {
+   margin: auto;
+   position: absolute;
+   bottom: -95%;
+   left: 35%;
+
+   height: 40px;
+   width: 200px;
+
+   background-color: lightblue;
+   border-radius: 4px;
+
+   font-size: 20px;
+}
+
+#login-button:hover {
+    cursor: pointer;
+}
 
