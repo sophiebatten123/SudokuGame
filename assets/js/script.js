@@ -71,12 +71,18 @@ document.addEventListener("DOMContentLoaded", function() {
 function loginUser() {
     let userLoginPopUp = document.getElementById("loginpopup");
     let close = document.getElementById("close-login");
+    let register = document.getElementById("new-account")
 
     userLoginPopUp.style.opacity = "1";
     userLoginPopUp.style.pointerEvents = "auto";
 
-    close.addEventListener("click", function(){
+    close.addEventListener("click", function() {
         userLoginPopUp.style.opacity = "0";
+    })
+
+    register.addEventListener("click", function() {
+        userLoginPopUp.style.opacity = "0";
+        registerDetails();
     })
 }
 
@@ -87,8 +93,7 @@ function accessLoginInformation() {
     for (i=0; i < userDetails.length; i++) {
         if (username == userDetails[i].username && password == userDetails[i].password) {
             console.log(username + "is logged in");
-            
-            displayUserDetails(username)
+            displayUserDetails(username);
             return
         }
     }
@@ -99,6 +104,18 @@ function accessLoginInformation() {
 function displayUserDetails(username) {
     usernameEditable = document.getElementById("username-editable");
     usernameEditable.innerText = username;
+}
+
+function registerDetails() {
+    let registrationPopUp = document.getElementById("registerpopup")
+
+    registrationPopUp.style.opacity = "1";
+    registrationPopUp.style.pointerEvents = "auto";
+
+    close.addEventListener("click", function() {
+        registrationPopUp.style.opacity = "0";
+    })
+
 }
 
 // Instructions section will display instructions to the user upon click
