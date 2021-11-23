@@ -241,6 +241,11 @@ body{
     pointer-events: none;
 }
 
+#welcomepopup {
+    opacity: 0;
+    pointer-events: none;
+}
+
 .close:hover{
     cursor: pointer;
     font-size: 40px;

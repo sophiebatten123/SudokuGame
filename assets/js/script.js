@@ -87,11 +87,18 @@ function accessLoginInformation() {
     for (i=0; i < userDetails.length; i++) {
         if (username == userDetails[i].username && password == userDetails[i].password) {
             console.log(username + "is logged in");
+            
+            displayUserDetails(username)
             return
         }
     }
     console.log("incorrect username or password");
     alert("yay")
+}
+
+function displayUserDetails(username) {
+    usernameEditable = document.getElementById("username-editable");
+    usernameEditable.innerText = username;
 }
 
 // Instructions section will display instructions to the user upon click
