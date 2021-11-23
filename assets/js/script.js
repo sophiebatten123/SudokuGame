@@ -11,6 +11,9 @@ let easyGameSolution = ['2','6','8','9','3','1','7','8','1','5','2','7','5','6',
 let mediumGameSolution = ['3','4','7','8','7','6','2','4','9','3','4','9','7','5','6','4','2','6','9','8','7','1','4','6','3','5','5','9','2','1','1','5','8','7','6','7','6','5','4','2','9','3','9','4','3','1','2','5'];
 let hardGameSolution = ['6','8','4','1','5','9','7','3','7','5','1','8','3','2','6','9','2','6','7','4','1','8','1','6','8','5','2','1','7','6','9','3','3','4','2','5','1','2','3','9','4','5','1','8','5','1','6','8','3','4','7','7','2','1','9'];
 
+// Timer Element
+let timer;
+
 document.addEventListener("DOMContentLoaded", function() {
     let userLogin = document.getElementById("login");
     let instructionsManual = document.getElementById("instructions");
@@ -63,8 +66,8 @@ function accessLoginInformation() {
     var username = document.getElementById("username").value;
     var password = document.getElementById("password").value;
 
-    console.log("Hi " + username + " your password is " + password)
-    alert("Hi " + username)
+    console.log("Hi " + username + " your password is " + password);
+    alert("Hi " + username);
 }
 
 // Instructions section will display instructions to the user upon click
@@ -114,7 +117,10 @@ function runGame() {
 //Runs the EASYGAME and Checks Answers
 
 function runEasyGame(medium, hard, counter) {
-    startTimer();
+    timer = setInterval(function(){
+        startTimer();
+    }, 1000);
+
     medium.disabled = true;   
     hard.disabled = true;  
     
@@ -171,7 +177,10 @@ function checkAnswersEasy(value, index, active) {
 //Runs the MEDIUMGAME and Checks Answers
 
 function runMediumGame(easy, hard, counter) {
-    startTimer();
+    setInterval(function(){
+        startTimer();
+    }, 1000);
+
     easy.disabled = true;   
     hard.disabled = true;
     
@@ -228,7 +237,10 @@ function checkAnswersMedium(value, index, active) {
 //Runs the HARDGAME and Checks Answers
 
 function runHardGame(easy, medium, counter) {
-    startTimer();
+    setInterval(function(){
+        startTimer();
+    }, 1000);
+
     easy.disabled = true;   
     medium.disabled = true;
     
@@ -318,13 +330,13 @@ function startTimer() {
     }
 
     document.getElementById("timer").innerHTML = minutes + ":" + seconds;
-    setTimeout(startTimer, 1000);
 }
 
 function resetTimer() {
+    clearInterval(timer);
+
     var minutes = "0";
     var seconds = "00";
 
     document.getElementById("timer").innerHTML = minutes + ":" + seconds;
-    setTimeout(resetTimer,0);
 }
