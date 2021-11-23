@@ -3,34 +3,32 @@
 body{
     font-family:'Montserrat', sans-serif;
     background-color: #FFFECE;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #game-board {
-    height: 1100px;
+    height: 937px;
     width: 80%;
     text-align: center;
     margin: auto;
     background-color: white;
+    border-right: 4px solid black;
+    border-left: 4px solid black;
 }
 
 #header {
-    padding-top: 10px;
+    padding-top: 5px;
     text-decoration: underline;
 }
 
 /** Icons */
 
-#position-icons {
-    position: relative;
-}
-
 #icons {
-    position: absolute;
     display: flex;
-    width: 400px;
+    width: 360px;
     height: 100px;
-    left: 38%;
-    top: 80%;
+    margin: auto;
 }
 
 .icon-style {
@@ -93,7 +91,7 @@ body{
     margin: auto;
     justify-content: center;
     display: flex;
-    margin-top: 1%;
+    margin-top: 2%;
     margin-bottom: 1%;
 }
 
@@ -348,29 +346,11 @@ body{
 /** Media Queries */
 
 @media screen and (max-width: 1400px) {
-    #login {
-        right: 15%;
-    }
-    #personal-best {
-        right: 15%;
-    }
-    #instructions {
-        left: 15%;
-    }
 }
 
 @media screen and (max-width: 1100px) {
     #game-board {
         width: 95%;
-    }
-    #login {
-        right: 5%;
-    }
-    #personal-best {
-        right: 5%;
-    }
-    #instructions {
-        left: 5%;
     }
     .popup-box {
         width: 400px;
@@ -378,24 +358,6 @@ body{
 }
 
 @media screen and (max-width: 800px) {
-    #login i {
-        font-size: 25px;
-    }
-    #personal-best i {
-        font-size: 25px;
-    }
-    #instructions i {
-        font-size: 25px;
-    }
-    #login {
-        font-size: 12px;
-    }
-    #personal-best {
-        font-size: 12px;
-    }
-    #instructions {
-        font-size: 12px;
-    }
     #header {
         font-size: 15px;
     }
