@@ -351,3 +351,16 @@ body{
     padding: 5px;
 }
  
+/** Media Queries */
+
+@media screen and (max-width: 1400px) {
+    #login {
+        right: 15%;
+    }
+    #personal-best {
+        right: 15%;
+    }
+    #instructions {
+        left: 15%;
+    }
+}
