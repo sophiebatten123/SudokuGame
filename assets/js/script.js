@@ -345,8 +345,12 @@ function resetTimer() {
 }
 
 function wellDone() {
+    lastGameTime = `${minutes}:${seconds}`;
+
     let congratulationsPopUp = document.getElementById("winnerpopup");
     let close = document.getElementById("close-winner");
+
+    document.getElementById("well-done-text").innerHTML = "Well done you have won!<br> You completed the sudoku in " + lastGameTime;
 
     congratulationsPopUp.style.opacity = "1";
     congratulationsPopUp.style.pointerEvents = "auto";
@@ -355,6 +359,7 @@ function wellDone() {
         congratulationsPopUp.style.opacity = "0";
     })
 
-    lastGameTime = `${minutes}:${seconds}`;
     console.log("Well done you have won! You completed the sudoku in " + lastGameTime);
+
+    resetGame();
 }
