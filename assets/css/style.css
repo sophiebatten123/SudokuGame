@@ -228,7 +228,7 @@ body{
     pointer-events: none;
 }
 
-.winnerpopup i {
+#winnerpopup i {
     font-size: 30px;
     float: right;
     position: absolute;
