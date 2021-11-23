@@ -6,7 +6,7 @@ body{
 }
 
 #game-board {
-    height: 900px;
+    height: 1100px;
     width: 80%;
     text-align: center;
     margin: auto;
@@ -20,14 +20,21 @@ body{
 
 /** Icons */
 
-#icons {
+#position-icons {
     position: relative;
 }
 
-#login {
+#icons {
     position: absolute;
-    right: 20%;
-    top: 50px;
+    display: flex;
+    width: 400px;
+    height: 100px;
+    left: 38%;
+    top: 80%;
+}
+
+.icon-style {
+    padding: 10px;
     text-align: center;
 }
 
@@ -40,13 +47,6 @@ body{
     font-size: 40px;
 }
 
-#personal-best {
-    position: absolute;
-    right: 20%;
-    top: 150px;
-    text-align: center;
-}
-
 #personal-best i {
     font-size: 30px;
 }
@@ -54,13 +54,6 @@ body{
 #personal-best i:hover {
     cursor: pointer;
     font-size: 40px;
-}
-
-#instructions {
-    position: absolute;
-    left: 20%;
-    top: 50px;
-    text-align: center;
 }
 
 #instructions i {
@@ -78,7 +71,7 @@ body{
 
 #difficulty-buttons{
     width: 60%;
-    height: 100px;
+    height: 80px;
     margin: auto;
     padding-top: 10px;
 }
@@ -122,16 +115,16 @@ body{
 
 #board {
     border: 4px solid black;
-    height: 540px;
-    width: 540px;
+    height: 495px;
+    width: 495px;
     margin: auto;
  }
 
  .number {
     background-color: white;
     border: 1px solid black;
-    width: 60px;
-    height: 60px;
+    width: 55px;
+    height: 55px;
     text-align: center;
     font-size: 20pt;
     padding-top: 10px;
@@ -150,13 +143,14 @@ body{
 
 .row {
     width: 100%;
-    height: 60px;
+    height: 55px;
     box-sizing: border-box;
 }
 
 #timer {
     font-size: 35px;
     margin-top: 15px;
+    margin-bottom: 10px;
 }
 
 /** Popup boxes **/
@@ -419,5 +413,22 @@ body{
 @media screen and (max-width: 670px) {
     #difficulty-position > p {
         padding: 0 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .number {
+        width: 45px;
+        height: 45px;
+    }
+    .row {
+        height: 45px;
+    }
+    #board {
+        height: 405px;
+        width: 405px;
+    }
+    #main-game-buttons {
+        margin-bottom: 10%;
     }
 }

@@ -14,21 +14,6 @@
     <title>Sudoku Game</title>
 </head>
 <body>
-    <!--Game board icons-->
-    <div id="icons">
-        <div id="login">
-            <i class="far fa-user"></i>
-            <h3 id="username-editable">Username</h3>
-        </div>
-        <div id="instructions">
-            <i class="fas fa-book-open"></i>
-            <h3>Instructions</h3>
-        </div>
-        <div id="personal-best">
-            <i class="fas fa-medal"></i>
-            <h3>Highscores</h3>
-        </div>
-    </div>
     <!--Game board-->
     <div id="game-board">
 
@@ -45,9 +30,8 @@
             </div>
         </div>
 
-        <div id="main-game-buttons">
-            <button id="play" class="game-button">Start Game</button>
-            <button id="reset" class="game-button">Reset Game</button>
+       <div>
+          <p id="timer">0:00</p>
        </div>
 
         <div id="board">
@@ -160,10 +144,28 @@
             </div>
         </div>
 
-        <div>
-            <p id="timer">0:00</p>
-        </div>
+        <div id="main-game-buttons">
+            <button id="play" class="game-button">Start Game</button>
+            <button id="reset" class="game-button">Reset Game</button>
+       </div>
 
+        <!--Game board icons-->
+        <div id="position-icons">
+            <div id="icons">
+                <div id="login" class="icon-style">
+                    <i class="far fa-user"></i>
+                    <h3 id="username-editable">Username</h3>
+                </div>
+                <div id="instructions" class="icon-style">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Instructions</h3>
+                </div>
+                <div id="personal-best" class="icon-style">
+                    <i class="fas fa-medal"></i>
+                    <h3>Highscores</h3>
+                </div>
+            </div>
+        </div>
     </div>
 
     <!--JavaScript Pop-Up Boxes-->
