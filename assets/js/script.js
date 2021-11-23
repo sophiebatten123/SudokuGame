@@ -60,8 +60,11 @@ function loginUser() {
 }
 
 function accessLoginInformation() {
-    console.log("Yay your logged in!");
-    alert("Hi Bob")
+    var username = document.getElementById("username").value;
+    var password = document.getElementById("password").value;
+
+    console.log("Hi " + username + " your password is " + password)
+    alert("Hi " + username)
 }
 
 // Instructions section will display instructions to the user upon click
