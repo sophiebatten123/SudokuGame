@@ -179,7 +179,7 @@ body{
 }
 
 #loginpopup {
-    opacity: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
@@ -192,7 +192,7 @@ body{
 }
 
 #instructionspopup {
-    opacity: 0;
+    z-index: -1;
     pointer-events: none;
     text-align: left;
 }
@@ -204,27 +204,27 @@ body{
 }
 
 #highscorespopup {
-    opacity: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
 #correct {
-    opacity: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
 #incorrect {
-    opacity: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
 #livespopup {
-    opacity: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
 #winnerpopup {
-    opacity: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
@@ -237,7 +237,7 @@ body{
 }
 
 #difficultypopup {
-    opacity: 0;
+    z-index: -1;
     pointer-events: none;
 }
 
@@ -297,7 +297,7 @@ body{
 }
 
 #registerpopup {
-    opacity: 0;
+    z-index: -1;
     pointer-events: none;
 }
 

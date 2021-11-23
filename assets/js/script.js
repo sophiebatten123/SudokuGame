@@ -14,6 +14,12 @@ let hardGameSolution = ['6','8','4','1','5','9','7','3','7','5','1','8','3','2',
 // Final Solution
 let easyFinalSolution = ['2','6','4','8','5','9','3','1','7','9','8','1','7','3','4','6','5','2','7','5','3','6','2','1','8','4','9','1','3','5','2','7','4','8','6','8','9','2','5','4','6','7','3','1','4','7','6','3','1','8','9','2','5','3','1','8','9','7','5','2','6','4','6','4','9','1','8','2','5','7','3','5','2','7','4','6','3','1','9','8']
 
+// Empty Answers Array
+
+let easyUserInput = [];
+let mediumUserInput = [];
+let hardUserInput = [];
+
 // Timer Elements
 let timer;
 let lastGameTime = "No games played yet";
@@ -73,15 +79,15 @@ function loginUser() {
     let close = document.getElementById("close-login");
     let register = document.getElementById("new-account")
 
-    userLoginPopUp.style.opacity = "1";
+    userLoginPopUp.style.zIndex = 1;
     userLoginPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function() {
-        userLoginPopUp.style.opacity = "0";
+        userLoginPopUp.style.zIndex = -1;
     })
 
     register.addEventListener("click", function() {
-        userLoginPopUp.style.opacity = "0";
+        userLoginPopUp.style.zIndex = -1;
         registerDetails();
     })
 }
@@ -110,11 +116,11 @@ function registerDetails() {
     let registrationPopUp = document.getElementById("registerpopup")
     let close = document.getElementById("close-registration");
 
-    registrationPopUp.style.opacity = "1";
+    registrationPopUp.style.zIndex = 1;
     registrationPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function() {
-        registrationPopUp.style.opacity = "0";
+        registrationPopUp.style.zIndex = -1;
     })
 
 }
@@ -124,11 +130,11 @@ function displayInstructions() {
     let instructionsPopUp = document.getElementById("instructionspopup");
     let close = document.getElementById("close-instructions");
 
-    instructionsPopUp.style.opacity = "1";
+    instructionsPopUp.style.zIndex = 1;
     instructionsPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function(){
-        instructionsPopUp.style.opacity = "0";
+        instructionsPopUp.style.zIndex = -1;
     })
 }
 
@@ -137,11 +143,11 @@ function viewHighScores() {
     let highscoresPopUp = document.getElementById("highscorespopup");
     let close = document.getElementById("close-highscores");
 
-    highscoresPopUp.style.opacity = "1";
+    highscoresPopUp.style.zIndex = 1;
     highscoresPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function(){
-        highscoresPopUp.style.opacity = "0";
+        highscoresPopUp.style.zIndex = -1;
     })
 }
 
@@ -209,6 +215,8 @@ function checkAnswersEasy(value, index, active, number) {
           setTimeout(function () {
              correct.style.opacity="0";
           }, 1000);
+          easyUserInput.push(value);
+          console.log(easyUserInput);
        } else {
           active.style.backgroundColor = "red";
           setTimeout(function () {
@@ -222,13 +230,11 @@ function checkAnswersEasy(value, index, active, number) {
           }, 1000);
        }
 
-       //for (i=0; i < easyGame.length; i++) {
-        //if (easyGame[i] === easyFinalSolution[i]) {
-            //wellDone();
-        //} else {
-           //console.log("continue play")
-        //}
-    //}
+        if (easyUserInput.length === easyGameSolution.length) {
+            wellDone();
+        } else {
+           console.log("continue play");
+        }
 }
 
 //Runs the MEDIUMGAME and Checks Answers
@@ -411,11 +417,11 @@ function wellDone() {
 
     document.getElementById("well-done-text").innerHTML = "Well done you have won!<br> You completed the sudoku in " + lastGameTime;
 
-    congratulationsPopUp.style.opacity = "1";
+    congratulationsPopUp.style.zIndex = 1;
     congratulationsPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function(){
-        congratulationsPopUp.style.opacity = "0";
+        congratulationsPopUp.style.zIndex = -1;
     })
 
     console.log("Well done you have won! You completed the sudoku in " + lastGameTime);
