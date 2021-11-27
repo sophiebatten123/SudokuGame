@@ -60,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function() {
     highScores.addEventListener("click", function() {
         viewHighScores();
     })
-
+    
     playButton.addEventListener("click", function() {
         runGame();
     })
