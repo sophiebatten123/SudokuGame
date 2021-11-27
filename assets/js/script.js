@@ -242,7 +242,11 @@ function checkAnswersEasy(value, index, active, number) {
 //Runs the MEDIUMGAME and Checks Answers
 
 function runMediumGame(easy, hard, counter) {
-    setInterval(function(){
+    if (timer) {
+        resetTimer();
+    }
+
+    timer = setInterval(function(){
         startTimer();
     }, 1000);
 
@@ -310,9 +314,14 @@ function checkAnswersMedium(value, index, active) {
 //Runs the HARDGAME and Checks Answers
 
 function runHardGame(easy, medium, counter) {
-    setInterval(function(){
+    if (timer) {
+        resetTimer();
+    }
+
+    timer = setInterval(function(){
         startTimer();
     }, 1000);
+
 
     easy.disabled = true;   
     medium.disabled = true;
