@@ -171,6 +171,10 @@ function runGame() {
 
 function runEasyGame(medium, hard, counter) {
 
+    timer = setInterval(function(){
+        startTimer();
+    }, 1000);
+
     medium.disabled = true;   
     hard.disabled = true;  
     
@@ -236,6 +240,10 @@ function checkAnswersEasy(value, index, active, number) {
 
 function runMediumGame(easy, hard, counter) {
 
+    timer = setInterval(function(){
+        startTimer();
+    }, 1000);
+
     easy.disabled = true;   
     hard.disabled = true;
     
@@ -300,6 +308,10 @@ function checkAnswersMedium(value, index, active) {
 //Runs the HARDGAME and Checks Answers
 
 function runHardGame(easy, medium, counter) {
+
+    timer = setInterval(function(){
+        startTimer();
+    }, 1000);
 
     easy.disabled = true;   
     medium.disabled = true;
