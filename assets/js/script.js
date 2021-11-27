@@ -396,6 +396,19 @@ function resetGame() {
     document.getElementById("medium").disabled = false;
     document.getElementById("hard").disabled = false;
 
+    var easy = document.getElementById("easy");
+    var medium = document.getElementById("medium");
+    var hard = document.getElementById("hard");
+
+    if (easy.checked==true) {
+        easyUserInput.length = 0
+        console.log(easyUserInput);
+        } else if (medium.checked==true) {
+        
+        } else if (hard.checked==true) {
+        
+        }
+
     for (i=0; i < number.length; i++) {
        number[i].innerText = "";
        number[i].style.backgroundColor = "white";
