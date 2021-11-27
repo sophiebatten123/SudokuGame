@@ -399,6 +399,9 @@ function startTimer() {
 }
 
 function wellDone() {
+
+    let replayGame = document.getElementById("replay");
+
     var time = document.getElementById("timer").innerHTML;
     var arr = time.split(":");
     var minutes = arr[0];
@@ -420,5 +423,7 @@ function wellDone() {
 
     console.log("Well done you have won! You completed the sudoku in " + lastGameTime);
 
-    resetGame();
+    replayGame.addEventListener("click", function () {
+        resetGame();
+    })
 }
