@@ -170,6 +170,7 @@ function runGame() {
 //Runs the EASYGAME and Checks Answers
 
 function runEasyGame(medium, hard, counter) {
+
     if (timer) {
         resetTimer();
     }
@@ -386,6 +387,20 @@ function checkAnswersHard(value, index, active) {
 
 // Reset game will delete all previously inputtted numbers allowing the user to start again
 function resetGame() {
+    
+    var easy = document.getElementById("easy");
+    var medium = document.getElementById("medium");
+    var hard = document.getElementById("hard");
+
+    if (easy.checked==true) {
+        easyUserInput = [];
+        console.log(easyUserInput);
+    } else if (medium.checked==true) {
+        
+    } else if (hard.checked==true) {
+        
+    }
+
     let number = document.getElementsByClassName('number');
 
     document.getElementById("easy").checked = false;
@@ -395,19 +410,6 @@ function resetGame() {
     document.getElementById("easy").disabled = false;
     document.getElementById("medium").disabled = false;
     document.getElementById("hard").disabled = false;
-
-    var easy = document.getElementById("easy");
-    var medium = document.getElementById("medium");
-    var hard = document.getElementById("hard");
-
-    if (easy.checked==true) {
-        easyUserInput.length = 0
-        console.log(easyUserInput);
-        } else if (medium.checked==true) {
-        
-        } else if (hard.checked==true) {
-        
-        }
 
     for (i=0; i < number.length; i++) {
        number[i].innerText = "";
