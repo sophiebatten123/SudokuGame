@@ -171,14 +171,6 @@ function runGame() {
 
 function runEasyGame(medium, hard, counter) {
 
-    if (timer) {
-        resetTimer();
-    }
-
-    timer = setInterval(function(){
-        startTimer();
-    }, 1000);
-
     medium.disabled = true;   
     hard.disabled = true;  
     
@@ -243,13 +235,6 @@ function checkAnswersEasy(value, index, active, number) {
 //Runs the MEDIUMGAME and Checks Answers
 
 function runMediumGame(easy, hard, counter) {
-    if (timer) {
-        resetTimer();
-    }
-
-    timer = setInterval(function(){
-        startTimer();
-    }, 1000);
 
     easy.disabled = true;   
     hard.disabled = true;
@@ -315,14 +300,6 @@ function checkAnswersMedium(value, index, active) {
 //Runs the HARDGAME and Checks Answers
 
 function runHardGame(easy, medium, counter) {
-    if (timer) {
-        resetTimer();
-    }
-
-    timer = setInterval(function(){
-        startTimer();
-    }, 1000);
-
 
     easy.disabled = true;   
     medium.disabled = true;
@@ -387,36 +364,7 @@ function checkAnswersHard(value, index, active) {
 
 // Reset game will delete all previously inputtted numbers allowing the user to start again
 function resetGame() {
-    
-    var easy = document.getElementById("easy");
-    var medium = document.getElementById("medium");
-    var hard = document.getElementById("hard");
-
-    if (easy.checked==true) {
-        easyUserInput = [];
-        console.log(easyUserInput);
-    } else if (medium.checked==true) {
-        
-    } else if (hard.checked==true) {
-        
-    }
-
-    let number = document.getElementsByClassName('number');
-
-    document.getElementById("easy").checked = false;
-    document.getElementById("medium").checked = false;
-    document.getElementById("hard").checked = false;
-
-    document.getElementById("easy").disabled = false;
-    document.getElementById("medium").disabled = false;
-    document.getElementById("hard").disabled = false;
-
-    for (i=0; i < number.length; i++) {
-       number[i].innerText = "";
-       number[i].style.backgroundColor = "white";
-    }
-    
-    resetTimer();
+    window.location.reload()
 }
 
 function startTimer() {
@@ -434,15 +382,6 @@ function startTimer() {
         seconds++;
         if (seconds < 10) seconds = "0" + seconds;
     }
-
-    document.getElementById("timer").innerHTML = minutes + ":" + seconds;
-}
-
-function resetTimer() {
-    clearInterval(timer);
-
-    var minutes = "0";
-    var seconds = "00";
 
     document.getElementById("timer").innerHTML = minutes + ":" + seconds;
 }
