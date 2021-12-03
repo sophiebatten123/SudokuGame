@@ -20,14 +20,12 @@ body{
 
 #game-board-outer {
     width: 60%;
-    background-color: red;
     float: left;
 }
 
 #game-board-inner {
     width: 40%;
     float: right;
-    background-color: blue;
 }
 
 #header {
