@@ -406,6 +406,7 @@ body{
     .number {
         height: 60px;
         width: 60px;
+        font-size: 35px;
     }
     .number-pad-row {
         margin: 10px;
@@ -473,6 +474,7 @@ body{
     .number {
         height: 50px;
         width: 50px;
+        font-size: 30px;
     }
     #board {
         height: 450px;
@@ -490,6 +492,7 @@ body{
     .number {
         height: 40px;
         width: 40px;
+        font-size: 20px;
     }
     #board {
         height: 360px;
@@ -501,7 +504,7 @@ body{
         font-size: 30px;
     }
     .popup-box {
-        width: 200px;
+        width: 300px;
     }
 }
 
@@ -515,6 +518,8 @@ body{
      .number {
          height: 30px;
          width: 30px;
+         font-size: 20px;
+         padding-top: 0;
      }
      #board {
          height: 270px;
