@@ -24,6 +24,7 @@ var time;
 var arr;
 var minutes;
 var seconds;
+let squareClicked = "";
 
 //User login details
 var userDetails = [
@@ -177,9 +178,10 @@ function runEasyGame(medium, hard, counter) {
 
     medium.disabled = true;   
     hard.disabled = true;  
+    let number = document.getElementsByClassName('number');
     
     for (i=0; i < easyGame.length; i++) {
-        let number = document.getElementsByClassName('number');
+ 
            for (i=0; i < number.length; i++) {
              if (easyGame[i] === '') {
                 number[i].classList.add("userInput");
@@ -187,20 +189,19 @@ function runEasyGame(medium, hard, counter) {
 
                 number[i].addEventListener('click', function(event) {
                 console.log("Im inside the square");
-                let squareClicked = event.target;
+                squareClicked = event.target;
                 let numberPad = document.getElementsByClassName("number-pad-item");
+                squareClicked.style.backgroundColor = "yellow";
 
                     for (j=0; j < numberPad.length; j++) {
                         numberPad[j].addEventListener('click', function(e) {
-                    
                         squareClicked.innerHTML = e.target.innerHTML;
                         console.log(e);
                         console.log(e.target.innerHTML);
                     })
+                    checkAnswersEasy(squareClicked.innerText, squareClicked.dataset.index, squareClicked);
                   }
-                  //checkAnswersEasy(event.target.innerText, event.target.dataset.index, event.target, number);
                 })
-
                 number[i].style.backgroundColor = '#bbb';
              }
              else {
@@ -210,7 +211,8 @@ function runEasyGame(medium, hard, counter) {
     }
 }
 
-function checkAnswersEasy(value, index, active, number) {
+
+function checkAnswersEasy(value, index, active) {
     let correct = document.getElementById('correct');
     let incorrect = document.getElementById('incorrect')
     
@@ -224,6 +226,8 @@ function checkAnswersEasy(value, index, active, number) {
           }, 1000);
           easyUserInput.push(value);
           console.log(easyUserInput);
+       }  if (value === "") {
+        active.style.backgroundColor = "yellow";
        } else {
           active.style.backgroundColor = "red";
           setTimeout(function () {
