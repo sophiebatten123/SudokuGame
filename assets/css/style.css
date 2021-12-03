@@ -6,29 +6,32 @@ body{
 }
 
 #game-board {
-    height: 937px;
+    height: 770px;
     width: 100%;
     background-color: white;
-    display: flex;
     justify-content: center;
 }
 
 #game-board-top {
     background-color: white;
     height: 150px;
+    width: 100%;
 }
 
 #game-board-outer {
-    width: 40%;
-    margin-left: 5%;
+    width: 60%;
+    background-color: red;
+    float: left;
 }
 
 #game-board-inner {
     width: 40%;
+    float: right;
+    background-color: blue;
 }
 
 #header {
-    margin-left: 13%;
+    margin-left: 10%;
     padding-top: 10px;
     text-decoration: underline;
 }
@@ -122,7 +125,8 @@ body{
 /** Game board **/
 
 #board-outer {
-    width: 60%;
+    width: 100%;
+    justify-content: center;
 }
 
 #board {
