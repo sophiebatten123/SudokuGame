@@ -191,7 +191,7 @@ function runEasyGame(medium, hard, counter) {
                 console.log("Im inside the square");
                 squareClicked = event.target;
                 let numberPad = document.getElementsByClassName("number-pad-item");
-                squareClicked.style.backgroundColor = "yellow";
+                squareClicked.style.backgroundColor = "#FFFECE";
 
                     for (j=0; j < numberPad.length; j++) {
                         numberPad[j].addEventListener('click', function(e) {
