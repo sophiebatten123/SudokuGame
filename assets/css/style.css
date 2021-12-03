@@ -399,3 +399,82 @@ body{
         padding: 0 10px;
     }
 }
+
+@media screen and (max-width: 1120px) {
+    #board {
+        height: 540px;
+        width: 540px;
+    }
+    .number {
+        height: 60px;
+        width: 60px;
+    }
+    .number-pad-row {
+        margin: 10px;
+    }
+    #difficulty-position > p {
+        padding: 0 2px;
+    }
+    .number-pad-item {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    #game-board-inner {
+        width: 100%;
+    }
+    #game-board-outer {
+        width: 100%;
+    }
+    #number-pad-inner{
+        display: flex;
+        justify-content: center;
+    }
+    .number-pad-item {
+        width: 40px;
+    }
+    .number-pad-row {
+        margin: 0;
+    }
+    #game-board-top {
+        text-align: center;
+    }
+    #timer {
+        margin-left: 0;
+    }
+    #header {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 780px) {
+    .number-pad-item {
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .number-pad-item {
+        width: 20px;
+        height: 45px;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .number-pad-item {
+       margin: 5px;
+    }
+    .row {
+        height: 50px;
+    }
+    .number {
+        height: 50px;
+        width: 50px;
+    }
+    #board {
+        height: 450px;
+        width: 450px;
+    }
+}
