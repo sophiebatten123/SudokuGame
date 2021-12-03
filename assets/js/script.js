@@ -196,10 +196,11 @@ function runEasyGame(medium, hard, counter) {
                     for (j=0; j < numberPad.length; j++) {
                         numberPad[j].addEventListener('click', function(e) {
                         squareClicked.innerHTML = e.target.innerHTML;
-                        console.log(e);
                         console.log(e.target.innerHTML);
+                        console.log(squareClicked.dataset.index)
+                        console.log(squareClicked);
+                        checkAnswersEasy(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
                     })
-                    checkAnswersEasy(squareClicked.innerText, squareClicked.dataset.index, squareClicked);
                   }
                 })
                 number[i].style.backgroundColor = '#bbb';
@@ -215,8 +216,10 @@ function runEasyGame(medium, hard, counter) {
 function checkAnswersEasy(value, index, active) {
     let correct = document.getElementById('correct');
     let incorrect = document.getElementById('incorrect')
+    console.log(value);
+    console.log(easyGameSolution[index]);
     
-       if (value === easyGameSolution[index]) {
+       if (value == easyGameSolution[index]) {
           active.contentEditable = false;
           active.style.backgroundColor = "green";
           correct.style.opacity = "1";
@@ -226,8 +229,6 @@ function checkAnswersEasy(value, index, active) {
           }, 1000);
           easyUserInput.push(value);
           console.log(easyUserInput);
-       }  if (value === "") {
-        active.style.backgroundColor = "yellow";
        } else {
           active.style.backgroundColor = "red";
           setTimeout(function () {
