@@ -182,17 +182,25 @@ function runEasyGame(medium, hard, counter) {
         let number = document.getElementsByClassName('number');
            for (i=0; i < number.length; i++) {
              if (easyGame[i] === '') {
-                number[i].setAttribute("contenteditable", true);
                 number[i].classList.add("userInput");
                 number[i].dataset.index = ++counter;
-                number[i].addEventListener('keyup', event => {
-                   if (isNaN(event.target.innerText)) {
-                      alert('You must only input numbers');
-                      event.target.innerText = "";
-                   } else {
-                   checkAnswersEasy(event.target.innerText, event.target.dataset.index, event.target, number)
-                   }
+
+                number[i].addEventListener('click', function(event) {
+                console.log("Im inside the square");
+                let squareClicked = event.target;
+                let numberPad = document.getElementsByClassName("number-pad-item");
+
+                    for (j=0; j < numberPad.length; j++) {
+                        numberPad[j].addEventListener('click', function(e) {
+                    
+                        squareClicked.innerHTML = e.target.innerHTML;
+                        console.log(e);
+                        console.log(e.target.innerHTML);
+                    })
+                  }
+                  //checkAnswersEasy(event.target.innerText, event.target.dataset.index, event.target, number);
                 })
+
                 number[i].style.backgroundColor = '#bbb';
              }
              else {

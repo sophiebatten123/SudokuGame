@@ -151,6 +151,27 @@ body{
     margin-bottom: 10px;
 }
 
+/** Number Pad**/
+
+#number-pad-inner {
+    width: 60%;
+    height: 50px;
+    margin: auto;
+    display: flex;
+    width: 70%;
+    padding: 15px;
+}
+
+.number-pad-item {
+    font-size: 25px;
+    width: 25px;
+    height: 25px;
+    background-color: #FFFECE;
+    margin: auto;
+    border: 2px solid black;
+    padding: 10px;
+}
+
 /** Popup boxes **/
 
 .popup-box {
