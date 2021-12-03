@@ -181,7 +181,6 @@ function runEasyGame(medium, hard, counter) {
     let number = document.getElementsByClassName('number');
     
     for (i=0; i < easyGame.length; i++) {
- 
            for (i=0; i < number.length; i++) {
              if (easyGame[i] === '') {
                 number[i].classList.add("userInput");

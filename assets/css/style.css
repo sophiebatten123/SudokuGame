@@ -9,8 +9,7 @@ body{
 
 #game-board {
     height: 937px;
-    width: 80%;
-    text-align: center;
+    width: 99%;
     margin: auto;
     background-color: white;
     border-right: 4px solid black;
@@ -110,6 +109,11 @@ body{
 }
 
 /** Game board **/
+
+#board-outer {
+    width: 60%;
+    background-color: red;
+}
 
 #board {
     border: 4px solid black;
