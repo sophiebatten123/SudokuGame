@@ -381,8 +381,8 @@ function checkAnswersHard(value, index, active) {
           setTimeout(function () {
              correct.style.opacity="0";
           }, 1000);
-          mediumUserInput.push(value);
-          console.log(mediumUserInput);
+          hardUserInput.push(value);
+          console.log(hardUserInput);
        } else {
           active.style.backgroundColor = "red";
           setTimeout(function () {
