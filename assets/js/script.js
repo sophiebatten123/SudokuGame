@@ -190,26 +190,25 @@ function runEasyGame(medium, hard, counter) {
                 number[i].addEventListener('click', function(event) {
                 console.log("Im inside the square");
                 squareClicked = event.target;
-                let numberPad = document.getElementsByClassName("number-pad-item");
                 squareClicked.style.backgroundColor = "#FFFECE";
-
-                    for (j=0; j < numberPad.length; j++) {
-                        numberPad[j].addEventListener('click', function(e) {
-                        squareClicked.innerHTML = e.target.innerHTML;
-                        console.log(e.target.innerHTML);
-                        console.log(squareClicked.dataset.index)
-                        console.log(squareClicked);
-                        checkAnswersEasy(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
-                    })
-                  }
                 })
                 number[i].style.backgroundColor = '#bbb';
-             }
-             else {
+                } else {
                 number[i].innerHTML = easyGame[i];
             }   
         }
     }
+   let numberPad = document.getElementsByClassName("number-pad-item");
+
+   for (j=0; j < numberPad.length; j++) {
+    numberPad[j].addEventListener('click', function(e) {
+    squareClicked.innerHTML = e.target.innerHTML;
+    console.log(e.target.innerHTML);
+    console.log(squareClicked.dataset.index)
+    console.log(squareClicked);
+    checkAnswersEasy(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
+    })
+   }
 }
 
 
@@ -220,7 +219,7 @@ function checkAnswersEasy(value, index, active) {
     console.log(easyGameSolution[index]);
     
        if (value == easyGameSolution[index]) {
-          active.contentEditable = false;
+        
           active.style.backgroundColor = "green";
           correct.style.opacity = "1";
           correct.style.pointerEvents = "auto";
