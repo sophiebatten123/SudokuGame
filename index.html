@@ -15,26 +15,15 @@
 </head>
 <body>
     <!--Game board-->
-    <div id="game-board">
 
         <div id="header">
             <h1>Mindfulness Sukodu</h1>
         </div>
 
-        <div id="difficulty-buttons">
-            <div id="difficulty-position">
-                <h2 id="button-header">Select difficulty:</h2>
-                <p>Easy<input id="easy" class="difficulty" name="difficulty" type="radio" value="easy" checked></p>
-                <p>Medium<input id="medium" class="difficulty" name="difficulty" type="radio" value="medium"></p>
-                <p>Hard<input id="hard" class="difficulty" name="difficulty" type="radio" value="hard"></p>
-            </div>
-        </div>
-
-        <div id="main-game-buttons">
-            <button id="play" class="game-button">Start Game</button>
-            <button id="reset" class="game-button">Reset Game</button>
-       </div>
-
+        <p id="timer">0:00</p>
+        
+<div id="game-board">
+<div id="game-board-outer">
     <div id="board-outer">
         <div id="board">
             <div id="row-one" class="row">
@@ -146,26 +135,39 @@
             </div>
         </div>
     </div>
-
-        <div id="number-pad-outer">
-            <div id="number-pad-inner">
-                <div class="number-pad-item" id="number-pad-one">1</div>
-                <div class="number-pad-item" id="number-pad-two">2</div> 
-                <div class="number-pad-item" id="number-pad-three">3</div> 
-                <div class="number-pad-item" id="number-pad-four">4</div> 
-                <div class="number-pad-item" id="number-pad-five">5</div> 
-                <div class="number-pad-item" id="number-pad-six">6</div> 
-                <div class="number-pad-item" id="number-pad-seven">7</div> 
-                <div class="number-pad-item" id="number-pad-eight">8</div> 
-                <div class="number-pad-item" id="number-pad-nine">9</div>  
+</div>
+    <div id="game-board-inner">
+        <div id="difficulty-buttons">
+            <div id="difficulty-position">
+                <h2 id="button-header">Select difficulty:</h2>
+                <p>Easy<input id="easy" class="difficulty" name="difficulty" type="radio" value="easy" checked></p>
+                <p>Medium<input id="medium" class="difficulty" name="difficulty" type="radio" value="medium"></p>
+                <p>Hard<input id="hard" class="difficulty" name="difficulty" type="radio" value="hard"></p>
             </div>
         </div>
-        
-       <div>
-           <p id="timer">0:00</p>
+        <div id="number-pad-outer">
+            <div id="number-pad-inner">
+                <div class="number-pad-row">
+                    <div class="number-pad-item" id="number-pad-one">1</div>
+                    <div class="number-pad-item" id="number-pad-two">2</div> 
+                    <div class="number-pad-item" id="number-pad-three">3</div> 
+                </div>
+                <div class="number-pad-row">
+                    <div class="number-pad-item" id="number-pad-four">4</div> 
+                    <div class="number-pad-item" id="number-pad-five">5</div> 
+                    <div class="number-pad-item" id="number-pad-six">6</div> 
+                </div>
+                <div class="number-pad-row">
+                    <div class="number-pad-item" id="number-pad-seven">7</div> 
+                    <div class="number-pad-item" id="number-pad-eight">8</div> 
+                    <div class="number-pad-item" id="number-pad-nine">9</div>
+                </div>  
+            </div>
         </div>
-
-        <!--Game board icons-->
+        <div id="main-game-buttons">
+            <button id="play" class="game-button">Start Game</button>
+            <button id="reset" class="game-button">Reset Game</button>
+       </div>
         <div id="position-icons">
             <div id="icons">
                 <div id="login" class="icon-style">

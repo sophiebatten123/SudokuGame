@@ -3,17 +3,26 @@
 body{
     font-family:'Montserrat', sans-serif;
     background-color: #FFFECE;
-    margin-top: 0;
-    margin-bottom: 0;
 }
 
 #game-board {
     height: 937px;
-    width: 99%;
+    width: 100%;
     margin: auto;
     background-color: white;
     border-right: 4px solid black;
     border-left: 4px solid black;
+    display: flex;
+}
+
+#game-board-outer {
+    background-color: green;
+    width: 60%;
+}
+
+#game-board-inner {
+    background-color: violet;
+    width: 40%;
 }
 
 #header {
@@ -67,10 +76,9 @@ body{
 }
 
 #difficulty-buttons{
-    width: 60%;
-    height: 80px;
+    width: 80%;
+    height: 150px;
     margin: auto;
-    padding-top: 10px;
 }
 
 #difficulty-position > h2 {
@@ -86,12 +94,12 @@ body{
 
 #main-game-buttons {
     height: 50px;
-    width: 60%;
     margin: auto;
     justify-content: center;
     display: flex;
     margin-top: 2%;
     margin-bottom: 1%;
+    background-color: yellow;
 }
 
 .game-button {
@@ -112,7 +120,6 @@ body{
 
 #board-outer {
     width: 60%;
-    background-color: red;
 }
 
 #board {
@@ -159,21 +166,27 @@ body{
 
 #number-pad-inner {
     width: 60%;
-    height: 50px;
+    height: 300px;
     margin: auto;
-    display: flex;
     width: 70%;
     padding: 15px;
+    background-color: blue;
 }
 
 .number-pad-item {
-    font-size: 25px;
-    width: 25px;
-    height: 25px;
+    font-size: 50px;
+    width: 100px;
+    height: 60px;
     background-color: #FFFECE;
-    margin: auto;
+    margin: 10px;
     border: 2px solid black;
     padding: 10px;
+    text-align: center;
+}
+
+.number-pad-row {
+    background-color: red;
+    display: flex;
 }
 
 /** Popup boxes **/
