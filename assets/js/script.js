@@ -257,37 +257,45 @@ function runMediumGame(easy, hard, counter) {
 
     easy.disabled = true;   
     hard.disabled = true;
+    let number = document.getElementsByClassName('number');
     
     for (i=0; i < mediumGame.length; i++) {
-        let number = document.getElementsByClassName('number');
            for (i=0; i < number.length; i++) {
              if (mediumGame[i] === '') {
-                number[i].setAttribute("contenteditable", true);
                 number[i].classList.add("userInput");
                 number[i].dataset.index = ++counter;
-                number[i].addEventListener('keyup', event => {
-                   if (isNaN(event.target.innerText)) {
-                      alert('You must only input numbers');
-                      event.target.innerText = "";
-                   } else {
-                   checkAnswersMedium(event.target.innerText, event.target.dataset.index, event.target)
-                   }
+
+                number[i].addEventListener('click', function(event) {
+                console.log("Im inside the square");
+                squareClicked = event.target;
+                squareClicked.style.backgroundColor = "#FFFECE";
                 })
                 number[i].style.backgroundColor = '#bbb';
-             }
-             else {
+                } else {
                 number[i].innerHTML = mediumGame[i];
             }   
         }
     }
+
+   let numberPad = document.getElementsByClassName("number-pad-item");
+
+   for (j=0; j < numberPad.length; j++) {
+    numberPad[j].addEventListener('click', function(e) {
+    squareClicked.innerHTML = e.target.innerHTML;
+    console.log(e.target.innerHTML);
+    console.log(squareClicked.dataset.index)
+    console.log(squareClicked);
+    checkAnswersMedium(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
+    })
+   }
 }
+
 
 function checkAnswersMedium(value, index, active) {
     let correct = document.getElementById('correct');
     let incorrect = document.getElementById('incorrect')
     
        if (value === mediumGameSolution[index]) {
-          active.contentEditable = false;
           active.style.backgroundColor = "green";
           correct.style.opacity = "1";
           correct.style.pointerEvents = "auto";
@@ -326,30 +334,40 @@ function runHardGame(easy, medium, counter) {
 
     easy.disabled = true;   
     medium.disabled = true;
+
+    let number = document.getElementsByClassName('number');
     
     for (i=0; i < hardGame.length; i++) {
-        let number = document.getElementsByClassName('number');
            for (i=0; i < number.length; i++) {
              if (hardGame[i] === '') {
-                number[i].setAttribute("contenteditable", true);
                 number[i].classList.add("userInput");
                 number[i].dataset.index = ++counter;
-                number[i].addEventListener('keyup', event => {
-                   if (isNaN(event.target.innerText)) {
-                      alert('You must only input numbers');
-                      event.target.innerText = "";
-                   } else {
-                   checkAnswersHard(event.target.innerText, event.target.dataset.index, event.target)
-                   }
+
+                number[i].addEventListener('click', function(event) {
+                console.log("Im inside the square");
+                squareClicked = event.target;
+                squareClicked.style.backgroundColor = "#FFFECE";
                 })
                 number[i].style.backgroundColor = '#bbb';
-             }
-             else {
+                } else {
                 number[i].innerHTML = hardGame[i];
             }   
         }
     }
+    
+   let numberPad = document.getElementsByClassName("number-pad-item");
+
+   for (j=0; j < numberPad.length; j++) {
+    numberPad[j].addEventListener('click', function(e) {
+    squareClicked.innerHTML = e.target.innerHTML;
+    console.log(e.target.innerHTML);
+    console.log(squareClicked.dataset.index)
+    console.log(squareClicked);
+    checkAnswersHard(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
+    })
+   }
 }
+    
 
 function checkAnswersHard(value, index, active) {
     let correct = document.getElementById('correct');
