@@ -383,99 +383,19 @@ body{
  
 /** Media Queries */
 
-@media screen and (max-width: 1400px) {
-}
-
-@media screen and (max-width: 1100px) {
-    #game-board {
-        width: 95%;
+@media screen and (max-width: 1270px) {
+    #board {
+        height: 630px;
+        width: 630px;
     }
-    .popup-box {
-        width: 400px;
+    .number {
+        height: 70px;
+        width: 70px;
     }
-}
-
-@media screen and (max-width: 800px) {
-    #header {
-        font-size: 15px;
+    .number-pad-row {
+        margin: 18px;
     }
-    #button-header {
-        font-size: 20px;
-    }
-    #difficulty-position > p {
-        font-size: 20px;
-    }
-    #difficulty-buttons {
-        height: 80px;
-    }
-}
-
-@media screen and (max-width: 670px) {
     #difficulty-position > p {
         padding: 0 10px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .number {
-        width: 45px;
-        height: 45px;
-    }
-    .row {
-        height: 45px;
-    }
-    #board {
-        height: 405px;
-        width: 405px;
-    }
-    #main-game-buttons {
-        margin-bottom: 10%;
-    }
-    #difficulty-position > p {
-        padding: 0 5px;
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .number {
-        width: 30px;
-        height: 30px;
-
-        font-size: 15px;
-        padding-top: 5px;
-    }
-    .row {
-        height: 30px;
-    }
-    #board {
-        height: 270px;
-        width: 270px;
-    }
-    .game-button {
-        padding: 0;
-    }
-    #difficulty-position {
-        width: 100%;
-    }
-    #difficulty-buttons {
-        width: 100%;
-        padding-top: 0;
-    }
-    .popup-box {
-        width: 300px;
-        height: 400px;
-    }
-    .icon-style {
-        padding: 5px;
-    }
-    #game-board {
-        height: 700px;
-    }
-    #main-game-buttons {
-        height: 30px;
-    }
-    #instructionspopup p {
-        font-size: 15px;
-        line-height: 40px;
     }
 }
