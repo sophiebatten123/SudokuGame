@@ -15,13 +15,12 @@
 </head>
 <body>
     <!--Game board-->
-
-        <div id="header">
-            <h1>Mindfulness Sukodu</h1>
-        </div>
-
-        <p id="timer">0:00</p>
-        
+<div id="game-board-top">
+    <div id="header">
+        <h1>Mindfulness Sukodu</h1>
+    </div>
+    <p id="timer">0:00</p>
+</div>
 <div id="game-board">
 <div id="game-board-outer">
     <div id="board-outer">
@@ -145,6 +144,10 @@
                 <p>Hard<input id="hard" class="difficulty" name="difficulty" type="radio" value="hard"></p>
             </div>
         </div>
+        <div id="main-game-buttons">
+            <button id="play" class="game-button">Start Game</button>
+            <button id="reset" class="game-button">Reset Game</button>
+       </div>
         <div id="number-pad-outer">
             <div id="number-pad-inner">
                 <div class="number-pad-row">
@@ -164,10 +167,6 @@
                 </div>  
             </div>
         </div>
-        <div id="main-game-buttons">
-            <button id="play" class="game-button">Start Game</button>
-            <button id="reset" class="game-button">Reset Game</button>
-       </div>
         <div id="position-icons">
             <div id="icons">
                 <div id="login" class="icon-style">
