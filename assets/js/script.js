@@ -252,11 +252,11 @@ function checkAnswersEasy(value, index, active) {
           active.innerText = "";
        }
 
-        if (easyUserInput.length === easyGameSolution.length) {
+       if (easyUserInput.length === easyGameSolution.length) {
             wellDone();
-        } else {
+       } else {
            console.log("continue play");
-        }
+       }
 }
 
 //Runs the MEDIUMGAME and Checks Answers
