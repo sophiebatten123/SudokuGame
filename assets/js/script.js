@@ -45,6 +45,39 @@ document.addEventListener("DOMContentLoaded", function() {
     let playButton = document.getElementById("play");
     let resetButton = document.getElementById("reset");
     let loginButton = document.getElementById("login-button");
+    let difficultyDropdown = document.getElementById("dropdown-button");
+    let easy = document.getElementById("easy");
+    let medium = document.getElementById("medium");
+    let hard = document.getElementById("hard");
+    let userDifficulty = document.getElementById("user-difficulty");
+
+
+    difficultyDropdown.addEventListener("click", function() {
+        let dropdownOptions = document.getElementById("difficulty-dropdown");
+        dropdownOptions.classList.toggle("show");
+    })
+
+    window.onclick = function(event) {
+        if (!event.target.matches('#dropdown-button')) {
+          var dropdowns = document.getElementById("difficulty-dropdown");
+          var openDropdown = dropdowns;
+            if (dropdowns.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+        }
+    }
+
+    easy.addEventListener("click", function (){
+        userDifficulty.innerHTML = "Easy";
+    })
+
+    medium.addEventListener("click", function (){
+        userDifficulty.innerHTML = "Medium";
+    })
+
+    hard.addEventListener("click", function (){
+        userDifficulty.innerHTML = "Hard";
+    })
 
     userLogin.addEventListener("click", function() {
         loginUser();
@@ -155,15 +188,13 @@ function runGame() {
 
     let counter=-1;
 
-    var easy = document.getElementById("easy");
-    var medium = document.getElementById("medium");
-    var hard = document.getElementById("hard");
+    let userDifficulty = document.getElementById("user-difficulty");
 
-    if (easy.checked==true) {
+    if (userDifficulty.innerHTML === "Easy") {
         runEasyGame(medium, hard, counter);
-    } else if (medium.checked==true) {
+    } else if (userDifficulty.innerHTML === "Medium") {
         runMediumGame(easy, hard, counter);
-    } else if (hard.checked==true) {
+    } else if (userDifficulty.innerHTML === "Hard") {
         runHardGame(easy, medium, counter);
     }
 }

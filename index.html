@@ -16,11 +16,24 @@
 <body>
     <!--Game board-->
 <div id="game-board-top">
+
     <div id="header">
         <h1>Mindfulness Sukodu</h1>
     </div>
+
     <p id="timer">0:00</p>
+
+    <div id="difficulty-buttons-dropdown">
+        <button id="dropdown-button">Difficulty</button>
+        <div id="user-difficulty"></div>
+        <div id="difficulty-dropdown" class="dropdown-content">
+            <a href="#" id="easy" class="difficulty">Easy</a>
+            <a href="#" id="medium" class="difficulty">Medium</a>
+            <a href="#" id="hard" class="difficulty">Hard</a>
+        </div>
+    </div>
 </div>
+
 <div id="game-board">
 <div id="game-board-outer">
     <div id="board-outer">
@@ -136,14 +149,6 @@
     </div>
 </div>
     <div id="game-board-inner">
-        <div id="difficulty-buttons">
-            <div id="difficulty-position">
-                <h2 id="button-header">Select difficulty:</h2>
-                <p>Easy<input id="easy" class="difficulty" name="difficulty" type="radio" value="easy" checked></p>
-                <p>Medium<input id="medium" class="difficulty" name="difficulty" type="radio" value="medium"></p>
-                <p>Hard<input id="hard" class="difficulty" name="difficulty" type="radio" value="hard"></p>
-            </div>
-        </div>
         <div id="main-game-buttons">
             <button id="play" class="game-button">Start Game</button>
             <button id="reset" class="game-button">Reset Game</button>

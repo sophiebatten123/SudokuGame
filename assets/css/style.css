@@ -79,22 +79,42 @@ body{
     font-weight: bold;
 }
 
-#difficulty-buttons{
-    width: 80%;
-    height: 100px;
-    margin: auto;
-    text-align: center;
+#dropdown-button {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
 }
 
-#difficulty-position > h2 {
-    margin-top: 0;
+#difficulty-buttons-dropdown{
+    position: relative;
+    display: inline-block;
 }
 
-#difficulty-position > p {
-    width: 20%;
-    font-size: 25px;
-    display: inline;
-    padding:0 20px;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+  .dropdown-content a:hover {
+      background-color: #FFFECE;
+}
+
+.show {
+    display: block;
 }
 
 #main-game-buttons {
