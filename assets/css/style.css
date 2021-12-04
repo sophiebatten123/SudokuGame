@@ -18,6 +18,15 @@ body{
     width: 100%;
 }
 
+#top-positioning-outer {
+    width: 60%;
+}
+
+#top-positioning {
+    width: 720px;
+    margin: auto;
+}
+
 #game-board-outer {
     width: 60%;
     float: left;
@@ -29,8 +38,7 @@ body{
 }
 
 #header {
-    margin-left: 10%;
-    padding-top: 10px;
+    padding-top: 5px;
     text-decoration: underline;
 }
 
@@ -80,17 +88,16 @@ body{
 }
 
 #dropdown-button {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+    justify-content: center;
+    font-size: 15pt;
+    border: 2px solid black;
+    height: 50px;
 }
 
 #difficulty-buttons-dropdown{
     position: relative;
     display: inline-block;
+    float: left;
 }
 
 .dropdown-content {
@@ -109,12 +116,16 @@ body{
     display: block;
 }
 
-  .dropdown-content a:hover {
+.dropdown-content a:hover {
       background-color: #FFFECE;
 }
 
 .show {
     display: block;
+}
+
+#user-difficulty {
+    display: inline-flex;
 }
 
 #main-game-buttons {
@@ -183,9 +194,8 @@ body{
 
 #timer {
     font-size: 35px;
-    margin-top: 15px;
-    margin-bottom: 10px;
-    margin-left: 40%;
+    float: right;
+    margin: 0;
 }
 
 /** Number Pad**/
@@ -416,6 +426,9 @@ body{
     #difficulty-position > p {
         padding: 0 10px;
     }
+    #top-positioning {
+        width: 630px;
+    }
 }
 
 @media screen and (max-width: 1120px) {
@@ -436,6 +449,9 @@ body{
     }
     .number-pad-item {
         width: 80px;
+    }
+    #top-positioning {
+        width: 540px;
     }
 }
 
@@ -464,6 +480,9 @@ body{
     }
     #header {
         margin-left: 0;
+    }
+    #top-positioning-outer{
+        width: 100%;
     }
 }
 
@@ -500,6 +519,9 @@ body{
         height: 450px;
         width: 450px;
     }
+    #top-positioning {
+        width: 450px;
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -525,6 +547,9 @@ body{
     }
     .popup-box {
         width: 300px;
+    }
+    #top-positioning {
+        width: 360px;
     }
 }
 
@@ -554,4 +579,7 @@ body{
          padding: 0;
          font-size: 20px;
      }
+     #top-positioning {
+        width: 270px;
+    }
 }
