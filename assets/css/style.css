@@ -266,21 +266,6 @@ body{
     pointer-events: none;
 }
 
-#correct {
-    z-index: -1;
-    pointer-events: none;
-}
-
-#incorrect {
-    z-index: -1;
-    pointer-events: none;
-}
-
-#livespopup {
-    z-index: -1;
-    pointer-events: none;
-}
-
 #winnerpopup {
     z-index: -1;
     pointer-events: none;

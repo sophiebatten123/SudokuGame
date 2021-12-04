@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let hard = document.getElementById("hard");
     let userDifficulty = document.getElementById("user-difficulty");
 
-
     difficultyDropdown.addEventListener("click", function() {
         let dropdownOptions = document.getElementById("difficulty-dropdown");
         dropdownOptions.classList.toggle("show");
@@ -209,18 +208,17 @@ function runEasyGame(medium, hard, counter) {
 
     medium.disabled = true;   
     hard.disabled = true;  
-    let number = document.getElementsByClassName('number');
-    
+    let number = document.getElementsByClassName('active');
+
     for (i=0; i < easyGame.length; i++) {
            for (i=0; i < number.length; i++) {
              if (easyGame[i] === '') {
                 number[i].classList.add("userInput");
                 number[i].dataset.index = ++counter;
-
                 number[i].addEventListener('click', function(event) {
                 console.log("Im inside the square");
                 squareClicked = event.target;
-                squareClicked.style.backgroundColor = "#FFFECE";
+                squareClicked.style.backgroundColor = '#FFFECE';
                 })
                 number[i].style.backgroundColor = '#bbb';
                 } else {
@@ -228,47 +226,31 @@ function runEasyGame(medium, hard, counter) {
             }   
         }
     }
+
    let numberPad = document.getElementsByClassName("number-pad-item");
 
-   for (j=0; j < numberPad.length; j++) {
-    numberPad[j].addEventListener('click', function(e) {
-    squareClicked.innerHTML = e.target.innerHTML;
-    console.log(e.target.innerHTML);
-    console.log(squareClicked.dataset.index)
-    console.log(squareClicked);
-    checkAnswersEasy(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
+   for (i=0; i < numberPad.length; i++) {
+              numberPad[i].addEventListener('click', function(e) {
+              squareClicked.innerHTML = e.target.innerHTML;
+              checkAnswersEasy(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
     })
    }
 }
 
 
 function checkAnswersEasy(value, index, active) {
-    let correct = document.getElementById('correct');
-    let incorrect = document.getElementById('incorrect')
-    console.log(value);
-    console.log(easyGameSolution[index]);
     
        if (value == easyGameSolution[index]) {
-        
           active.style.backgroundColor = "green";
-          correct.style.opacity = "1";
-          correct.style.pointerEvents = "auto";
-          setTimeout(function () {
-             correct.style.opacity="0";
-          }, 1000);
           easyUserInput.push(value);
           console.log(easyUserInput);
+          active.classList.remove('active');
        } else {
           active.style.backgroundColor = "red";
           setTimeout(function () {
              active.style.backgroundColor = "#bbb";
           }, 1000)
           active.innerText = "";
-          incorrect.style.opacity = "1";
-          incorrect.style.pointerEvents = "auto";
-          setTimeout(function () {
-             incorrect.style.opacity="0";
-          }, 1000);
        }
 
         if (easyUserInput.length === easyGameSolution.length) {
@@ -323,16 +305,9 @@ function runMediumGame(easy, hard, counter) {
 
 
 function checkAnswersMedium(value, index, active) {
-    let correct = document.getElementById('correct');
-    let incorrect = document.getElementById('incorrect')
     
        if (value === mediumGameSolution[index]) {
           active.style.backgroundColor = "green";
-          correct.style.opacity = "1";
-          correct.style.pointerEvents = "auto";
-          setTimeout(function () {
-             correct.style.opacity="0";
-          }, 1000);
           mediumUserInput.push(value);
           console.log(mediumUserInput);
        } else {
@@ -341,11 +316,6 @@ function checkAnswersMedium(value, index, active) {
              active.style.backgroundColor = "#bbb";
           }, 1000)
           active.innerText = "";
-          incorrect.style.opacity = "1";
-          incorrect.style.pointerEvents = "auto";
-          setTimeout(function () {
-             incorrect.style.opacity="0";
-          }, 1000);
        }
 
        if (mediumUserInput.length === mediumGameSolution.length) {
@@ -401,17 +371,10 @@ function runHardGame(easy, medium, counter) {
     
 
 function checkAnswersHard(value, index, active) {
-    let correct = document.getElementById('correct');
-    let incorrect = document.getElementById('incorrect')
-    
+
        if (value === hardGameSolution[index]) {
           active.contentEditable = false;
           active.style.backgroundColor = "green";
-          correct.style.opacity = "1";
-          correct.style.pointerEvents = "auto";
-          setTimeout(function () {
-             correct.style.opacity="0";
-          }, 1000);
           hardUserInput.push(value);
           console.log(hardUserInput);
        } else {
@@ -420,11 +383,6 @@ function checkAnswersHard(value, index, active) {
              active.style.backgroundColor = "#bbb";
           }, 1000)
           active.innerText = "";
-          incorrect.style.opacity = "1";
-          incorrect.style.pointerEvents = "auto";
-          setTimeout(function () {
-             incorrect.style.opacity="0";
-          }, 1000);
        }
         
        if (hardUserInput.length === hardGameSolution.length) {
