@@ -211,8 +211,8 @@ function runEasyGame(medium, hard, counter) {
     let number = document.getElementsByClassName('active');
 
     for (i=0; i < easyGame.length; i++) {
-           for (i=0; i < number.length; i++) {
-             if (easyGame[i] === '') {
+        for (i=0; i < number.length; i++) {
+            if (easyGame[i] === '') {
                 number[i].classList.add("userInput");
                 number[i].dataset.index = ++counter;
                 number[i].addEventListener('click', function(event) {
@@ -221,20 +221,20 @@ function runEasyGame(medium, hard, counter) {
                 squareClicked.style.backgroundColor = '#FFFECE';
                 })
                 number[i].style.backgroundColor = '#bbb';
-                } else {
+            } else {
                 number[i].innerHTML = easyGame[i];
             }   
         }
     }
-
+        
    let numberPad = document.getElementsByClassName("number-pad-item");
 
    for (i=0; i < numberPad.length; i++) {
               numberPad[i].addEventListener('click', function(e) {
-              squareClicked.innerHTML = e.target.innerHTML;
-              checkAnswersEasy(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
-    })
-   }
+                 squareClicked.innerHTML = e.target.innerHTML;
+                 checkAnswersEasy(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
+              })
+    }
 }
 
 
@@ -244,7 +244,6 @@ function checkAnswersEasy(value, index, active) {
           active.style.backgroundColor = "green";
           easyUserInput.push(value);
           console.log(easyUserInput);
-          active.classList.remove('active');
        } else {
           active.style.backgroundColor = "red";
           setTimeout(function () {
