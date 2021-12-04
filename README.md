@@ -25,3 +25,15 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
 ### Frequent Visitor Goals:
 - As a Frequent User, I should have the option to increase the difficulty of puzzles I complete.
 - As a Frequent User, I should be able to login to my Sudoku account to access high scores and challenge myself to beat these times.
+
+# Design
+
+## Colour Scheme
+
+![Colour Scheme]()
+
+- The sites primary colours are blue, white, and yellow. The image above displays the original colour scheme chosen for the website. These colours were chosen based on peace and tranquillity aiming to relax the user and prevent any strain on their eyes during the game.
+
+- Pastel shades were chosen to create a soft texture to the website; whilst ensuring text behind was readable.
+
+-The websites main text was written against a white background ensuring that the text was clear and stood out to the user. The colour palette was created using [coolors.co](https://coolors.co/).
