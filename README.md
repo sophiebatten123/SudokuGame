@@ -37,3 +37,9 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
 - Pastel shades were chosen to create a soft texture to the website; whilst ensuring text behind was readable.
 
 -The websites main text was written against a white background ensuring that the text was clear and stood out to the user. The colour palette was created using [coolors.co](https://coolors.co/).
+
+## Typography
+
+![Typography]()
+
+- ‘Montserrat’ as the main font used on the website with ‘San Serif’ as a fallback font. This font was chosen based upon the curvature of the letters, creating a soft appearance against a harsh white background.
