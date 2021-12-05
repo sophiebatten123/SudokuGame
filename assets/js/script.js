@@ -213,9 +213,7 @@ function runEasyGame(medium, hard, counter) {
     timer = setInterval(function(){
         startTimer();
     }, 1000);
-
-    medium.disabled = true;   
-    hard.disabled = true;  
+ 
     let number = document.getElementsByClassName('active');
 
     for (i=0; i < easyGame.length; i++) {
@@ -291,62 +289,73 @@ function runMediumGame(easy, hard, counter) {
     timer = setInterval(function(){
         startTimer();
     }, 1000);
+ 
+    let number = document.getElementsByClassName('active');
 
-    easy.disabled = true;   
-    hard.disabled = true;
-    let number = document.getElementsByClassName('number');
-    
     for (i=0; i < mediumGame.length; i++) {
-           for (i=0; i < number.length; i++) {
-             if (mediumGame[i] === '') {
+        for (i=0; i < number.length; i++) {
+            if (mediumGame[i] === '' && number[i].innerHTML === '') {
                 number[i].classList.add("userInput");
                 number[i].dataset.index = ++counter;
+                number[i].style.backgroundColor = '#D2EEEF';
 
                 number[i].addEventListener('click', function(event) {
-                console.log("Im inside the square");
-                squareClicked = event.target;
-                squareClicked.style.backgroundColor = "#FFFECE";
+                    console.log("Im inside the square");
+                    squareClicked = event.target;
+
+                    for (i=0; i < number.length; i++) {
+                        if (number[i].style.backgroundColor = '#84CFD7' && number[i].innerHTML === '') {
+                            number[i].style.backgroundColor = '#D2EEEF';
+                        }
+                    }
+                       if (squareClicked.innerHTML === '') {
+                           squareClicked.style.backgroundColor = '#84CFD7';
+                       } else {
+                          console.log("This square is already correct")
+                       }
                 })
-                number[i].style.backgroundColor = '#bbb';
-                } else {
+            } else {
                 number[i].innerHTML = mediumGame[i];
             }   
         }
     }
-
+        
    let numberPad = document.getElementsByClassName("number-pad-item");
 
-   for (j=0; j < numberPad.length; j++) {
-    numberPad[j].addEventListener('click', function(e) {
-    squareClicked.innerHTML = e.target.innerHTML;
-    console.log(e.target.innerHTML);
-    console.log(squareClicked.dataset.index)
-    console.log(squareClicked);
-    checkAnswersMedium(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
-    })
-   }
+   for (i=0; i < numberPad.length; i++) {
+              numberPad[i].addEventListener('click', function(e) {
+                  if (squareClicked.innerHTML === '') {
+                        squareClicked.innerHTML = e.target.innerHTML;
+                        checkAnswersMedium(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
+                  } else {
+                      console.log("This square already has a number");
+                  }
+                })
+    }
 }
 
 
 function checkAnswersMedium(value, index, active) {
     
-       if (value === mediumGameSolution[index]) {
-          active.style.backgroundColor = "green";
-          mediumUserInput.push(value);
-          console.log(mediumUserInput);
-       } else {
-          active.style.backgroundColor = "red";
+    if (value == mediumGameSolution[index]) {
+        active.style.backgroundColor = "#ACD8AA";
+        mediumUserInput.push(value);
+        console.log(easyUserInput);
+        correctSound.play();
+     } else {
+          active.style.backgroundColor = "#E27A78";
           setTimeout(function () {
-             active.style.backgroundColor = "#bbb";
-          }, 1000)
+          active.style.backgroundColor = "#D2EEEF";
+          }, 500)
           active.innerText = "";
-       }
+          incorrectSound.play();
+     }
 
-       if (mediumUserInput.length === mediumGameSolution.length) {
-        wellDone();
-       } else {
-       console.log("continue play");
-       }
+     if (mediumUserInput.length === mediumGameSolution.length) {
+          wellDone();
+     } else {
+         console.log("continue play");
+     }
 }
 
 //Runs the HARDGAME and Checks Answers
