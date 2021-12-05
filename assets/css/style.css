@@ -43,6 +43,13 @@ body{
     border-bottom: solid 2px #1B4353;
 }
 
+#select-difficulty {
+    background-color: #D2EEEF;
+    padding: 20px 0;
+    margin: auto;
+    width: 95%;
+}
+
 /** Icons */
 
 #icons {
@@ -126,6 +133,9 @@ body{
 
 #user-difficulty {
     display: inline-flex;
+    font-size: 25px;
+    padding-left: 15px;
+    font-weight: bold;
 }
 
 #main-game-buttons {
