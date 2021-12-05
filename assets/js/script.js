@@ -184,17 +184,24 @@ function viewHighScores() {
 
 // Run game will generate a board based upon the selection of difficulty
 function runGame() {
+    let time = document.getElementById("timer").innerHTML;
+    console.log(time);
 
-    let counter=-1;
+    if (time === "0:00") {
+        let counter=-1;
 
-    let userDifficulty = document.getElementById("user-difficulty");
+        let userDifficulty = document.getElementById("user-difficulty");
 
-    if (userDifficulty.innerHTML === "Easy") {
-        runEasyGame(medium, hard, counter);
-    } else if (userDifficulty.innerHTML === "Medium") {
-        runMediumGame(easy, hard, counter);
-    } else if (userDifficulty.innerHTML === "Hard") {
-        runHardGame(easy, medium, counter);
+        if (userDifficulty.innerHTML === "Easy") {
+            runEasyGame(medium, hard, counter);
+        } else if (userDifficulty.innerHTML === "Medium") {
+            runMediumGame(easy, hard, counter);
+        } else if (userDifficulty.innerHTML === "Hard") {
+            runHardGame(easy, medium, counter);
+        }
+
+    } else {
+        console.log("You are already playing the game!");
     }
 }
 
