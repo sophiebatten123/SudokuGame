@@ -221,13 +221,14 @@ function runEasyGame(medium, hard, counter) {
             if (easyGame[i] === '' && number[i].innerHTML === '') {
                 number[i].classList.add("userInput");
                 number[i].dataset.index = ++counter;
-                number[i].style.backgroundColor = '#bbb';
+                number[i].style.backgroundColor = '#D2EEEF';
+
                 number[i].addEventListener('click', function(event) {
-                       console.log("Im inside the square");
-                       squareClicked = event.target;
+                    console.log("Im inside the square");
+                    squareClicked = event.target;
+
                        if (squareClicked.innerHTML === '') {
-                           console.log(squareClicked.innerHTML);
-                           squareClicked.style.backgroundColor = '#FFFECE';
+                           squareClicked.style.backgroundColor = '#84CFD7';
                        } else {
                           console.log("This square is already correct")
                        }
@@ -262,7 +263,7 @@ function checkAnswersEasy(value, index, active) {
        } else {
             active.style.backgroundColor = "red";
             setTimeout(function () {
-            active.style.backgroundColor = "#bbb";
+            active.style.backgroundColor = "#D2EEEF";
             }, 1000)
             active.innerText = "";
        }
