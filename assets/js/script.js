@@ -227,6 +227,11 @@ function runEasyGame(medium, hard, counter) {
                     console.log("Im inside the square");
                     squareClicked = event.target;
 
+                    for (i=0; i < number.length; i++) {
+                        if (number[i].style.backgroundColor = '#84CFD7' && number[i].innerHTML === '') {
+                            number[i].style.backgroundColor = '#D2EEEF';
+                        }
+                    }
                        if (squareClicked.innerHTML === '') {
                            squareClicked.style.backgroundColor = '#84CFD7';
                        } else {
