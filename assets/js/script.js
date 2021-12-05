@@ -25,6 +25,7 @@ var arr;
 var minutes;
 var seconds;
 let squareClicked = "";
+let correctSound = new Audio('correct.mp3');
 
 //User login details
 var userDetails = [
@@ -262,14 +263,15 @@ function runEasyGame(medium, hard, counter) {
 function checkAnswersEasy(value, index, active) {
     
        if (value == easyGameSolution[index]) {
-          active.style.backgroundColor = "green";
+          active.style.backgroundColor = "#ACD8AA";
           easyUserInput.push(value);
           console.log(easyUserInput);
+          correctSound.play();
        } else {
-            active.style.backgroundColor = "red";
+            active.style.backgroundColor = "#E27A78";
             setTimeout(function () {
             active.style.backgroundColor = "#D2EEEF";
-            }, 1000)
+            }, 500)
             active.innerText = "";
        }
 
