@@ -36,7 +36,7 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
 
 - Pastel shades were chosen to create a soft texture to the website; whilst ensuring text behind was readable.
 
--The websites main text was written against a white background ensuring that the text was clear and stood out to the user. The colour palette was created using [coolors.co](https://coolors.co/).
+-The websites main text was written against a white background ensuring that the text was clear and stood out to the user. The colour palette was created using [coolors](https://coolors.co/).
 
 ## Typography
 
@@ -83,16 +83,50 @@ Some alterations were made from the original wireframe designs to improve User E
 
  # Manual Testing
 
- - Manual testing was completed throughout the entire project and the website was continually tested on different browsers and on different screen sizes. Dev tools was used to recognise and spot errors within the code allowing me to regularly use the ‘debugger’ tool to analyse logic functions. 
+ Manual testing was completed throughout the entire project and the website was continually tested on different browsers and on different screen sizes. Dev tools was used to recognise and spot errors within the code allowing me to regularly use the ‘debugger’ tool to analyse logic functions. 
 
- - Furthermore, I regularly generated lighthouse reports giving me an indication of how well the website was performing. 
+ Furthermore, I regularly generated lighthouse reports giving me an indication of how well the website was performing. Attached below is a screenshot of my lighthouse report at the deployment stage of my project:
+
+ ![Lighthouse-Report]()
 
  # Automatic Testing
 
- - Automatic testing of the HTML and CSS code was checked using W3C Validator ensuring that there were no errors or warnings within the code. When the website was ran through the validator no warnings or errors were present when the site was deployed.
+ Automatic testing of the HTML and CSS code was checked using W3C Validator ensuring that there were no errors or warnings within the code. When the website was ran through the validator no warnings or errors were present when the site was deployed.
 
- - Attached below is a screenshot of the HTML and CSS Validator showing no errors or warnings when the website was deployed. 
+Attached below is a screenshot of the HTML and CSS Validator showing no errors or warnings when the website was deployed. 
 
  ![HTML-Validator]()
  ![CSS-Validator]()
  ![JS-Validator]()
+
+ # WAVE Testing
+
+ WAVE was used to check the accessibility of ‘The Sudoku Game’ this was to ensure that the game was made accessible to users with disabilities. This tool highlighted errors and warnings that could prevent a disabled user using the site including: 
+
+ - Underlined heading was removed to improve accessibility on the website for impaired readers.
+
+Errors and warnings were removed before the website was deployed. 
+
+# Deployment
+
+The website was deployed through GitHub and accessible through the following steps:
+
+- Start within the GitHub repository and then navigate to the settings tab.
+- Select the pages tab on the left-hand side of the settings page.
+- Click on Master Branch and the page will automatically be opened with a detailed ribbon display containing the website link.
+
+The live link to the website can be found here:
+
+![Live-Link]()
+
+# Credits
+
+## Content
+
+- The Sudoku Game Board idea was inspired from a YouTube Tutorial and the structure of this used and edited for my site: [Sudoku-Game-Tutorial](https://www.youtube.com/watch?v=ea3UBpMHDoc).
+- The icons included throughout the website were taken from [Font-Awesome](https://fontawesome.com/).
+- The colour theme was chosen using [coolors](https://coolors.co/).
+- Help and support was given by the Code Institute Tutors on some of the logic functions within the website. 
+
+Thank you to the tutors of code institute for the help given throughout this project.
+
