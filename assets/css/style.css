@@ -43,13 +43,16 @@ body{
     border-bottom: solid 2px #1B4353;
 }
 
-#select-difficulty {
-    background-color: #D2EEEF;
+.select-difficulty {
+    background-color: #4E8098;
     padding: 20px 0;
     margin: auto;
     width: 95%;
 }
 
+#select-difficulty-small {
+    display: none;
+}
 /** Icons */
 
 #icons {
@@ -526,6 +529,9 @@ body{
 }
 
 @media screen and (max-width: 500px) {
+    #game-board {
+        height: 650px;
+    }
     .number-pad-item {
        margin: 1px;
     }
@@ -551,6 +557,18 @@ body{
     }
     #top-positioning {
         width: 360px;
+    }
+    #select-difficulty-large {
+        display: none;
+    }
+    #select-difficulty-small {
+        display: inline-block;
+    }
+    .select-difficulty {
+        font-size: 16px;
+        margin: 10px 0;
+        width: 100%;
+        padding: 5px 0;
     }
 }
 

@@ -346,7 +346,7 @@ function checkAnswersMedium(value, index, active) {
           active.style.backgroundColor = "#E27A78";
           setTimeout(function () {
           active.style.backgroundColor = "#D2EEEF";
-          }, 500)
+          }, 250)
           active.innerText = "";
           incorrectSound.play();
      }
@@ -422,7 +422,7 @@ function checkAnswersHard(value, index, active) {
           active.style.backgroundColor = "#E27A78";
           setTimeout(function () {
           active.style.backgroundColor = "#D2EEEF";
-          }, 500)
+          }, 250)
           active.innerText = "";
           incorrectSound.play();
      }
