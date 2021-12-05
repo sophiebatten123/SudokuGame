@@ -259,7 +259,9 @@ function checkAnswersEasy(value, index, active) {
           setTimeout(function () {
              active.style.backgroundColor = "#bbb";
           }, 1000)
-          active.innerText = "";
+          setInterval(function () {
+              active.innerText = "";
+          }, 1000)
        }
 
        if (easyUserInput.length === easyGameSolution.length) {
