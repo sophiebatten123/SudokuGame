@@ -212,17 +212,23 @@ function runEasyGame(medium, hard, counter) {
 
     for (i=0; i < easyGame.length; i++) {
         for (i=0; i < number.length; i++) {
-            if (easyGame[i] === '') {
+            if (easyGame[i] === '' && number[i].innerHTML === '') {
                 number[i].classList.add("userInput");
                 number[i].dataset.index = ++counter;
-                number[i].addEventListener('click', function(event) {
-                console.log("Im inside the square");
-                squareClicked = event.target;
-                squareClicked.style.backgroundColor = '#FFFECE';
-                })
                 number[i].style.backgroundColor = '#bbb';
+                number[i].addEventListener('click', function(event) {
+                       console.log("Im inside the square");
+                       squareClicked = event.target;
+                       if (squareClicked.innerHTML === '') {
+                           console.log(squareClicked.innerHTML);
+                           squareClicked.style.backgroundColor = '#FFFECE';
+                       } else {
+                          console.log("This square is already correct")
+                       }
+                })
             } else {
                 number[i].innerHTML = easyGame[i];
+                console.log("uhoh");
             }   
         }
     }
@@ -231,9 +237,13 @@ function runEasyGame(medium, hard, counter) {
 
    for (i=0; i < numberPad.length; i++) {
               numberPad[i].addEventListener('click', function(e) {
-                 squareClicked.innerHTML = e.target.innerHTML;
-                 checkAnswersEasy(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
-              })
+                  if (squareClicked.innerHTML === '') {
+                        squareClicked.innerHTML = e.target.innerHTML;
+                        checkAnswersEasy(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
+                  } else {
+                      console.log("This square already has a number");
+                  }
+        })
     }
 }
 
