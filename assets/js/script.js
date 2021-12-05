@@ -194,11 +194,11 @@ function runGame() {
         let userDifficulty = document.getElementById("user-difficulty");
 
         if (userDifficulty.innerHTML === "Easy") {
-            runEasyGame(medium, hard, counter);
+            runEasyGame(counter);
         } else if (userDifficulty.innerHTML === "Medium") {
-            runMediumGame(easy, hard, counter);
+            runMediumGame(counter);
         } else if (userDifficulty.innerHTML === "Hard") {
-            runHardGame(easy, medium, counter);
+            runHardGame(counter);
         }
 
     } else {
@@ -208,7 +208,7 @@ function runGame() {
 
 //Runs the EASYGAME and Checks Answers
 
-function runEasyGame(medium, hard, counter) {
+function runEasyGame(counter) {
 
     timer = setInterval(function(){
         startTimer();
@@ -284,7 +284,7 @@ function checkAnswersEasy(value, index, active) {
 
 //Runs the MEDIUMGAME and Checks Answers
 
-function runMediumGame(easy, hard, counter) {
+function runMediumGame(counter) {
 
     timer = setInterval(function(){
         startTimer();
@@ -360,70 +360,79 @@ function checkAnswersMedium(value, index, active) {
 
 //Runs the HARDGAME and Checks Answers
 
-function runHardGame(easy, medium, counter) {
+function runHardGame(counter) {
 
     timer = setInterval(function(){
         startTimer();
     }, 1000);
 
-    easy.disabled = true;   
-    medium.disabled = true;
+    let number = document.getElementsByClassName('active');
 
-    let number = document.getElementsByClassName('number');
-    
     for (i=0; i < hardGame.length; i++) {
-           for (i=0; i < number.length; i++) {
-             if (hardGame[i] === '') {
+        for (i=0; i < number.length; i++) {
+            if (hardGame[i] === '' && number[i].innerHTML === '') {
                 number[i].classList.add("userInput");
                 number[i].dataset.index = ++counter;
+                number[i].style.backgroundColor = '#D2EEEF';
 
                 number[i].addEventListener('click', function(event) {
-                console.log("Im inside the square");
-                squareClicked = event.target;
-                squareClicked.style.backgroundColor = "#FFFECE";
+                    console.log("Im inside the square");
+                    squareClicked = event.target;
+
+                    for (i=0; i < number.length; i++) {
+                        if (number[i].style.backgroundColor = '#84CFD7' && number[i].innerHTML === '') {
+                            number[i].style.backgroundColor = '#D2EEEF';
+                        }
+                    }
+                       if (squareClicked.innerHTML === '') {
+                           squareClicked.style.backgroundColor = '#84CFD7';
+                       } else {
+                          console.log("This square is already correct")
+                       }
                 })
-                number[i].style.backgroundColor = '#bbb';
-                } else {
+            } else {
                 number[i].innerHTML = hardGame[i];
             }   
         }
     }
-    
+        
    let numberPad = document.getElementsByClassName("number-pad-item");
 
-   for (j=0; j < numberPad.length; j++) {
-    numberPad[j].addEventListener('click', function(e) {
-    squareClicked.innerHTML = e.target.innerHTML;
-    console.log(e.target.innerHTML);
-    console.log(squareClicked.dataset.index)
-    console.log(squareClicked);
-    checkAnswersHard(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
-    })
-   }
+   for (i=0; i < numberPad.length; i++) {
+              numberPad[i].addEventListener('click', function(e) {
+                  if (squareClicked.innerHTML === '') {
+                        squareClicked.innerHTML = e.target.innerHTML;
+                        checkAnswersHard(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
+                  } else {
+                      console.log("This square already has a number");
+                  }
+                })
+    }
 }
     
 
 function checkAnswersHard(value, index, active) {
 
-       if (value === hardGameSolution[index]) {
-          active.contentEditable = false;
-          active.style.backgroundColor = "green";
-          hardUserInput.push(value);
-          console.log(hardUserInput);
-       } else {
-          active.style.backgroundColor = "red";
+    if (value == hardGameSolution[index]) {
+        active.style.backgroundColor = "#ACD8AA";
+        hardUserInput.push(value);
+        console.log(hardUserInput);
+        correctSound.play();
+     } else {
+          active.style.backgroundColor = "#E27A78";
           setTimeout(function () {
-             active.style.backgroundColor = "#bbb";
-          }, 1000)
+          active.style.backgroundColor = "#D2EEEF";
+          }, 500)
           active.innerText = "";
-       }
-        
-       if (hardUserInput.length === hardGameSolution.length) {
-        wellDone();
-       } else {
-       console.log("continue play");
-       }
-    }
+          incorrectSound.play();
+     }
+
+     if (hardUserInput.length === hardGameSolution.length) {
+          wellDone();
+     } else {
+         console.log("continue play");
+     }
+}
 
 // Reset game will delete all previously inputtted numbers allowing the user to start again
 function resetGame() {
