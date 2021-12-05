@@ -80,3 +80,19 @@ Some alterations were made from the original wireframe designs to improve User E
 - In the future ‘The Sudoku Game” would benefit from a wider range of puzzles to solve as opposed to just giving three options to the user, easy, medium, and hard. This will increase the chances of users revisiting the site and prevent the user from memorizing the numbers.
 
  - In the future the website would benefit from an ‘online leader board” allowing users to compete against friends in an attempt to sole the puzzles in the quickest time.
+
+ # Manual Testing
+
+ - Manual testing was completed throughout the entire project and the website was continually tested on different browsers and on different screen sizes. Dev tools was used to recognise and spot errors within the code allowing me to regularly use the ‘debugger’ tool to analyse logic functions. 
+
+ - Furthermore, I regularly generated lighthouse reports giving me an indication of how well the website was performing. 
+
+ # Automatic Testing
+
+ - Automatic testing of the HTML and CSS code was checked using W3C Validator ensuring that there were no errors or warnings within the code. When the website was ran through the validator no warnings or errors were present when the site was deployed.
+
+ - Attached below is a screenshot of the HTML and CSS Validator showing no errors or warnings when the website was deployed. 
+
+ ![HTML-Validator]()
+ ![CSS-Validator]()
+ ![JS-Validator]()

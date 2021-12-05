@@ -185,7 +185,6 @@ function viewHighScores() {
 // Run game will generate a board based upon the selection of difficulty
 function runGame() {
     let time = document.getElementById("timer").innerHTML;
-    console.log(time);
 
     if (time === "0:00") {
         let counter=-1;
@@ -235,7 +234,6 @@ function runEasyGame(medium, hard, counter) {
                 })
             } else {
                 number[i].innerHTML = easyGame[i];
-                console.log("uhoh");
             }   
         }
     }
@@ -250,7 +248,7 @@ function runEasyGame(medium, hard, counter) {
                   } else {
                       console.log("This square already has a number");
                   }
-        })
+                })
     }
 }
 
@@ -262,13 +260,11 @@ function checkAnswersEasy(value, index, active) {
           easyUserInput.push(value);
           console.log(easyUserInput);
        } else {
-          active.style.backgroundColor = "red";
-          setTimeout(function () {
-             active.style.backgroundColor = "#bbb";
-          }, 1000)
-          setInterval(function () {
-              active.innerText = "";
-          }, 1000)
+            active.style.backgroundColor = "red";
+            setTimeout(function () {
+            active.style.backgroundColor = "#bbb";
+            }, 1000)
+            active.innerText = "";
        }
 
        if (easyUserInput.length === easyGameSolution.length) {
