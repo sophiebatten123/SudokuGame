@@ -26,6 +26,7 @@ var minutes;
 var seconds;
 let squareClicked = "";
 let correctSound = new Audio('correct.mp3');
+let incorrectSound = new Audio('wrong.mp3');
 
 //User login details
 var userDetails = [
@@ -273,6 +274,7 @@ function checkAnswersEasy(value, index, active) {
             active.style.backgroundColor = "#D2EEEF";
             }, 500)
             active.innerText = "";
+            incorrectSound.play();
        }
 
        if (easyUserInput.length === easyGameSolution.length) {
