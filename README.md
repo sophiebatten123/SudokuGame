@@ -1,6 +1,6 @@
-[Live Link]()
+[Live Link](https://sophiebatten123.github.io/SudokuGame/)
 
-[GitHub Repository]()
+[GitHub Repository](https://github.com/sophiebatten123/SudokuGame)
 
 # Overview
 
@@ -101,7 +101,7 @@ A screenshot of the website from a mobile device can be seen above. Content was 
 
 - In the future the website would benefit from a "Lives Lost" section to avoid the user guessing answers.
 
- - In the future the website would benefit from an "online leader board” allowing users to compete against friends in an attempt to sole the puzzles in the quickest time.
+ - In the future the website would benefit from an "online leader board” allowing users to compete against friends in an attempt to solve the puzzles in the quickest time.
 
  # Manual Testing
 
@@ -117,8 +117,8 @@ A screenshot of the website from a mobile device can be seen above. Content was 
 
 Attached below is a screenshot of the HTML and CSS Validator showing no errors or warnings when the website was deployed. 
 
- ![HTML-Validator]()
- ![CSS-Validator]()
+ ![HTML-Validator](assets/images/html-approved.PNG)
+ ![CSS-Validator](assets/images/css-approved.PNG)
  ![JS-Validator]()
 
  # WAVE Testing
@@ -139,7 +139,7 @@ The website was deployed through GitHub and accessible through the following ste
 
 The live link to the website can be found here:
 
-![Live-Link]()
+[Live-Link](https://sophiebatten123.github.io/SudokuGame/)
 
 # Credits
 
