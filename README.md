@@ -30,7 +30,7 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
 
 ## Colour Scheme
 
-![Colour Scheme](assets/images/color-pallette.png)
+![Colour Scheme](assets/images/colour.PNG)
 
 - The sites primary colours are blues and whites. The image above displays the original colour scheme chosen for the website. These colours were chosen based on peace and tranquillity aiming to relax the user and prevent any strain on their eyes during the game.
 
