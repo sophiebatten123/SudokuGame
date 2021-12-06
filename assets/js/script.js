@@ -20,10 +20,6 @@ let hardUserInput = [];
 // Timer Elements
 let timer;
 let lastGameTime = "No games played yet";
-var time;
-var arr;
-var minutes;
-var seconds;
 let squareClicked = "";
 let correctSound = new Audio('correct.mp3');
 let incorrectSound = new Audio('wrong.mp3');
@@ -38,7 +34,7 @@ var userDetails = [
         username: "tom",
         password: "sophie"
     },
-]
+];
 
 document.addEventListener("DOMContentLoaded", function() {
     let userLogin = document.getElementById("login");
@@ -56,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
     difficultyDropdown.addEventListener("click", function() {
         let dropdownOptions = document.getElementById("difficulty-dropdown");
         dropdownOptions.classList.toggle("show");
-    })
+    });
 
     window.onclick = function(event) {
         if (!event.target.matches('#dropdown-button')) {
@@ -66,62 +62,62 @@ document.addEventListener("DOMContentLoaded", function() {
               openDropdown.classList.remove('show');
             }
         }
-    }
+    };
 
     easy.addEventListener("click", function (){
         userDifficulty.innerHTML = "Easy";
-    })
+    });
 
     medium.addEventListener("click", function (){
         userDifficulty.innerHTML = "Medium";
-    })
+    });
 
     hard.addEventListener("click", function (){
         userDifficulty.innerHTML = "Hard";
-    })
+    });
 
     userLogin.addEventListener("click", function() {
         loginUser();
-    })
+    });
 
     loginButton.addEventListener("click", function() {
         accessLoginInformation();
-    })
+    });
 
     instructionsManual.addEventListener("click", function() {
         displayInstructions();
-    })
+    });
 
     highScores.addEventListener("click", function() {
         viewHighScores();
-    })
+    });
     
     playButton.addEventListener("click", function() {
         runGame();
-    })
+    });
 
     resetButton.addEventListener("click", function() {
         resetGame();
-    })
-})
+    });
+});
 
 // User login section of the website allowing credentials to be entered by the user
 function loginUser() {
     let userLoginPopUp = document.getElementById("loginpopup");
     let close = document.getElementById("close-login");
-    let register = document.getElementById("new-account")
+    let register = document.getElementById("new-account");
 
     userLoginPopUp.style.zIndex = 1;
     userLoginPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function() {
         userLoginPopUp.style.zIndex = -1;
-    })
+    });
 
     register.addEventListener("click", function() {
         userLoginPopUp.style.zIndex = -1;
         registerDetails();
-    })
+    });
 }
 
 function accessLoginInformation() {
@@ -133,7 +129,7 @@ function accessLoginInformation() {
         if (username == userDetails[i].username && password == userDetails[i].password) {
             console.log(username + "is logged in");
             displayUserDetails(username);
-            return
+            return;
         }
     }
     console.log("incorrect username or password");
@@ -146,7 +142,7 @@ function displayUserDetails(username) {
 }
 
 function registerDetails() {
-    let registrationPopUp = document.getElementById("registerpopup")
+    let registrationPopUp = document.getElementById("registerpopup");
     let close = document.getElementById("close-registration");
 
     registrationPopUp.style.zIndex = 1;
@@ -154,7 +150,7 @@ function registerDetails() {
 
     close.addEventListener("click", function() {
         registrationPopUp.style.zIndex = -1;
-    })
+    });
 
 }
 
@@ -168,7 +164,7 @@ function displayInstructions() {
 
     close.addEventListener("click", function(){
         instructionsPopUp.style.zIndex = -1;
-    })
+    });
 }
 
 // Highscores section will allow the user to view previously obtained scores
@@ -181,7 +177,7 @@ function viewHighScores() {
 
     close.addEventListener("click", function(){
         highscoresPopUp.style.zIndex = -1;
-    })
+    });
 }
 
 // Run game will generate a board based upon the selection of difficulty
@@ -235,9 +231,9 @@ function runEasyGame(counter) {
                        if (squareClicked.innerHTML === '') {
                            squareClicked.style.backgroundColor = '#84CFD7';
                        } else {
-                          console.log("This square is already correct")
+                          console.log("This square is already correct");
                        }
-                })
+                });
             } else {
                 number[i].innerHTML = easyGame[i];
             }   
@@ -254,7 +250,7 @@ function runEasyGame(counter) {
                   } else {
                       console.log("This square already has a number");
                   }
-                })
+                });
     }
 }
 
@@ -270,7 +266,7 @@ function checkAnswersEasy(value, index, active) {
             active.style.backgroundColor = "#E27A78";
             setTimeout(function () {
             active.style.backgroundColor = "#D2EEEF";
-            }, 250)
+            }, 250);
             active.innerText = "";
             incorrectSound.play();
        }
@@ -311,9 +307,9 @@ function runMediumGame(counter) {
                        if (squareClicked.innerHTML === '') {
                            squareClicked.style.backgroundColor = '#84CFD7';
                        } else {
-                          console.log("This square is already correct")
+                          console.log("This square is already correct");
                        }
-                })
+                });
             } else {
                 number[i].innerHTML = mediumGame[i];
             }   
@@ -330,7 +326,7 @@ function runMediumGame(counter) {
                   } else {
                       console.log("This square already has a number");
                   }
-                })
+                });
     }
 }
 
@@ -387,9 +383,9 @@ function runHardGame(counter) {
                        if (squareClicked.innerHTML === '') {
                            squareClicked.style.backgroundColor = '#84CFD7';
                        } else {
-                          console.log("This square is already correct")
+                          console.log("This square is already correct");
                        }
-                })
+                });
             } else {
                 number[i].innerHTML = hardGame[i];
             }   
@@ -406,7 +402,7 @@ function runHardGame(counter) {
                   } else {
                       console.log("This square already has a number");
                   }
-                })
+                });
     }
 }
     
@@ -422,7 +418,7 @@ function checkAnswersHard(value, index, active) {
           active.style.backgroundColor = "#E27A78";
           setTimeout(function () {
           active.style.backgroundColor = "#D2EEEF";
-          }, 250)
+          }, 250);
           active.innerText = "";
           incorrectSound.play();
      }
@@ -436,7 +432,7 @@ function checkAnswersHard(value, index, active) {
 
 // Reset game will delete all previously inputtted numbers allowing the user to start again
 function resetGame() {
-    window.location.reload()
+    window.location.reload();
 }
 
 function startTimer() {
@@ -479,11 +475,11 @@ function wellDone() {
 
     close.addEventListener("click", function(){
         congratulationsPopUp.style.zIndex = -1;
-    })
+    });
 
     console.log("Well done you have won! You completed the sudoku in " + lastGameTime);
 
     replayGame.addEventListener("click", function () {
         resetGame();
-    })
+    });
 }
