@@ -464,6 +464,8 @@ function startTimer() {
     document.getElementById("timer").innerHTML = minutes + ":" + seconds;
 }
 
+// Well done message will appear when the user have completed all empty squares correctly
+
 function wellDone() {
     let replayGame = document.getElementById("replay");
     var time = document.getElementById("timer").innerHTML;
