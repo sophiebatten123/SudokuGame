@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
     
     playButton.addEventListener("click", function() {
-        runGame();
+        selectDifficulty();
     });
 
     resetButton.addEventListener("click", function() {
@@ -180,8 +180,8 @@ function viewHighScores() {
     });
 }
 
-// Run game will generate a board based upon the selection of difficulty
-function runGame() {
+//Board will generate based upon the selection of difficulty
+function selectDifficulty() {
     let time = document.getElementById("timer").innerHTML;
 
     if (time === "0:00") {
@@ -342,7 +342,7 @@ function checkAnswersMedium(value, index, active) {
           active.style.backgroundColor = "#E27A78";
           setTimeout(function () {
           active.style.backgroundColor = "#D2EEEF";
-          }, 250)
+          }, 250);
           active.innerText = "";
           incorrectSound.play();
      }
