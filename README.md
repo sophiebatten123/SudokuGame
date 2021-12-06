@@ -32,17 +32,18 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
 
 ![Colour Scheme](assets/images/colour.PNG)
 
-- The sites primary colours are blues and whites. The image above displays the original colour scheme chosen for the website. These colours were chosen based on peace and tranquillity aiming to relax the user and prevent any strain on their eyes during the game.
+The sites primary colours are blues and whites. The image above displays the original colour scheme chosen for the website. The colour palette was created using [coolors](https://coolors.co/). 
 
-- Pastel shades were chosen to create a soft texture to the website; whilst ensuring text behind was readable.
+These colours were chosen based on peace and tranquillity aiming to relax the user and prevent strain on their eyes during the game. Pastel shades were chosen to create a soft texture to the website; whilst ensuring text behind was readable.
 
--The websites main text was written against a white background ensuring that the text was clear and stood out to the user. The colour palette was created using [coolors](https://coolors.co/).
 
 ## Typography
 
 ![Typography]()
 
-- ‘Montserrat’ was the main font used on the website with ‘San Serif’ as a fallback font. This font was chosen based upon the curvature of the letters, creating a soft appearance against a harsh white background.
+The websites main text was written against a white background ensuring that the text was clear and stood out to the user.
+
+‘Montserrat’ was the main font used on the website with ‘San Serif’ as a fallback font. This font was chosen based upon the curvature of the letters, creating a soft appearance against a harsh white background.
 
 ## Imagery
 
