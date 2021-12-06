@@ -224,7 +224,7 @@ function runEasyGame(counter) {
                     squareClicked = event.target;
 
                     for (i=0; i < number.length; i++) {
-                        if (number[i].style.backgroundColor = '#84CFD7' && number[i].innerHTML === '') {
+                        if (number[i].style.backgroundColor === '#84CFD7' && number[i].innerHTML === '') {
                             number[i].style.backgroundColor = '#D2EEEF';
                         }
                     }
@@ -300,7 +300,7 @@ function runMediumGame(counter) {
                     squareClicked = event.target;
 
                     for (i=0; i < number.length; i++) {
-                        if (number[i].style.backgroundColor = '#84CFD7' && number[i].innerHTML === '') {
+                        if (number[i].style.backgroundColor === '#84CFD7' && number[i].innerHTML === '') {
                             number[i].style.backgroundColor = '#D2EEEF';
                         }
                     }
@@ -376,7 +376,7 @@ function runHardGame(counter) {
                     squareClicked = event.target;
 
                     for (i=0; i < number.length; i++) {
-                        if (number[i].style.backgroundColor = '#84CFD7' && number[i].innerHTML === '') {
+                        if (number[i].style.backgroundColor === '#84CFD7' && number[i].innerHTML === '') {
                             number[i].style.backgroundColor = '#D2EEEF';
                         }
                     }
