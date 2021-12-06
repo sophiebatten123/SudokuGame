@@ -65,11 +65,11 @@ The links to these can be found below for both desktop and mobile devices:
 
 ## Mobile Wireframe
 
-[Sudoku-Main-Page-Mobile]()
+[Sudoku-Main-Page-Mobile](assets/images/mobile.PNG)
 
 ## Logic Function Wireframes
 
-[Sudoku-Main-Page-Functions]()
+[Sudoku-Main-Page-Functions](assets/images/functions.PNG)
 
 Some alterations were made from the original wireframe designs to improve User Experience (UX) including: 
 - The difficulty selection was changed into a drop-down menu due to the site containing too much text and looking overcrowded. It was imperative that the site remaining simplistic and therefore this change was important.
