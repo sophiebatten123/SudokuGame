@@ -39,7 +39,7 @@ These colours were chosen based on peace and tranquillity aiming to relax the us
 
 ## Typography
 
-![Typography]()
+![Typography](assets/images/title.PNG)
 
 The websites main text was written against a white background ensuring that the text was clear and stood out to the user.
 
@@ -47,17 +47,21 @@ The websites main text was written against a white background ensuring that the 
 
 ## Imagery
 
-![Imagery]()
+![Imagery](assets/images/icon.PNG)
 
-- Icons were chosen to accompany sections of the website. These icons were used to break up a text heavy page and to improve the accessibility of the site. Furthermore, these contributed towards the soft texture of the site, making the users experience more relaxing.
+Icons were chosen to accompany sections of the website. These icons were used to break up a text heavy page and to improve the accessibility of the site. 
+
+Furthermore, these contributed towards the soft texture of the site, making the users experience more relaxing.
 
 # Wireframes
 
-- To ensure that I was being efficient in my coding I created wireframes before starting, this gave me an outline of what the website should look like and how I should incorporate logic functions into JavaScript. The links to these can be found below for both desktop and mobile devices:
+-To ensure that I was being efficient in my coding I created wireframes before starting, this gave me an outline of what the website should look like and how I should incorporate logic functions into JavaScript. 
+
+The links to these can be found below for both desktop and mobile devices:
 
 ## Desktop Wireframe
 
-[Sudoku-Main-Page-Desktop]()
+[Sudoku-Main-Page-Desktop](assets/images/desktop.PNG)
 
 ## Mobile Wireframe
 
