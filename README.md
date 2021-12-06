@@ -109,7 +109,7 @@ A screenshot of the website from a mobile device can be seen above. Content was 
 
  Furthermore, I regularly generated lighthouse reports giving me an indication of how well the website was performing. Attached below is a screenshot of my lighthouse report at the deployment stage of my project:
 
- ![Lighthouse-Report]()
+ ![Lighthouse-Report](assets/images/lighthouse.PNG)
 
  # Automatic Testing
 
