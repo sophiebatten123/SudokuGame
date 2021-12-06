@@ -69,6 +69,7 @@ body{
 
 #login i {
     font-size: 30px;
+    color: #12122B;
 }
 
 #login i:hover {
@@ -78,6 +79,7 @@ body{
 
 #personal-best i {
     font-size: 30px;
+    color: #12122B;
 }
 
 #personal-best i:hover {
@@ -87,6 +89,7 @@ body{
 
 #instructions i {
     font-size: 30px;
+    color: #12122B;
 }
 
 #instructions i:hover {
@@ -102,7 +105,7 @@ body{
     justify-content: center;
     font-size: 15pt;
     height: 50px;
-    border: solid 2px black;
+    border: solid 2px #12122B;
 }
 
 #difficulty-buttons-dropdown{
@@ -120,7 +123,7 @@ body{
 }
 
 .dropdown-content a {
-    color: black;
+    color: #12122B;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -153,7 +156,7 @@ body{
 .game-button {
     justify-content: center;
     font-size: 15pt;
-    border: 2px solid black;
+    border: 2px solid #12122B;
     padding: 10px;
     height: 50px;
     margin: 0 1%;
@@ -172,7 +175,7 @@ body{
 }
 
 #board {
-    border: 4px solid black;
+    border: 4px solid #12122B;
     height: 720px;
     width: 720px;
     margin: auto;
@@ -180,7 +183,7 @@ body{
 
  .number {
     background-color: white;
-    border: 1px solid black;
+    border: 1px solid #12122B;
     width: 80px;
     height: 80px;
     text-align: center;
@@ -192,11 +195,11 @@ body{
 }
 
 .right {
-    border-right: 4px solid black;
+    border-right: 4px solid #12122B;
 }
 
 .bottom {
-    border-bottom: 4px solid black;
+    border-bottom: 4px solid #12122B;
 }
 
 .row {
@@ -220,7 +223,7 @@ body{
     height: 60px;
     background-color: #F0F9FA;
     margin: 10px;
-    border: 2px solid black;
+    border: 2px solid #12122B;
     padding: 10px;
     text-align: center;
     border-radius: 5px;
