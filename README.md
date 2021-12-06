@@ -75,6 +75,18 @@ Some alterations were made from the original wireframe designs to improve User E
 - The difficulty selection was changed into a drop-down menu due to the site containing too much text and looking overcrowded. It was imperative that the site remaining simplistic and therefore this change was important.
 - An on-screen keypad was created to improve User Experience on a mobile device. After user testing it was apparent that using a mobile keypad to play the game was exhausting and therefore by creating an on-screen keypad it made the game easier to navigate.
 
+# Main Game Page
+
+![Game-Page-Desktop](assets/images/game-desktop.PNG)
+
+Above is a screenshot of the deployed website in desktop view. It was imperative throughout the design process that the game board occupied over half of the screen area; ensuring that this was the main focus to the user. 
+
+The keypad was designed to ensure buttons could easily be accessed and that accidental clicks would be kept to a minimum during the game
+
+![Game-Page-Desktop](assets/images/game-mobile.PNG)
+
+A screenshot of the website from a mobile device can be seen above. Content was centered to ensure that the user could see the game board clearly and the keypad was aligned for ease of clicking.
+
 # Logic Functions
 
 - Before starting the JavaScript code within the site, I found it useful to plan the functions needed for the site to work. By doing this I was able to ensure efficiency within the code and structure my work better for deployment. Upon reflection, I feel that some of the code could have been collated; reducing the amount of work needed for each difficulty section of the site and avoiding copying of code.
