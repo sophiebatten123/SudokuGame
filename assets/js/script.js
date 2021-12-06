@@ -1,18 +1,17 @@
 //Wait for the DOM to finish loading before running the game
 //Get the button elements and add event listeners to them
 
-// Game board number arrays
+// Generates the game board numbers and empty squares
 let easyGame = ['','','4','','5','','','','','9','','','7','3','4','6','','','','','3','','2','1','','4','9','','3','5','','9','','4','8','','','9','','','','','','3','','','7','6','','1','8','9','2','','3','1','','9','7','','2','','','','','9','1','8','2','','','3','','','','','6','','1','',''];
 let mediumGame = ['6','5','9','','1','','2','8','','1','','','','5','','','3','','2','','','8','','','','1','','','','','1','3','5','','7','','8','','','9','','','','','2','','','3','','7','8','6','4','','3','','2','','','9','','','4','','','','','','1','8','','','','','8','7','6','','','',''];
 let hardGame = ['','','','','','','','','2','','','','','','','9','4','','','','3','','','','','','5','','9','2','3','','5','','7','4','8','4','','','','','','','','','6','7','','9','8','','','','','','','7','','6','','','','','','','9','','','','2','','4','','8','5','','','3','6',''];
 
-// Game board number solutions
+// Allows the users input the be checked against the answer arrays below
 let easyGameSolution = ['2','6','8','9','3','1','7','8','1','5','2','7','5','6','8','1','2','7','6','8','2','5','4','6','7','1','4','3','5','8','5','6','4','6','4','5','7','5','2','7','4','3','9','8'];
 let mediumGameSolution = ['3','4','7','8','7','6','2','4','9','3','4','9','7','5','6','4','2','6','9','8','7','1','4','6','3','5','5','9','2','1','1','5','8','7','6','7','6','5','4','2','9','3','9','4','3','1','2','5'];
 let hardGameSolution = ['6','8','4','1','5','9','7','3','7','5','1','8','3','2','6','9','2','6','7','4','1','8','1','6','8','5','2','1','7','6','9','3','3','4','2','5','1','2','3','9','4','5','1','8','5','1','6','8','3','4','7','7','2','1','9'];
 
-// Empty Answers Array
-
+// Empty answer arrays to hold the users answers allowing for array lengths to be compared upon completion
 let easyUserInput = [];
 let mediumUserInput = [];
 let hardUserInput = [];
@@ -20,7 +19,11 @@ let hardUserInput = [];
 // Timer Elements
 let timer;
 let lastGameTime = "No games played yet";
+
+// Game Board Elements
 let squareClicked = "";
+
+// MP3 Elements to create sound on correct and incorrect answers
 let correctSound = new Audio('correct.mp3');
 let incorrectSound = new Audio('wrong.mp3');
 
@@ -59,49 +62,49 @@ document.addEventListener("DOMContentLoaded", function() {
           var dropdowns = document.getElementById("difficulty-dropdown");
           var openDropdown = dropdowns;
             if (dropdowns.classList.contains('show')) {
-              openDropdown.classList.remove('show');
+               openDropdown.classList.remove('show');
             }
         }
     };
 
     easy.addEventListener("click", function (){
-        userDifficulty.innerHTML = "Easy";
+       userDifficulty.innerHTML = "Easy";
     });
 
     medium.addEventListener("click", function (){
-        userDifficulty.innerHTML = "Medium";
+       userDifficulty.innerHTML = "Medium";
     });
 
     hard.addEventListener("click", function (){
-        userDifficulty.innerHTML = "Hard";
+       userDifficulty.innerHTML = "Hard";
     });
 
     userLogin.addEventListener("click", function() {
-        loginUser();
+       loginUser();
     });
 
     loginButton.addEventListener("click", function() {
-        accessLoginInformation();
+       accessLoginInformation();
     });
 
     instructionsManual.addEventListener("click", function() {
-        displayInstructions();
+       displayInstructions();
     });
 
     highScores.addEventListener("click", function() {
-        viewHighScores();
+       viewHighScores();
     });
     
     playButton.addEventListener("click", function() {
-        selectDifficulty();
+       selectDifficulty();
     });
 
     resetButton.addEventListener("click", function() {
-        resetGame();
+       resetGame();
     });
 });
 
-// User login section of the website allowing credentials to be entered by the user
+// User login section of the website allowing credentials to be entered by the user and for the user to sign up to the Sudoku - Needs backend development to be fully functional
 function loginUser() {
     let userLoginPopUp = document.getElementById("loginpopup");
     let close = document.getElementById("close-login");
@@ -111,12 +114,12 @@ function loginUser() {
     userLoginPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function() {
-        userLoginPopUp.style.zIndex = -1;
+       userLoginPopUp.style.zIndex = -1;
     });
 
     register.addEventListener("click", function() {
-        userLoginPopUp.style.zIndex = -1;
-        registerDetails();
+       userLoginPopUp.style.zIndex = -1;
+       registerDetails();
     });
 }
 
@@ -126,12 +129,13 @@ function accessLoginInformation() {
     let incorrectUser = document.getElementById("incorrect-user");
 
     for (i=0; i < userDetails.length; i++) {
-        if (username == userDetails[i].username && password == userDetails[i].password) {
-            console.log(username + "is logged in");
-            displayUserDetails(username);
-            return;
+       if (username == userDetails[i].username && password == userDetails[i].password) {
+           console.log(username + "is logged in");
+           displayUserDetails(username);
+           return;
         }
     }
+
     console.log("incorrect username or password");
     incorrectUser.style.zIndex = 1;
 }
@@ -149,12 +153,12 @@ function registerDetails() {
     registrationPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function() {
-        registrationPopUp.style.zIndex = -1;
+       registrationPopUp.style.zIndex = -1;
     });
 
 }
 
-// Instructions section will display instructions to the user upon click
+// Instructions section will display instructions to the user upon click as a pop up element
 function displayInstructions() {
     let instructionsPopUp = document.getElementById("instructionspopup");
     let close = document.getElementById("close-instructions");
@@ -163,11 +167,11 @@ function displayInstructions() {
     instructionsPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function(){
-        instructionsPopUp.style.zIndex = -1;
+       instructionsPopUp.style.zIndex = -1;
     });
 }
 
-// Highscores section will allow the user to view previously obtained scores
+// Highscores section will allow the user to view previously obtained scores - Needs backend development to be fully functional
 function viewHighScores() {
     let highscoresPopUp = document.getElementById("highscorespopup");
     let close = document.getElementById("close-highscores");
@@ -176,7 +180,7 @@ function viewHighScores() {
     highscoresPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function(){
-        highscoresPopUp.style.zIndex = -1;
+       highscoresPopUp.style.zIndex = -1;
     });
 }
 
@@ -186,7 +190,6 @@ function selectDifficulty() {
 
     if (time === "0:00") {
         let counter=-1;
-
         let userDifficulty = document.getElementById("user-difficulty");
 
         if (userDifficulty.innerHTML === "Easy") {
