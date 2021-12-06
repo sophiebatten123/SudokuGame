@@ -53,54 +53,54 @@ document.addEventListener("DOMContentLoaded", function() {
     let userDifficulty = document.getElementById("user-difficulty");
 
     difficultyDropdown.addEventListener("click", function() {
-        let dropdownOptions = document.getElementById("difficulty-dropdown");
+         let dropdownOptions = document.getElementById("difficulty-dropdown");
         dropdownOptions.classList.toggle("show");
     });
 
     window.onclick = function(event) {
         if (!event.target.matches('#dropdown-button')) {
-          var dropdowns = document.getElementById("difficulty-dropdown");
-          var openDropdown = dropdowns;
-            if (dropdowns.classList.contains('show')) {
-               openDropdown.classList.remove('show');
-            }
+           var dropdowns = document.getElementById("difficulty-dropdown");
+           var openDropdown = dropdowns;
+             if (dropdowns.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+             }
         }
     };
 
     easy.addEventListener("click", function (){
-       userDifficulty.innerHTML = "Easy";
+        userDifficulty.innerHTML = "Easy";
     });
 
     medium.addEventListener("click", function (){
-       userDifficulty.innerHTML = "Medium";
+        userDifficulty.innerHTML = "Medium";
     });
 
     hard.addEventListener("click", function (){
-       userDifficulty.innerHTML = "Hard";
+        userDifficulty.innerHTML = "Hard";
     });
 
     userLogin.addEventListener("click", function() {
-       loginUser();
+        loginUser();
     });
 
     loginButton.addEventListener("click", function() {
-       accessLoginInformation();
+        accessLoginInformation();
     });
 
     instructionsManual.addEventListener("click", function() {
-       displayInstructions();
+        displayInstructions();
     });
 
     highScores.addEventListener("click", function() {
-       viewHighScores();
+        viewHighScores();
     });
     
     playButton.addEventListener("click", function() {
-       selectDifficulty();
+        selectDifficulty();
     });
 
     resetButton.addEventListener("click", function() {
-       resetGame();
+        resetGame();
     });
 });
 
@@ -114,12 +114,12 @@ function loginUser() {
     userLoginPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function() {
-       userLoginPopUp.style.zIndex = -1;
+        userLoginPopUp.style.zIndex = -1;
     });
 
     register.addEventListener("click", function() {
-       userLoginPopUp.style.zIndex = -1;
-       registerDetails();
+        userLoginPopUp.style.zIndex = -1;
+        registerDetails();
     });
 }
 
@@ -129,10 +129,10 @@ function accessLoginInformation() {
     let incorrectUser = document.getElementById("incorrect-user");
 
     for (i=0; i < userDetails.length; i++) {
-       if (username == userDetails[i].username && password == userDetails[i].password) {
-           console.log(username + "is logged in");
-           displayUserDetails(username);
-           return;
+        if (username == userDetails[i].username && password == userDetails[i].password) {
+            console.log(username + "is logged in");
+            displayUserDetails(username);
+            return;
         }
     }
 
@@ -153,7 +153,7 @@ function registerDetails() {
     registrationPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function() {
-       registrationPopUp.style.zIndex = -1;
+        registrationPopUp.style.zIndex = -1;
     });
 
 }
@@ -167,7 +167,7 @@ function displayInstructions() {
     instructionsPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function(){
-       instructionsPopUp.style.zIndex = -1;
+        instructionsPopUp.style.zIndex = -1;
     });
 }
 
@@ -180,17 +180,17 @@ function viewHighScores() {
     highscoresPopUp.style.pointerEvents = "auto";
 
     close.addEventListener("click", function(){
-       highscoresPopUp.style.zIndex = -1;
+        highscoresPopUp.style.zIndex = -1;
     });
 }
 
-//Board will generate based upon the selection of difficulty
+//Board will generate based upon the users difficulty selection and the game will begin
 function selectDifficulty() {
     let time = document.getElementById("timer").innerHTML;
 
     if (time === "0:00") {
-        let counter=-1;
-        let userDifficulty = document.getElementById("user-difficulty");
+       let counter=-1;
+       let userDifficulty = document.getElementById("user-difficulty");
 
         if (userDifficulty.innerHTML === "Easy") {
             runEasyGame(counter);
@@ -199,21 +199,19 @@ function selectDifficulty() {
         } else if (userDifficulty.innerHTML === "Hard") {
             runHardGame(counter);
         }
-
     } else {
         console.log("You are already playing the game!");
     }
 }
 
-//Runs the EASYGAME and Checks Answers
+//Runs the EASYGAME based upon the users selection. The board generates and user input is enabled.
 
 function runEasyGame(counter) {
+    let number = document.getElementsByClassName('active');
 
     timer = setInterval(function(){
         startTimer();
     }, 1000);
- 
-    let number = document.getElementsByClassName('active');
 
     for (i=0; i < easyGame.length; i++) {
         for (i=0; i < number.length; i++) {
@@ -221,7 +219,6 @@ function runEasyGame(counter) {
                 number[i].classList.add("userInput");
                 number[i].dataset.index = ++counter;
                 number[i].style.backgroundColor = '#D2EEEF';
-
                 number[i].addEventListener('click', function(event) {
                     console.log("Im inside the square");
                     squareClicked = event.target;
@@ -231,11 +228,12 @@ function runEasyGame(counter) {
                             number[i].style.backgroundColor = '#D2EEEF';
                         }
                     }
-                       if (squareClicked.innerHTML === '') {
-                           squareClicked.style.backgroundColor = '#84CFD7';
-                       } else {
-                          console.log("This square is already correct");
-                       }
+
+                    if (squareClicked.innerHTML === '') {
+                        squareClicked.style.backgroundColor = '#84CFD7';
+                    } else {
+                        console.log("This square is already correct");
+                    }
                 });
             } else {
                 number[i].innerHTML = easyGame[i];
@@ -246,50 +244,52 @@ function runEasyGame(counter) {
    let numberPad = document.getElementsByClassName("number-pad-item");
 
    for (i=0; i < numberPad.length; i++) {
-              numberPad[i].addEventListener('click', function(e) {
-                  if (squareClicked.innerHTML === '') {
-                        squareClicked.innerHTML = e.target.innerHTML;
-                        checkAnswersEasy(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
-                  } else {
-                      console.log("This square already has a number");
-                  }
-                });
+        numberPad[i].addEventListener('click', function(e) {
+            if (squareClicked.innerHTML === '') {
+                squareClicked.innerHTML = e.target.innerHTML;
+                checkAnswersEasy(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
+            } else {
+                console.log("This square already has a number");
+            }
+        });
     }
 }
 
+//Checks the EASYGAME answers against the solution global array
 
 function checkAnswersEasy(value, index, active) {
     
-       if (value == easyGameSolution[index]) {
-          active.style.backgroundColor = "#ACD8AA";
-          easyUserInput.push(value);
-          console.log(easyUserInput);
-          correctSound.play();
-       } else {
-            active.style.backgroundColor = "#E27A78";
-            setTimeout(function () {
-            active.style.backgroundColor = "#D2EEEF";
-            }, 250);
-            active.innerText = "";
-            incorrectSound.play();
+    if (value == easyGameSolution[index]) {
+        active.style.backgroundColor = "#ACD8AA";
+        easyUserInput.push(value);
+        console.log(easyUserInput);
+        correctSound.play();
+    } else {
+        active.style.backgroundColor = "#E27A78";
+
+        setTimeout(function () {
+        active.style.backgroundColor = "#D2EEEF";
+        }, 250);
+
+        active.innerText = "";
+        incorrectSound.play();
        }
 
-       if (easyUserInput.length === easyGameSolution.length) {
-            wellDone();
-       } else {
-           console.log("continue play");
-       }
+    if (easyUserInput.length === easyGameSolution.length) {
+        wellDone();
+    } else {
+        console.log("continue play");
+    }
 }
 
-//Runs the MEDIUMGAME and Checks Answers
+//Runs the MEDIUMGAME based upon the users selection. The board generates and user input is enabled.
 
 function runMediumGame(counter) {
+    let number = document.getElementsByClassName('active');
 
     timer = setInterval(function(){
         startTimer();
     }, 1000);
- 
-    let number = document.getElementsByClassName('active');
 
     for (i=0; i < mediumGame.length; i++) {
         for (i=0; i < number.length; i++) {
@@ -307,11 +307,12 @@ function runMediumGame(counter) {
                             number[i].style.backgroundColor = '#D2EEEF';
                         }
                     }
-                       if (squareClicked.innerHTML === '') {
-                           squareClicked.style.backgroundColor = '#84CFD7';
-                       } else {
-                          console.log("This square is already correct");
-                       }
+                       
+                    if (squareClicked.innerHTML === '') {
+                        squareClicked.style.backgroundColor = '#84CFD7';
+                    } else {
+                        console.log("This square is already correct");
+                    }
                 });
             } else {
                 number[i].innerHTML = mediumGame[i];
@@ -322,17 +323,18 @@ function runMediumGame(counter) {
    let numberPad = document.getElementsByClassName("number-pad-item");
 
    for (i=0; i < numberPad.length; i++) {
-              numberPad[i].addEventListener('click', function(e) {
-                  if (squareClicked.innerHTML === '') {
-                        squareClicked.innerHTML = e.target.innerHTML;
-                        checkAnswersMedium(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
-                  } else {
-                      console.log("This square already has a number");
-                  }
-                });
+        numberPad[i].addEventListener('click', function(e) {
+            if (squareClicked.innerHTML === '') {
+                squareClicked.innerHTML = e.target.innerHTML;
+                checkAnswersMedium(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
+            } else {
+                console.log("This square already has a number");
+            }
+        });
     }
 }
 
+//Checks the MEDIUMGAME answers against the solution global array
 
 function checkAnswersMedium(value, index, active) {
     
@@ -342,30 +344,31 @@ function checkAnswersMedium(value, index, active) {
         console.log(easyUserInput);
         correctSound.play();
      } else {
-          active.style.backgroundColor = "#E27A78";
-          setTimeout(function () {
-          active.style.backgroundColor = "#D2EEEF";
-          }, 250);
-          active.innerText = "";
-          incorrectSound.play();
+        active.style.backgroundColor = "#E27A78";
+
+        setTimeout(function () {
+        active.style.backgroundColor = "#D2EEEF";
+        }, 250);
+
+        active.innerText = "";
+        IncorrectSound.play();
      }
 
      if (mediumUserInput.length === mediumGameSolution.length) {
-          wellDone();
+        wellDone();
      } else {
-         console.log("continue play");
+        console.log("continue play");
      }
 }
 
-//Runs the HARDGAME and Checks Answers
+//Runs the HARDGAME based upon the users selection. The board generates and user input is enabled.
 
 function runHardGame(counter) {
+    let number = document.getElementsByClassName('active');
 
     timer = setInterval(function(){
         startTimer();
     }, 1000);
-
-    let number = document.getElementsByClassName('active');
 
     for (i=0; i < hardGame.length; i++) {
         for (i=0; i < number.length; i++) {
@@ -383,11 +386,12 @@ function runHardGame(counter) {
                             number[i].style.backgroundColor = '#D2EEEF';
                         }
                     }
-                       if (squareClicked.innerHTML === '') {
-                           squareClicked.style.backgroundColor = '#84CFD7';
-                       } else {
-                          console.log("This square is already correct");
-                       }
+
+                    if (squareClicked.innerHTML === '') {
+                        squareClicked.style.backgroundColor = '#84CFD7';
+                    } else {
+                        console.log("This square is already correct");
+                    }
                 });
             } else {
                 number[i].innerHTML = hardGame[i];
@@ -398,17 +402,18 @@ function runHardGame(counter) {
    let numberPad = document.getElementsByClassName("number-pad-item");
 
    for (i=0; i < numberPad.length; i++) {
-              numberPad[i].addEventListener('click', function(e) {
-                  if (squareClicked.innerHTML === '') {
-                        squareClicked.innerHTML = e.target.innerHTML;
-                        checkAnswersHard(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
-                  } else {
-                      console.log("This square already has a number");
-                  }
-                });
+        numberPad[i].addEventListener('click', function(e) {
+            if (squareClicked.innerHTML === '') {
+                squareClicked.innerHTML = e.target.innerHTML;
+                checkAnswersHard(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
+            } else {
+                console.log("This square already has a number");
+            }
+        });
     }
 }
-    
+  
+//Checks the HARDGAME answers against the solution global array
 
 function checkAnswersHard(value, index, active) {
 
@@ -418,28 +423,30 @@ function checkAnswersHard(value, index, active) {
         console.log(hardUserInput);
         correctSound.play();
      } else {
-          active.style.backgroundColor = "#E27A78";
-          setTimeout(function () {
-          active.style.backgroundColor = "#D2EEEF";
-          }, 250);
-          active.innerText = "";
-          incorrectSound.play();
+        active.style.backgroundColor = "#E27A78";
+
+        setTimeout(function () {
+        active.style.backgroundColor = "#D2EEEF";
+        }, 250);
+
+        active.innerText = "";
+        incorrectSound.play();
      }
 
      if (hardUserInput.length === hardGameSolution.length) {
-          wellDone();
+        wellDone();
      } else {
-         console.log("continue play");
+        console.log("continue play");
      }
 }
 
-// Reset game will delete all previously inputtted numbers allowing the user to start again
+// Reset game will delete all previously inputtted numbers by reloading the window
 function resetGame() {
     window.location.reload();
 }
 
+// Start timer will begin when the difficulty has been selected and the play button has been pressed
 function startTimer() {
-
     var time = document.getElementById("timer").innerHTML;
     var arr = time.split(":");
     var minutes = arr[0];
@@ -458,9 +465,7 @@ function startTimer() {
 }
 
 function wellDone() {
-
     let replayGame = document.getElementById("replay");
-
     var time = document.getElementById("timer").innerHTML;
     var arr = time.split(":");
     var minutes = arr[0];
