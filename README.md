@@ -89,7 +89,11 @@ A screenshot of the website from a mobile device can be seen above. Content was 
 
 # Logic Functions
 
-- Before starting the JavaScript code within the site, I found it useful to plan the functions needed for the site to work. By doing this I was able to ensure efficiency within the code and structure my work better for deployment. Upon reflection, I feel that some of the code could have been collated; reducing the amount of work needed for each difficulty section of the site and avoiding copying of code.
+- Before starting the JavaScript code within the site, I found it useful to plan the functions needed for the site to work. By doing this I was able to ensure efficiency within the code and structure my work better for deployment.
+
+![Sudoku-Main-Page-Functions](assets/images/functions.PNG)
+
+ Upon reflection, I feel that some of the code could have been collated; reducing the amount of work needed for each difficulty section of the site and avoiding copying of code.
 
 # Future Features
 
