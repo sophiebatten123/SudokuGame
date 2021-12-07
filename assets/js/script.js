@@ -225,7 +225,7 @@ function runEasyGame(counter) {
 
                     for (i=0; i < number.length; i++) {
                         if (number[i].style.backgroundColor === '#84CFD7' && number[i].innerHTML === '') {
-                            number[i].style.backgroundColor = '#D2EEEF';
+                            number[i].style.backgroundColor = '#F0F9FA';
                         }
                     }
 
@@ -237,6 +237,7 @@ function runEasyGame(counter) {
                 });
             } else {
                 number[i].innerHTML = easyGame[i];
+                number[i].style.backgroundColor = "white";
             }   
         }
     }
@@ -304,7 +305,7 @@ function runMediumGame(counter) {
 
                     for (i=0; i < number.length; i++) {
                         if (number[i].style.backgroundColor === '#84CFD7' && number[i].innerHTML === '') {
-                            number[i].style.backgroundColor = '#D2EEEF';
+                            number[i].style.backgroundColor = '#F0F9FA';
                         }
                     }
                        
@@ -316,6 +317,7 @@ function runMediumGame(counter) {
                 });
             } else {
                 number[i].innerHTML = mediumGame[i];
+                number[i].style.backgroundColor = "white";
             }   
         }
     }
@@ -383,7 +385,7 @@ function runHardGame(counter) {
 
                     for (i=0; i < number.length; i++) {
                         if (number[i].style.backgroundColor === '#84CFD7' && number[i].innerHTML === '') {
-                            number[i].style.backgroundColor = '#D2EEEF';
+                            number[i].style.backgroundColor = '#F0F9FA';
                         }
                     }
 
@@ -395,6 +397,7 @@ function runHardGame(counter) {
                 });
             } else {
                 number[i].innerHTML = hardGame[i];
+                number[i].style.backgroundColor = "white";
             }   
         }
     }

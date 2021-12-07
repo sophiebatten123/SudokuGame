@@ -2,7 +2,7 @@
 
 body{
     font-family:'Montserrat', sans-serif;
-    background-color: #4E8098;
+    background-color: #F0F9FA;
 }
 
 /** Header & Top section of the website*/
@@ -134,6 +134,10 @@ body{
     box-sizing: border-box;
 }
 
+.grey {
+    background-color: #F0F9FA;
+}
+
 .right {
     border-right: 4px solid #12122B;
 }
@@ -151,9 +155,10 @@ body{
 /** Right Selection Area */
 
 #game-board-inner {
-    width: 40%;
+    width: 30%;
     float: right;
     text-align: center;
+    padding-right: 160px;
 }
 
 /** Main Game Buttons */
@@ -425,6 +430,9 @@ body{
 /** Media Queries */
 
 @media screen and (max-width: 1270px) {
+    #game-board{
+        height: 700px;
+    }
     #board {
         height: 630px;
         width: 630px;
@@ -471,6 +479,7 @@ body{
 @media screen and (max-width: 940px) {
     #game-board-inner {
         width: 100%;
+        padding: 0;
     }
     #game-board-outer {
         width: 100%;
