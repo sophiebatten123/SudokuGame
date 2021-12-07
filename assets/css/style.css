@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goudy+Bookletter+1911&family=Montserrat:wght@200&display=swap');
 
 body{
     font-family:'Montserrat', sans-serif;
@@ -25,6 +25,12 @@ body{
 #header {
     padding-top: 5px;
     border-bottom: solid 2px #1B4353;
+}
+
+#title-style {
+    font-weight: bold;
+    font-family: 'Goudy Bookletter 1911', sans-serif;
+    font-size: 50px;
 }
 
 /** Select Difficulty*/
