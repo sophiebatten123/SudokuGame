@@ -9,8 +9,9 @@ body{
 
 #game-board-top {
     background-color: white;
-    height: 150px;
+    height: 170px;
     width: 100%;
+    display: flex;
 }
 
 #top-positioning-outer {
@@ -229,6 +230,12 @@ body{
 }
 
 /* Login, Instructions and Highscore Icons**/
+
+#position-icons{
+    width: 30%;
+    padding-top: 40px;
+    padding-left: 20px;
+}
 
 #icons {
     display: flex;
