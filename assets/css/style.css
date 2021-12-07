@@ -178,6 +178,7 @@ body{
     float: right;
     text-align: center;
     padding-right: 160px;
+    padding-top: 30px;
 }
 
 /** Main Game Buttons */
@@ -232,9 +233,8 @@ body{
 /* Login, Instructions and Highscore Icons**/
 
 #position-icons{
-    width: 30%;
-    padding-top: 40px;
-    padding-left: 20px;
+    width: 100%;
+    border-top: 2px solid black;
 }
 
 #icons {
@@ -242,6 +242,10 @@ body{
     width: 360px;
     height: 100px;
     margin: auto;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 30px;
+    padding-right: 85px;
 }
 
 .icon-style {
