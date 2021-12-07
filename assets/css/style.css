@@ -156,6 +156,57 @@ body{
     text-align: center;
 }
 
+/** Main Game Buttons */
+
+#main-game-buttons {
+    height: 50px;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.game-button {
+    justify-content: center;
+    font-size: 15pt;
+    border: 2px solid #12122B;
+    padding: 10px;
+    height: 50px;
+    margin: 0 1%;
+}
+
+.game-button:hover {
+    cursor: pointer;
+    background-color: #C6CCD2;
+}
+
+/* Keypad Selection Area**/
+
+.number-pad-row {
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+}
+
+.number-pad-item {
+    font-size: 50px;
+    width: 100px;
+    height: 60px;
+    background-color: #F0F9FA;
+    margin: 10px;
+    border: 2px solid #12122B;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.number-pad-item:hover {
+    background-color: #D1EDF0;
+}
+
+/* Login, Instructions and Highscore Icons**/
+
 #icons {
     display: flex;
     width: 360px;
@@ -198,57 +249,6 @@ body{
     font-size: 40px;
 }
 
-#button-header {
-    font-weight: bold;
-}
-
-#main-game-buttons {
-    height: 50px;
-    margin: auto;
-    justify-content: center;
-    display: flex;
-    margin-top: 2%;
-    margin-bottom: 1%;
-}
-
-.game-button {
-    justify-content: center;
-    font-size: 15pt;
-    border: 2px solid #12122B;
-    padding: 10px;
-    height: 50px;
-    margin: 0 1%;
-}
-
-.game-button:hover {
-    cursor: pointer;
-    background-color: #C6CCD2;
-}
-
-/** Number Pad**/
-
-.number-pad-item {
-    font-size: 50px;
-    width: 100px;
-    height: 60px;
-    background-color: #F0F9FA;
-    margin: 10px;
-    border: 2px solid #12122B;
-    padding: 10px;
-    text-align: center;
-    border-radius: 5px;
-}
-
-.number-pad-item:hover {
-    background-color: #D1EDF0;
-}
-
-.number-pad-row {
-    display: flex;
-    justify-content: center;
-    margin: 30px;
-}
-
 /** Popup boxes **/
 
 .popup-box {
@@ -268,12 +268,31 @@ body{
     transition: all .3s ease-in-out;
 }
 
+
+.iconpopup i {
+    font-size: 30px;
+    float: right;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.close:hover{
+    cursor: pointer;
+    font-size: 40px;
+}
+
 #loginpopup {
     z-index: -1;
     pointer-events: none;
 }
 
-.iconpopup i {
+#registerpopup {
+    z-index: -1;
+    pointer-events: none;
+}
+
+#registerpopup i {
     font-size: 30px;
     float: right;
     position: absolute;
@@ -311,22 +330,12 @@ body{
     right: 10px;
 }
 
-#difficultypopup {
-    z-index: -1;
-    pointer-events: none;
-}
-
 #incorrect-user {
     z-index: -1;
     pointer-events: none;
 }
 
-.close:hover{
-    cursor: pointer;
-    font-size: 40px;
-}
-
-/* Login and register */
+/* Login or Register Section*/
 
 #login-form {
     text-align: left;
@@ -374,19 +383,6 @@ body{
 
 #login-button:hover {
     cursor: pointer;
-}
-
-#registerpopup {
-    z-index: -1;
-    pointer-events: none;
-}
-
-#registerpopup i {
-    font-size: 30px;
-    float: right;
-    position: absolute;
-    top: 10px;
-    right: 10px;
 }
 
 #registration-form {
