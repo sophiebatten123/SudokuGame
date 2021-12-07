@@ -91,6 +91,8 @@ body{
     padding: 10px 0;
 }
 
+/** Central Game Area */
+
 #game-board {
     height: 770px;
     width: 100%;
@@ -98,18 +100,61 @@ body{
     justify-content: center;
 }
 
+/** Left Selection Area */
+
 #game-board-outer {
     width: 60%;
     float: left;
 }
+
+/** Game Board */
+
+#board-outer {
+    width: 100%;
+    justify-content: center;
+}
+
+#board {
+    border: 4px solid #12122B;
+    height: 720px;
+    width: 720px;
+    margin: auto;
+ }
+
+ .number {
+    background-color: white;
+    border: 1px solid #12122B;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 10px;
+    justify-content: center;
+    float: left;
+    box-sizing: border-box;
+}
+
+.right {
+    border-right: 4px solid #12122B;
+}
+
+.bottom {
+    border-bottom: 4px solid #12122B;
+}
+
+.row {
+    width: 100%;
+    height: 55px;
+    box-sizing: border-box;
+}
+
+/** Right Selection Area */
 
 #game-board-inner {
     width: 40%;
     float: right;
     text-align: center;
 }
-
-/** Icons */
 
 #icons {
     display: flex;
@@ -178,47 +223,6 @@ body{
 .game-button:hover {
     cursor: pointer;
     background-color: #C6CCD2;
-}
-
-/** Game board **/
-
-#board-outer {
-    width: 100%;
-    justify-content: center;
-}
-
-#board {
-    border: 4px solid #12122B;
-    height: 720px;
-    width: 720px;
-    margin: auto;
- }
-
- .number {
-    background-color: white;
-    border: 1px solid #12122B;
-    width: 80px;
-    height: 80px;
-    text-align: center;
-    font-size: 50px;
-    padding-top: 10px;
-    justify-content: center;
-    float: left;
-    box-sizing: border-box;
-}
-
-.right {
-    border-right: 4px solid #12122B;
-}
-
-.bottom {
-    border-bottom: 4px solid #12122B;
-}
-
-.row {
-    width: 100%;
-    height: 55px;
-    box-sizing: border-box;
 }
 
 /** Number Pad**/
