@@ -22,19 +22,12 @@
         <div id="top-positioning">
             <div id="header">
                 <h1>The <span id="title-style">Sukodu</span> Game</h1>
+                <img id="logo" src="assets/images/logo.PNG" alt="Sudoku Logo">
             </div>
             <h2 id="select-difficulty-small" class="select-difficulty">Select a difficulty to start playing:</h2>
             <div>
+                <div id="user-difficulty"></div>
                 <p id="timer">0:00</p>
-                <div id="difficulty-buttons-dropdown">
-                    <button id="dropdown-button">Select Difficulty:</button>
-                    <div id="user-difficulty"></div>
-                    <div id="difficulty-dropdown" class="dropdown-content">
-                        <a href="#" id="easy" class="difficulty">Easy</a>
-                        <a href="#" id="medium" class="difficulty">Medium</a>
-                        <a href="#" id="hard" class="difficulty">Hard</a>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
@@ -148,6 +141,14 @@
     <div id="game-board-inner">
         <h2 id="select-difficulty-large" class="select-difficulty">Select a difficulty to start playing:</h2>
         <div id="main-game-buttons">
+            <div id="difficulty-buttons-dropdown">
+                <button id="dropdown-button">Select Difficulty</button>
+                <div id="difficulty-dropdown" class="dropdown-content">
+                    <a href="#" id="easy" class="difficulty">Easy</a>
+                    <a href="#" id="medium" class="difficulty">Medium</a>
+                    <a href="#" id="hard" class="difficulty">Hard</a>
+                </div>
+            </div>
             <button id="play" class="game-button">Start Game</button>
             <button id="reset" class="game-button">Reset Game</button>
        </div>

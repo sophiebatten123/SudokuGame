@@ -23,14 +23,21 @@ body{
 }
 
 #header {
-    padding-top: 5px;
     border-bottom: solid 2px #1B4353;
+    display: flex;
 }
 
 #title-style {
     font-weight: bold;
     font-family: 'Goudy Bookletter 1911', sans-serif;
     font-size: 50px;
+}
+
+#logo {
+    height: 15%;
+    width: 15%;
+    padding-left: 295px;
+    padding-top: 15px;
 }
 
 /** Select Difficulty*/
@@ -48,7 +55,7 @@ body{
 #difficulty-buttons-dropdown{
     position: relative;
     float: left;
-    padding-top: 10px;
+    margin: 0 1%;
 }
 
 #dropdown-button {
@@ -58,10 +65,15 @@ body{
     border: solid 2px #12122B;
 }
 
+#dropdown-button:hover {
+    cursor: pointer;
+    background-color: #C6CCD2;
+}
+
 #user-difficulty {
     display: inline-flex;
     font-size: 25px;
-    padding-left: 15px;
+    padding-top: 15px;
     font-weight: bold;
 }
 
@@ -94,7 +106,7 @@ body{
     font-size: 35px;
     float: right;
     margin: 0;
-    padding: 10px 0;
+    padding: 10px 20px 10px 0;
 }
 
 /** Central Game Area */
