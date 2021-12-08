@@ -75,10 +75,8 @@ body{
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 210px;
-    right: 550px;
     background-color: #f1f1f1;
-    min-width: 180px;
+    min-width: 150px;
     z-index: 1;
     border: 2px solid black;
     border-radius: 5px;
@@ -506,9 +504,9 @@ body{
     #top-positioning-outer {
         width: 100%;
     }
-    #buttons {
+    #buttons{
+        margin-bottom: 5px;
         justify-content: center;
-        padding-bottom: 30px;
     }
     #position-icons {
         border-top: none;
@@ -573,6 +571,9 @@ body{
     #top-positioning {
         width: 600px;
     }
+    #user-difficulty {
+        padding-left: 60px;
+    }
 }
 
 @media screen and (max-width: 630px) {
@@ -618,6 +619,9 @@ body{
 }
 
 @media screen and (max-width: 425px) {
+    .number{
+        font-size: 20px;
+    }
     .popup-box {
         width: 300px;
     }
