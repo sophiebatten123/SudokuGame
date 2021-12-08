@@ -76,11 +76,12 @@ body{
     display: none;
     position: absolute;
     background-color: #f1f1f1;
-    min-width: 150px;
+    min-width: 10%;
     z-index: 1;
     border: 2px solid black;
     border-radius: 5px;
     text-align: center;
+    margin-top: 5px;
 }
 
 .dropdown-content a {
@@ -508,12 +509,19 @@ body{
         margin-bottom: 5px;
         justify-content: center;
     }
+    .dropdown-content {
+        margin-left: 50px;
+        width: 90%;
+    }
+    .dropdown-content a {
+        padding: 8px 16px;
+    }
     #position-icons {
         border-top: none;
     }   
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
     #header{
         justify-content: center;
         width: 80%;
@@ -573,6 +581,11 @@ body{
     }
     #user-difficulty {
         padding-left: 60px;
+    }
+    .dropdown-content {
+        width: 100%;
+        margin-left: 0;
+        box-sizing: border-box;
     }
 }
 
