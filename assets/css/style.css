@@ -657,6 +657,9 @@ body{
         justify-content: center;
         padding-right: 0;
     }
+    #game-board {
+        height: 680px;
+    }
 }
 
 @media screen and (max-width: 375px) {
