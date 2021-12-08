@@ -44,19 +44,19 @@ body{
 /** Select Difficulty*/
 
 .select-difficulty {
-    padding: 20px 0;
+    text-align: center;
+    padding: 40px 0;
     margin: auto;
-    width: 95%;
+    width: 100%;
 }
 
 #select-difficulty-small {
     display: none;
 }
 
-#difficulty-buttons-dropdown{
-    position: relative;
-    float: left;
+#buttons{
     margin: 0 1%;
+    display: flex;
 }
 
 #dropdown-button {
@@ -81,13 +81,20 @@ body{
 .dropdown-content {
     display: none;
     position: absolute;
+    top: 210px;
+    right: 550px;
     background-color: #f1f1f1;
-    min-width: 160px;
+    min-width: 180px;
     z-index: 1;
+    border: 2px solid black;
+    border-radius: 5px;
+    text-align: center;
 }
 
 .dropdown-content a {
-    color: #12122B;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -178,7 +185,7 @@ body{
     float: right;
     text-align: center;
     padding-right: 160px;
-    padding-top: 30px;
+    padding-top: 80px;
 }
 
 /** Main Game Buttons */
@@ -187,18 +194,19 @@ body{
     height: 50px;
     margin: auto;
     justify-content: center;
-    display: flex;
     margin-top: 2%;
     margin-bottom: 1%;
+    padding-right: 120px;
 }
 
 .game-button {
     justify-content: center;
     font-size: 15pt;
     border: 2px solid #12122B;
-    padding: 10px;
     height: 50px;
+    width: 200px;
     margin: 0 1%;
+    border-radius: 5px;
 }
 
 .game-button:hover {
@@ -207,6 +215,10 @@ body{
 }
 
 /* Keypad Selection Area**/
+
+#number-pad-inner{
+    padding-bottom: 60px;
+}
 
 .number-pad-row {
     display: flex;
