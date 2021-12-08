@@ -472,7 +472,7 @@ body{
         font-size: 20px;
     }
     #game-board{
-        height: 700px;
+        height: 1100px;
     }
     #board {
         height: 630px;
@@ -502,185 +502,55 @@ body{
     .number-pad-row {
         margin: 0;
     }
-}
-
-@media screen and (max-width: 1120px) {
-    #board {
-        height: 540px;
-        width: 540px;
-    }
-    .number {
-        height: 60px;
-        width: 60px;
-        font-size: 35px;
-    }
-    .number-pad-row {
-        margin: 10px;
-    }
-    #difficulty-position > p {
-        padding: 0 2px;
-    }
-    .number-pad-item {
-        width: 80px;
-    }
-    #top-positioning {
-        width: 540px;
-    }
-}
-
-@media screen and (max-width: 940px) {
-    #game-board-inner {
-        width: 100%;
-        padding: 0;
-    }
-    #game-board-outer {
+    #top-positioning-outer {
         width: 100%;
     }
-    #number-pad-inner{
-        display: flex;
+    #buttons {
         justify-content: center;
+        padding-bottom: 30px;
     }
-    .number-pad-item {
-        width: 40px;
-    }
-    .number-pad-row {
-        margin: 0;
-    }
-    #game-board-top {
-        text-align: center;
-    }
-    #timer {
-        margin-left: 0;
-    }
-    #header {
-        margin-left: 0;
-    }
-    #top-positioning-outer{
-        width: 100%;
-    }
+    #position-icons {
+        border-top: none;
+    }   
 }
 
-@media screen and (max-width: 780px) {
-    .number-pad-item {
-        width: 30px;
+@media screen and (max-width: 800px) {
+    #header{
+        justify-content: center;
+        width: 80%;
+        margin: auto;
     }
-    .popup-box {
-        width: 400px;
+    #logo {
+        padding-left: 150px;
     }
-}
-
-@media screen and (max-width: 700px) {
-    .number-pad-item {
-        width: 20px;
-        height: 45px;
-        font-size: 40px;
-    }
-}
-
-@media screen and (max-width: 600px) {
-    .number-pad-item {
-       margin: 5px;
-    }
-    .row {
-        height: 50px;
-    }
-    .number {
-        height: 50px;
-        width: 50px;
-        font-size: 30px;
+    #timer{
+        padding: 10px 70px 10px 0;
     }
     #board {
         height: 450px;
         width: 450px;
     }
-    #top-positioning {
-        width: 450px;
+    .number {
+        height: 50px;
+        width: 50px;
     }
-}
-
-@media screen and (max-width: 500px) {
-    #game-board {
-        height: 650px;
-    }
-    .number-pad-item {
-       margin: 1px;
+    .number-pad-row {
+        height: 50px;
     }
     .row {
-        height: 40px;
-    }
-    .number {
-        height: 40px;
-        width: 40px;
-        font-size: 20px;
-    }
-    #board {
-        height: 360px;
-        width: 360px;
+        height: 50px;
     }
     .number-pad-item {
-        width: 15px;
+        width: 20px;
         height: 35px;
+    }
+    .number-pad-item {
         font-size: 30px;
     }
-    .popup-box {
-        width: 300px;
-    }
-    #top-positioning {
-        width: 360px;
-    }
-    #select-difficulty-large {
-        display: none;
-    }
-    #select-difficulty-small {
-        display: inline-block;
-    }
     .select-difficulty {
-        font-size: 16px;
-        margin: 10px 0;
-        width: 100%;
-        padding: 5px 0;
+        padding: 20px 0;
     }
-}
-
-@media screen and (max-width: 400px) {
-    #number-pad-inner {
-        margin: 5% 0;
-    }
-    .number-pad-item {
-        margin: 1px;
-     }
-     .row {
-         height: 30px;
-     }
-     .number {
-         height: 30px;
-         width: 30px;
-         font-size: 20px;
-         padding-top: 0;
-     }
-     #board {
-         height: 270px;
-         width: 270px;
-     }
-     .number-pad-item {
-         width: 10px;
-         height: 30px;
-         font-size: 25px;
-     }
-     #difficulty-position > p {
-         padding: 0;
-         font-size: 20px;
-     }
-     #top-positioning {
-        width: 270px;
-    }
-    #header {
-        font-size: 13px;
-    }
-    .icon-style {
-        padding: 10px 5px;
-    }
-    #main-game-buttons {
-        margin: 5% 0;
+    #buttons {
+        padding-bottom: 20px;
     }
 }
