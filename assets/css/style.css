@@ -533,6 +533,8 @@ body{
     .number {
         height: 50px;
         width: 50px;
+        font-size: 30px;
+        padding-top: 5px;
     }
     .number-pad-row {
         height: 50px;
@@ -552,5 +554,77 @@ body{
     }
     #buttons {
         padding-bottom: 20px;
+    }
+    .popup-box {
+        width: 400px;
+    }
+    #game-board {
+        height: 800px;
+    }
+    #header{
+        font-size: 10px;
+    }
+    #logo{
+        padding-top: 25px;
+        padding-left: 50px;
+        width: 13%;
+    }
+    #top-positioning {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .number-pad-item {
+        margin: 3px;
+    }
+    .game-button {
+        font-size: 17px;
+        width: 140px;
+    }
+    #top-positioning {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 525px) {
+    .number {
+        height: 40px;
+        width: 40px;
+    }
+    #board {
+        height: 360px;
+        width: 360px;
+    }
+    .row {
+        height: 40px;
+    }
+    #game-board {
+        height: 750px;
+    }
+    #buttons {
+        padding-bottom: 50px;
+    }
+    #top-positioning {
+        width: 400px;
+    }
+    #header{
+        font-size: 7px;
+    }
+    #logo{
+        padding-left: 20px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .popup-box {
+        width: 300px;
+    }
+    .number-pad-item {
+        width: 12px;
+        height: 30px;
+    }
+    .number-pad-item {
+        font-size: 25px;
     }
 }
