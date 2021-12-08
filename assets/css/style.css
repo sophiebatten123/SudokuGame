@@ -600,6 +600,12 @@ body{
     #top-positioning {
         width: 500px;
     }
+    #buttons {
+        padding-bottom: 15px;
+    }
+    .dropdown-content {
+        margin-top: 0;
+    }
 }
 
 @media screen and (max-width: 525px) {
@@ -616,9 +622,6 @@ body{
     }
     #game-board {
         height: 750px;
-    }
-    #buttons {
-        padding-bottom: 50px;
     }
     #top-positioning {
         width: 400px;
