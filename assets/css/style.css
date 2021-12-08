@@ -59,13 +59,6 @@ body{
     display: flex;
 }
 
-#dropdown-button {
-    justify-content: center;
-    font-size: 15pt;
-    height: 50px;
-    border: solid 2px #12122B;
-}
-
 #dropdown-button:hover {
     cursor: pointer;
     background-color: #C6CCD2;
@@ -185,18 +178,14 @@ body{
     float: right;
     text-align: center;
     padding-right: 160px;
-    padding-top: 80px;
 }
 
 /** Main Game Buttons */
 
 #main-game-buttons {
-    height: 50px;
     margin: auto;
     justify-content: center;
-    margin-top: 2%;
     margin-bottom: 1%;
-    padding-right: 120px;
 }
 
 .game-button {
@@ -204,7 +193,7 @@ body{
     font-size: 15pt;
     border: 2px solid #12122B;
     height: 50px;
-    width: 200px;
+    width: 180px;
     margin: 0 1%;
     border-radius: 5px;
 }
@@ -215,10 +204,6 @@ body{
 }
 
 /* Keypad Selection Area**/
-
-#number-pad-inner{
-    padding-bottom: 60px;
-}
 
 .number-pad-row {
     display: flex;
@@ -470,7 +455,22 @@ body{
  
 /** Media Queries */
 
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1630px) {
+    #game-board-inner{
+        padding-right: 150px;
+    }
+}
+
+@media screen and (max-width: 1550px) {
+    #game-board-inner{
+        padding-right: 80px;
+    }
+}
+
+@media screen and (max-width: 1380px) {
+    .game-button{
+        font-size: 20px;
+    }
     #game-board{
         height: 700px;
     }
@@ -485,11 +485,22 @@ body{
     .number-pad-row {
         margin: 18px;
     }
-    #difficulty-position > p {
-        padding: 0 10px;
+    #game-board-inner {
+        width: 100%;
+        padding: 0;
     }
-    #top-positioning {
-        width: 630px;
+    #game-board-outer {
+        width: 100%;
+    }
+    #number-pad-inner{
+        display: flex;
+        justify-content: center;
+    }
+    .number-pad-item {
+        width: 40px;
+    }
+    .number-pad-row {
+        margin: 0;
     }
 }
 
