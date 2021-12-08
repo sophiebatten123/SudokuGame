@@ -3,6 +3,7 @@
 body{
     font-family:'Montserrat', sans-serif;
     background-color: #F0F9FA;
+    margin: auto;
 }
 
 /** Header & Top section of the website*/
@@ -626,5 +627,37 @@ body{
     }
     .number-pad-item {
         font-size: 25px;
+    }
+    #icons {
+        font-size: 10px;
+        justify-content: center;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #board {
+        height: 315px;
+        width: 315px;
+    }
+    .row {
+        height: 35px;
+    }
+    .number {
+        height: 35px;
+        width: 35px;
+    }
+    .number-pad-item {
+        font-size: 20px;
+    }
+    .number-pad-item {
+        width: 10px;
+        height: 25px;
+    }
+    .number-pad-item {
+        margin: 2px;
+    }
+    #top-positioning {
+        width: 100%;
     }
 }
