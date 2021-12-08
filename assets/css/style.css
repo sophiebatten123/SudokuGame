@@ -235,7 +235,6 @@ body{
 }
 
 #icons {
-    display: flex;
     width: 360px;
     height: 100px;
     margin: auto;
@@ -248,26 +247,6 @@ body{
 .icon-style {
     padding: 10px;
     text-align: center;
-}
-
-#login i {
-    font-size: 30px;
-    color: #12122B;
-}
-
-#login i:hover {
-    cursor: pointer;
-    font-size: 40px;
-}
-
-#personal-best i {
-    font-size: 30px;
-    color: #12122B;
-}
-
-#personal-best i:hover {
-    cursor: pointer;
-    font-size: 40px;
 }
 
 #instructions i {
