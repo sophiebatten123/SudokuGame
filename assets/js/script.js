@@ -27,25 +27,10 @@ let squareClicked = "";
 let correctSound = new Audio('correct.mp3');
 let incorrectSound = new Audio('wrong.mp3');
 
-//User login details
-var userDetails = [
-    {
-        username: "sophie",
-        password: "tom"
-    },
-    {
-        username: "tom",
-        password: "sophie"
-    },
-];
-
 document.addEventListener("DOMContentLoaded", function() {
-    let userLogin = document.getElementById("login");
     let instructionsManual = document.getElementById("instructions");
-    let highScores = document.getElementById("personal-best");
     let playButton = document.getElementById("play");
     let resetButton = document.getElementById("reset");
-    let loginButton = document.getElementById("login-button");
     let difficultyDropdown = document.getElementById("dropdown-button");
     let easy = document.getElementById("easy");
     let medium = document.getElementById("medium");
@@ -79,20 +64,8 @@ document.addEventListener("DOMContentLoaded", function() {
         userDifficulty.innerHTML = "Hard";
     });
 
-    userLogin.addEventListener("click", function() {
-        loginUser();
-    });
-
-    loginButton.addEventListener("click", function() {
-        accessLoginInformation();
-    });
-
     instructionsManual.addEventListener("click", function() {
         displayInstructions();
-    });
-
-    highScores.addEventListener("click", function() {
-        viewHighScores();
     });
     
     playButton.addEventListener("click", function() {
@@ -104,60 +77,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-// User login section of the website allowing credentials to be entered by the user and for the user to sign up to the Sudoku - Needs backend development to be fully functional
-function loginUser() {
-    let userLoginPopUp = document.getElementById("loginpopup");
-    let close = document.getElementById("close-login");
-    let register = document.getElementById("new-account");
-
-    userLoginPopUp.style.zIndex = 1;
-    userLoginPopUp.style.pointerEvents = "auto";
-
-    close.addEventListener("click", function() {
-        userLoginPopUp.style.zIndex = -1;
-    });
-
-    register.addEventListener("click", function() {
-        userLoginPopUp.style.zIndex = -1;
-        registerDetails();
-    });
-}
-
-function accessLoginInformation() {
-    var username = document.getElementById("username").value;
-    var password = document.getElementById("password").value;
-    let incorrectUser = document.getElementById("incorrect-user");
-
-    for (i=0; i < userDetails.length; i++) {
-        if (username == userDetails[i].username && password == userDetails[i].password) {
-            console.log(username + "is logged in");
-            displayUserDetails(username);
-            return;
-        }
-    }
-
-    console.log("incorrect username or password");
-    incorrectUser.style.zIndex = 1;
-}
-
-function displayUserDetails(username) {
-    usernameEditable = document.getElementById("username-editable");
-    usernameEditable.innerText = username;
-}
-
-function registerDetails() {
-    let registrationPopUp = document.getElementById("registerpopup");
-    let close = document.getElementById("close-registration");
-
-    registrationPopUp.style.zIndex = 1;
-    registrationPopUp.style.pointerEvents = "auto";
-
-    close.addEventListener("click", function() {
-        registrationPopUp.style.zIndex = -1;
-    });
-
-}
-
 // Instructions section will display instructions to the user upon click as a pop up element
 function displayInstructions() {
     let instructionsPopUp = document.getElementById("instructionspopup");
@@ -168,19 +87,6 @@ function displayInstructions() {
 
     close.addEventListener("click", function(){
         instructionsPopUp.style.zIndex = -1;
-    });
-}
-
-// Highscores section will allow the user to view previously obtained scores - Needs backend development to be fully functional
-function viewHighScores() {
-    let highscoresPopUp = document.getElementById("highscorespopup");
-    let close = document.getElementById("close-highscores");
-
-    highscoresPopUp.style.zIndex = 1;
-    highscoresPopUp.style.pointerEvents = "auto";
-
-    close.addEventListener("click", function(){
-        highscoresPopUp.style.zIndex = -1;
     });
 }
 
