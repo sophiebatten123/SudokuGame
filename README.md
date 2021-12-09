@@ -23,7 +23,7 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
   - [Wireframes](#wireframes)
     - [Desktop Wireframe](#desktop-wireframe)
     - [Mobile Wireframe](#mobile-wireframe)
-    - [Logic Functions Wireframe](#logic-functions-wireframe)
+    - [Logic Function Wireframe](#logic-functions-wireframe)
     - [Site Improvements](#site-improvements)
   - [Features](#features)
     - [Game Board](#game-board)
@@ -135,9 +135,24 @@ Some alterations were made from the original wireframe designs to improve User E
 
 ## Game Board
 
+<details>
+    <summary>Sudoku Game Board - Click Here:</summary>
+    <img src="assets/images/game-board.PNG" width="500">
+</details>
+
 ## Game Keypad
 
+<details>
+    <summary>Sudoku Desktop Keypad - Click Here:</summary>
+    <img src="assets/images/keypad.PNG" width="500">
+</details>
+
 ## Game Buttons
+
+<details>
+    <summary>Sudoku Buttons - Click Here:</summary>
+    <img src="assets/images/buttons.PNG" width="500">
+</details>
 
 ## Instructions
 
