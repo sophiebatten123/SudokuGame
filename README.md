@@ -4,6 +4,8 @@
 
 # The SUDOKU Game
 
+(Developer: Sophie Batten)
+
 Loose yourself in mathematical puzzles and give your mind that ‘me time’ it deserves. This website will help you to find peace in a frantic world, by putting your worries to one side. Your brain will be given a gentle workout, leaving you feeling fresh and at rest. 
 
 To solve a sudoku puzzle, you must use a combination of logic, trial and error and mathematical thinking. The aim of the game is to complete every square, row, and column using only the numbers 1-9, all of which can only appear once.
@@ -12,7 +14,7 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
 
 ![Am I Responsive?](assets/images/am_i_responsive.PNG)
 
-# Contents
+# Table of Content:
 
 - [UX](#ux)
   - [User Stories](#user-stories)
@@ -57,12 +59,9 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
 
 ### Returning Visitor Goals:
 - As a Returning Visitor, I should be able to see the time taken to complete the puzzle and be competing against my personal best.
-- As a Returning Visitor, I should have the option to create a Sudoku account. This will allow me to store high scores and compete against myself.
+- As a Returning Visitor, I should have the option to increase the difficulty  of the sudoku game board.
 
-### Frequent Visitor Goals:
-- As a Frequent User, I should have the option to increase the difficulty of puzzles I complete.
-- As a Frequent User, I should be able to login to my Sudoku account to access high scores and challenge myself to beat these times.
-
+#
 # Design
 
 ## Colour Scheme
@@ -135,12 +134,17 @@ Some alterations were made from the original wireframe designs to improve User E
 
 ## Game Board
 
+- The game board consists of 81 squares which have then been seperated into 9 sub boxes and styled using pastel shades.
+- Boxes are interactive for the user and change colour based on the input.
+
 <details>
     <summary>Sudoku Game Board - Click Here:</summary>
     <img src="assets/images/game-board.PNG" width="500">
 </details>
 
 ## Game Keypad
+
+- The keypad ensures that the game can easily be played on any device.
 
 <details>
     <summary>Sudoku Desktop Keypad - Click Here:</summary>
@@ -149,12 +153,16 @@ Some alterations were made from the original wireframe designs to improve User E
 
 ## Game Buttons
 
+- Allows the user to interact with the game.
+
 <details>
     <summary>Sudoku Buttons - Click Here:</summary>
     <img src="assets/images/buttons.PNG" width="500">
 </details>
 
 ## Instructions
+
+- Explains to the user how to play the game with numbered and easy to read steps.
 
 <details>
     <summary>Instructions - Click Here:</summary>
@@ -163,11 +171,14 @@ Some alterations were made from the original wireframe designs to improve User E
 
 ## Game Complete
 
+- Displays a well done message to the user telling them how long it took to complete the puzzle.
+
 <details>
     <summary>Well Done Message - Click Here:</summary>
     <img src="assets/images/well-done.PNG" width="500">
 </details>
 
+#
 # Deployed Website
 
 ## Desktop Game
@@ -184,6 +195,7 @@ The keypad was designed to ensure buttons could easily be accessed and that acci
 
 A screenshot of the website from a mobile device can be seen above. Content was centered to ensure that the user could see the game board clearly and the keypad was aligned for ease of clicking.
 
+#
 # Functionality
 
 ## Fixed Bugs and Errors
@@ -208,7 +220,12 @@ A screenshot of the website from a mobile device can be seen above. Content was 
 - [Font Awesome](https://fontawesome.com/) - The instructions manual and the exit buttons were taken from Font Awesome.
 - [Am I Responsive?](http://ami.responsivedesign.is/#) - Was used to create the mockup image for the README file.
 - [Google Fonts](https://fonts.google.com/) - The fonts were imported from Google Fonts.
+- [GitHub](https://github.com/) - Coding platform used to create and deploy the website.
+- [JSHint](https://jshint.com/) - Used to check the JavaScript functionality of the code.
+- [W3C Markup Validation Service](https://validator.w3.org/) - Used to validate the HTML code.
+- [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS code.
 
+#
 # Testing
 
 ## Manual Testing
@@ -237,6 +254,7 @@ WAVE was used to check the accessibility of ‘The Sudoku Game’ this was to en
 
 Errors and warnings were removed before the website was deployed. 
 
+#
 # Deployment
 
 The website was deployed through GitHub and accessible through the following steps:
@@ -249,6 +267,7 @@ The live link to the website can be found here:
 
 [Live-Link](https://sophiebatten123.github.io/SudokuGame/)
 
+#
 # Future Features
 
 - In the future ‘The Sudoku Game” would benefit from a wider range of puzzles to solve as opposed to just giving three options to the user, easy, medium, and hard. This will increase the chances of users revisiting the site and prevent the user from memorizing the numbers.
@@ -257,6 +276,7 @@ The live link to the website can be found here:
 
  - In the future the website would benefit from an "online leader board” allowing users to compete against friends in an attempt to solve the puzzles in the quickest time.
 
+#
 # Credits
 
 ## Content
