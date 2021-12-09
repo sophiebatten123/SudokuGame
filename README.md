@@ -188,10 +188,15 @@ A screenshot of the website from a mobile device can be seen above. Content was 
 
 ## Fixed Bugs and Errors
 
-|      Bug/Error Identified      |     Reason for the error     |      Fix for the error      |
-|      --------------------      |     --------------------     |      -----------------      |
-| Timer element was increasing in pace after every game.| The timer wasnt reseting after each round.| Before the game was ran the timer was reset and initiated on runGame.|
- 
+|Bug/Error Identified|Reason for the error|Fix for the error|
+|--------------------|--------------------|-----------------|
+| The timer was increasing in pace after every game.| The timer wasnt reseting after each round.| Before the game was ran the timer was reset and initiated on runGame.|
+| Correct answers were editable by the user. | Elements were part of another class attribute. | An if statement was added within the class attribute of JS.|
+| The 'Well Done' message appeared before users finished. | Inputs were being pushed to an array multiple times. | Embedded 'For Loops' were removed and seperated. |
+| Multiple squares could be selected at one time. | The eventListener targetted any element of that class on click. | An 'if statement' was added indicating if it was already selected.|
+| A few correct answers were being marked incorrect | Elements being compared within seperate arrays did not align. | A counter element was added to each runGame function. |
+
+#
 ## Technologies Used
 
 ## Programs Used
