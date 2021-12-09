@@ -94,7 +94,7 @@ An instruction manual was chosen and a logo drawn to brighten up a plain page wh
 
 <details>
     <summary>Logo - Click Here:</summary>
-    <img src="assets/images/logo.PNG" width="500">
+    <img src="assets/images/logo.PNG" width="300">
 </details>
 
 # Wireframes
@@ -172,7 +172,7 @@ Some alterations were made from the original wireframe designs to improve User E
 
 ## Desktop Game
 
-![Game-Page-Desktop](assets/images/game-desktop.PNG)
+![Game-Page-Desktop](assets/images/desktop-final.PNG)
 
 Above is a screenshot of the deployed website in desktop view. It was imperative throughout the design process that the game board occupied over half of the screen area; ensuring that this was the main focus to the user. 
 
@@ -180,7 +180,7 @@ The keypad was designed to ensure buttons could easily be accessed and that acci
 
 ## Mobile Game
 
-![Game-Page-Mobile](assets/images/game-mobile.PNG)
+![Game-Page-Mobile](assets/images/final-mobile.PNG)
 
 A screenshot of the website from a mobile device can be seen above. Content was centered to ensure that the user could see the game board clearly and the keypad was aligned for ease of clicking.
 
