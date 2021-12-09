@@ -151,7 +151,7 @@ Some alterations were made from the original wireframe designs to improve User E
 
 <details>
     <summary>Sudoku Buttons - Click Here:</summary>
-    <img src="assets/images/buttons.PNG" width="500">
+    <img src="assets/images/buttons.PNG" width="300">
 </details>
 
 ## Instructions
