@@ -156,6 +156,11 @@ Some alterations were made from the original wireframe designs to improve User E
 
 ## Instructions
 
+<details>
+    <summary>Instructions - Click Here:</summary>
+    <img src="assets/images/instructions.PNG" width="500">
+</details>
+
 ## Game Complete
 
 <details>
