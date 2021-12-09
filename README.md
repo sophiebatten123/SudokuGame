@@ -199,7 +199,15 @@ A screenshot of the website from a mobile device can be seen above. Content was 
 #
 ## Technologies Used
 
+- HTML5
+- CSS
+- JavaScript
+
 ## Programs Used
+
+- [Font Awesome](https://fontawesome.com/) - The instructions manual and the exit buttons were taken from Font Awesome.
+- [Am I Responsive?](http://ami.responsivedesign.is/#) - Was used to create the mockup image for the README file.
+- [Google Fonts](https://fonts.google.com/) - The fonts were imported from Google Fonts.
 
 # Testing
 
