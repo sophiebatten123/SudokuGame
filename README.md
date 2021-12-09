@@ -91,15 +91,24 @@ The links to these can be found below for both desktop and mobile devices:
 
 ## Desktop Wireframe
 
-[Sudoku-Main-Page-Desktop](assets/images/desktop.PNG)
+<details>
+    <summary>Sudoku Desktop Wireframe - Click Here:</summary>
+    <img src="assets/images/desktop.PNG" width="500">
+</details>
 
 ## Mobile Wireframe
 
-[Sudoku-Main-Page-Mobile](assets/images/mobile.PNG)
+<details>
+    <summary>Sudoku Mobile Wireframe - Click Here:</summary>
+    <img src="assets/images/mobile.PNG" width="500">
+</details>
 
 ## Logic Function Wireframes
 
-[Sudoku-Main-Page-Functions](assets/images/functions.PNG)
+<details>
+    <summary>Sudoku Functions Wireframe - Click Here:</summary>
+    <img src="assets/images/functions.PNG" width="500">
+</details>
 
 Some alterations were made from the original wireframe designs to improve User Experience (UX) including: 
 - The difficulty selection was changed into a drop-down menu due to the site containing too much text and looking overcrowded. It was imperative that the site remaining simplistic and therefore this change was important.
