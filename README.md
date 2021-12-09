@@ -35,7 +35,7 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
     - [Desktop Game](#desktop-game)
     - [Mobile Game](#mobile-game)
  - [Functionality](#functionality)
-    - [Fixed Bugs and Errors](#fixed-bugs)
+    - [Fixed Bugs and Errors](#fixed-bugs-and-errors)
     - [Technologies Used](#technologies-used)
     - [Programs Used](#programs-used)
 - [Testing](#testing)
