@@ -53,27 +53,35 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
 
 ## Colour Scheme
 
-![Colour Scheme](assets/images/colour.PNG)
-
 The sites primary colours are blues and whites. The image above displays the original colour scheme chosen for the website. The colour palette was created using [coolors](https://coolors.co/). 
 
 These colours were chosen based on peace and tranquillity aiming to relax the user and prevent strain on their eyes during the game. Pastel shades were chosen to create a soft texture to the website; whilst ensuring text behind was readable.
 
-## Typography
+<details>
+    <summary>Colour Scheme - Click Here:</summary>
+    <img src="assets/images/colour.PNG" width="500">
+</details>
 
-![Typography](assets/images/title.PNG)
+#
+## Typography
 
 The websites main text was written against a white background ensuring that the text was clear and stood out to the user.
 
 ‘Montserrat’ was the main font used on the website with ‘San Serif’ as a fallback font. This font was chosen based upon the curvature of the letters, creating a soft appearance against a harsh white background.
 
+<details>
+    <summary>Title Font - Click Here:</summary>
+    <img src="assets/images/title.PNG" width="500">
+</details>
+
 ## Imagery
 
-![Imagery](assets/images/icon.PNG)
+An instruction manual was chosen and a logo drawn to brighten up a plain page whilst also improving the accessibility of the site. These elements contributed towards the soft texture of the site, making the users experience more relaxing.
 
-Icons were chosen to accompany sections of the website. These icons were used to break up a text heavy page and to improve the accessibility of the site. 
-
-Furthermore, these contributed towards the soft texture of the site, making the users experience more relaxing.
+<details>
+    <summary>Logo - Click Here:</summary>
+    <img src="assets/images/logo.PNG" width="500">
+</details>
 
 # Wireframes
 
