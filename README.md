@@ -24,7 +24,15 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
     - [Desktop Wireframe](#desktop-wireframe)
     - [Mobile Wireframe](#mobile-wireframe)
   - [Features](#features)
- 
+    - [Game Board](#game-board)
+    - [Game Keypad](#game-keypad)
+    - [Game Buttons](#game-buttons)
+    - [Instructions](#instructions)
+    - [Game Complete](#game-complete)
+  - [Deployed Website](#deployed-website)
+    - [Desktop Game](#desktop-game)
+    - [Mobile Game](#mobile-game)
+ - [Functionality](#functionality)
 # UX
 
 ## User Stories
@@ -99,7 +107,7 @@ Some alterations were made from the original wireframe designs to improve User E
 
 ## Instructions
 
-## Congratulations Message
+## Game Complete
 
 # Deployed Website
 
@@ -117,45 +125,45 @@ The keypad was designed to ensure buttons could easily be accessed and that acci
 
 A screenshot of the website from a mobile device can be seen above. Content was centered to ensure that the user could see the game board clearly and the keypad was aligned for ease of clicking.
 
-# Logic Functions
+# Functionality
+
+## Logic Functions
 
 - Before starting the JavaScript code within the site, I found it useful to plan the functions needed for the site to work. By doing this I was able to ensure efficiency within the code and structure my work better for deployment.
 
 ![Sudoku-Main-Page-Functions](assets/images/functions.PNG)
 
- Upon reflection, I feel that some of the code could have been collated; reducing the amount of work needed for each difficulty section of the site and avoiding copying of code.
+## Fixed Bugs and Errors
 
-# Future Features
+## Technologies Used
 
-- In the future ‘The Sudoku Game” would benefit from a wider range of puzzles to solve as opposed to just giving three options to the user, easy, medium, and hard. This will increase the chances of users revisiting the site and prevent the user from memorizing the numbers.
+## Programs Used
 
-- In the future the website would benefit from a "Lives Lost" section to avoid the user guessing answers.
+# Testing
 
- - In the future the website would benefit from an "online leader board” allowing users to compete against friends in an attempt to solve the puzzles in the quickest time.
+## Manual Testing
 
- # Manual Testing
+Manual testing was completed throughout the entire project and the website was continually tested on different browsers and on different screen sizes. Dev tools was used to recognise and spot errors within the code allowing me to regularly use the ‘debugger’ tool to analyse logic functions. 
 
- Manual testing was completed throughout the entire project and the website was continually tested on different browsers and on different screen sizes. Dev tools was used to recognise and spot errors within the code allowing me to regularly use the ‘debugger’ tool to analyse logic functions. 
+Furthermore, I regularly generated lighthouse reports giving me an indication of how well the website was performing. Attached below is a screenshot of my lighthouse report at the deployment stage of my project:
 
- Furthermore, I regularly generated lighthouse reports giving me an indication of how well the website was performing. Attached below is a screenshot of my lighthouse report at the deployment stage of my project:
+![Lighthouse-Report](assets/images/lighthouse.PNG)
 
- ![Lighthouse-Report](assets/images/lighthouse.PNG)
+## Automatic Testing
 
- # Automatic Testing
-
- Automatic testing of the HTML and CSS code was checked using W3C Validator ensuring that there were no errors or warnings within the code. When the website was ran through the validator no warnings or errors were present when the site was deployed.
+Automatic testing of the HTML and CSS code was checked using W3C Validator ensuring that there were no errors or warnings within the code. When the website was ran through the validator no warnings or errors were present when the site was deployed.
 
 Attached below is a screenshot of the HTML and CSS Validator showing no errors or warnings when the website was deployed. 
 
- ![HTML-Validator](assets/images/html-approved.PNG)
- ![CSS-Validator](assets/images/css-approved.PNG)
- ![JS-Validator]()
+![HTML-Validator](assets/images/html-approved.PNG)
+![CSS-Validator](assets/images/css-approved.PNG)
+![JS-Validator]()
 
- # WAVE Testing
+## WAVE Testing
 
- WAVE was used to check the accessibility of ‘The Sudoku Game’ this was to ensure that the game was made accessible to users with disabilities. This tool highlighted errors and warnings that could prevent a disabled user using the site including: 
+WAVE was used to check the accessibility of ‘The Sudoku Game’ this was to ensure that the game was made accessible to users with disabilities. This tool highlighted errors and warnings that could prevent a disabled user using the site including: 
 
- - Underlined heading was removed to improve accessibility on the website for impaired readers.
+- Underlined heading was removed to improve accessibility on the website for impaired readers.
 
 Errors and warnings were removed before the website was deployed. 
 
@@ -170,6 +178,14 @@ The website was deployed through GitHub and accessible through the following ste
 The live link to the website can be found here:
 
 [Live-Link](https://sophiebatten123.github.io/SudokuGame/)
+
+# Future Features
+
+- In the future ‘The Sudoku Game” would benefit from a wider range of puzzles to solve as opposed to just giving three options to the user, easy, medium, and hard. This will increase the chances of users revisiting the site and prevent the user from memorizing the numbers.
+
+- In the future the website would benefit from a "Lives Lost" section to avoid the user guessing answers.
+
+ - In the future the website would benefit from an "online leader board” allowing users to compete against friends in an attempt to solve the puzzles in the quickest time.
 
 # Credits
 
