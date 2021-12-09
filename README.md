@@ -158,6 +158,11 @@ Some alterations were made from the original wireframe designs to improve User E
 
 ## Game Complete
 
+<details>
+    <summary>Well Done Message - Click Here:</summary>
+    <img src="assets/images/well-done.PNG" width="500">
+</details>
+
 # Deployed Website
 
 ## Desktop Game
