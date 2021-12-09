@@ -188,6 +188,10 @@ A screenshot of the website from a mobile device can be seen above. Content was 
 
 ## Fixed Bugs and Errors
 
+|      Bug/Error Identified      |     Reason for the error     |      Fix for the error      |
+|      --------------------      |     --------------------     |      -----------------      |
+| Timer element was increasing in pace after every game.| The timer wasnt reseting after each round.| Before the game was ran the timer was reset and initiated on runGame.|
+ 
 ## Technologies Used
 
 ## Programs Used
