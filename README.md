@@ -35,6 +35,18 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
     - [Desktop Game](#desktop-game)
     - [Mobile Game](#mobile-game)
  - [Functionality](#functionality)
+    - [Fixed Bugs and Errors](#fixed-bugs)
+    - [Technologies Used](#technologies-used)
+    - [Programs Used](#programs-used)
+- [Testing](#testing)
+    - [Manual Testing](#manual-testing)
+    - [Automatic Testing](#automatic-testing)
+    - [Wave Testing](#wave-testing)
+- [Future Features](#future-features)
+- [Deployment](#deployment)
+- [Credits](#credits)
+
+#
 # UX
 
 ## User Stories
@@ -112,6 +124,7 @@ The links to these can be found below for both desktop and mobile devices:
     <img src="assets/images/functions.PNG" width="500">
 </details>
 
+#
 # Site Improvements
 
 Some alterations were made from the original wireframe designs to improve User Experience (UX) including: 
@@ -147,12 +160,6 @@ The keypad was designed to ensure buttons could easily be accessed and that acci
 A screenshot of the website from a mobile device can be seen above. Content was centered to ensure that the user could see the game board clearly and the keypad was aligned for ease of clicking.
 
 # Functionality
-
-## Logic Functions
-
-- Before starting the JavaScript code within the site, I found it useful to plan the functions needed for the site to work. By doing this I was able to ensure efficiency within the code and structure my work better for deployment.
-
-![Sudoku-Main-Page-Functions](assets/images/functions.PNG)
 
 ## Fixed Bugs and Errors
 
