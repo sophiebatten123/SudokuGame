@@ -23,6 +23,8 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
   - [Wireframes](#wireframes)
     - [Desktop Wireframe](#desktop-wireframe)
     - [Mobile Wireframe](#mobile-wireframe)
+    - [Logic Functions Wireframe](#logic-functions-wireframe)
+    - [Site Improvements](#site-improvements)
   - [Features](#features)
     - [Game Board](#game-board)
     - [Game Keypad](#game-keypad)
@@ -103,12 +105,14 @@ The links to these can be found below for both desktop and mobile devices:
     <img src="assets/images/mobile.PNG" width="500">
 </details>
 
-## Logic Function Wireframes
+## Logic Function Wireframe
 
 <details>
     <summary>Sudoku Functions Wireframe - Click Here:</summary>
     <img src="assets/images/functions.PNG" width="500">
 </details>
+
+# Site Improvements
 
 Some alterations were made from the original wireframe designs to improve User Experience (UX) including: 
 - The difficulty selection was changed into a drop-down menu due to the site containing too much text and looking overcrowded. It was imperative that the site remaining simplistic and therefore this change was important.
