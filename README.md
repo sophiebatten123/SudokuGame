@@ -10,6 +10,8 @@ To solve a sudoku puzzle, you must use a combination of logic, trial and error a
 
 The site itself is fully responsive and is designed in a simplistic and easy to read manner. Although the website contains ‘form’ elements, due to no back-end functionality the entered fields will not be sent anywhere.
 
+![Am I Responsive?](assets/images/am_i_responsive.PNG)
+
 # UX
 
 ## User Stories
