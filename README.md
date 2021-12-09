@@ -2,16 +2,29 @@
 
 [GitHub Repository](https://github.com/sophiebatten123/SudokuGame)
 
-# Overview
+# The SUDOKU Game
 
 Loose yourself in mathematical puzzles and give your mind that ‘me time’ it deserves. This website will help you to find peace in a frantic world, by putting your worries to one side. Your brain will be given a gentle workout, leaving you feeling fresh and at rest. 
 
 To solve a sudoku puzzle, you must use a combination of logic, trial and error and mathematical thinking. The aim of the game is to complete every square, row, and column using only the numbers 1-9, all of which can only appear once.
 
-The site itself is fully responsive and is designed in a simplistic and easy to read manner. Although the website contains ‘form’ elements, due to no back-end functionality the entered fields will not be sent anywhere.
+The site itself is fully responsive and is designed in a simplistic and easy to read manner. 
 
 ![Am I Responsive?](assets/images/am_i_responsive.PNG)
 
+# Contents
+
+- [UX](#ux)
+  - [User Stories](#user-stories)
+  - [Design](#design)
+    - [Colour Scheme](#colour-scheme)
+    - [Typography](#typography)
+    - [Imagery](#imagery)
+  - [Wireframes](#wireframes)
+    - [Desktop Wireframe](#desktop-wireframe)
+    - [Mobile Wireframe](#mobile-wireframe)
+  - [Features](#features)
+ 
 # UX
 
 ## User Stories
@@ -37,7 +50,6 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
 The sites primary colours are blues and whites. The image above displays the original colour scheme chosen for the website. The colour palette was created using [coolors](https://coolors.co/). 
 
 These colours were chosen based on peace and tranquillity aiming to relax the user and prevent strain on their eyes during the game. Pastel shades were chosen to create a soft texture to the website; whilst ensuring text behind was readable.
-
 
 ## Typography
 
@@ -77,7 +89,21 @@ Some alterations were made from the original wireframe designs to improve User E
 - The difficulty selection was changed into a drop-down menu due to the site containing too much text and looking overcrowded. It was imperative that the site remaining simplistic and therefore this change was important.
 - An on-screen keypad was created to improve User Experience on a mobile device. After user testing it was apparent that using a mobile keypad to play the game was exhausting and therefore by creating an on-screen keypad it made the game easier to navigate.
 
-# Main Game Page
+# Features
+
+## Game Board
+
+## Game Keypad
+
+## Game Buttons
+
+## Instructions
+
+## Congratulations Message
+
+# Deployed Website
+
+## Desktop Game
 
 ![Game-Page-Desktop](assets/images/game-desktop.PNG)
 
@@ -85,7 +111,9 @@ Above is a screenshot of the deployed website in desktop view. It was imperative
 
 The keypad was designed to ensure buttons could easily be accessed and that accidental clicks would be kept to a minimum during the game
 
-![Game-Page-Desktop](assets/images/game-mobile.PNG)
+## Mobile Game
+
+![Game-Page-Mobile](assets/images/game-mobile.PNG)
 
 A screenshot of the website from a mobile device can be seen above. Content was centered to ensure that the user could see the game board clearly and the keypad was aligned for ease of clicking.
 
