@@ -6,10 +6,6 @@ body{
     margin: auto;
 }
 
-#difficulty {
-    z-index: 1;
-}
-
 /** Header & Top section of the website*/
 
 #game-board-top {
@@ -48,24 +44,24 @@ body{
 
 /** Select Difficulty*/
 
-.select-difficulty {
-    text-align: center;
-    padding: 40px 0;
-    margin: auto;
-    width: 100%;
+#difficulty {
+    z-index: 1;
 }
 
-#select-difficulty-small {
-    display: none;
+#easy-game{
+    background-color: #ACD8AA;
 }
 
-#buttons{
-    margin: 0 1%;
+#medium-game{
+    background-color: #E3D985;
 }
 
-#dropdown-button:hover {
-    cursor: pointer;
-    background-color: #C6CCD2;
+#hard-game{
+    background-color: #E27A78;
+}
+
+.difficulty-selection:hover {
+    border: solid 3px black;
 }
 
 #user-difficulty {
@@ -73,35 +69,6 @@ body{
     font-size: 25px;
     padding-top: 15px;
     font-weight: bold;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 10%;
-    z-index: 1;
-    border: 2px solid black;
-    border-radius: 5px;
-    text-align: center;
-    margin-top: 5px;
-}
-
-.dropdown-content a {
-    color: black;
-    font-weight: bold;
-    font-size: 20px;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-      background-color: #C6CCD2;
-}
-
-.show {
-    display: block;
 }
 
 /** Timer Section */
@@ -230,7 +197,7 @@ body{
     background-color: #D1EDF0;
 }
 
-/* Login, Instructions and Highscore Icons**/
+/* Instructions**/
 
 #position-icons{
     width: 100%;
@@ -294,24 +261,6 @@ body{
     font-size: 40px;
 }
 
-#loginpopup {
-    z-index: -1;
-    pointer-events: none;
-}
-
-#registerpopup {
-    z-index: -1;
-    pointer-events: none;
-}
-
-#registerpopup i {
-    font-size: 30px;
-    float: right;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-
 #instructionspopup {
     z-index: -1;
     pointer-events: none;
@@ -322,11 +271,6 @@ body{
     text-align: left;
     font-size: 18px;
     line-height: 50px;
-}
-
-#highscorespopup {
-    z-index: -1;
-    pointer-events: none;
 }
 
 #winnerpopup {
@@ -340,98 +284,6 @@ body{
     position: absolute;
     top: 10px;
     right: 10px;
-}
-
-#incorrect-user {
-    z-index: -1;
-    pointer-events: none;
-}
-
-/* Login or Register Section*/
-
-#login-form {
-    text-align: left;
-    position: relative;
-}
-
-.login-position {
-    width: 100%;
-    padding-top: 15px;
-}
-
-#login-form input {
-    font-size: 25px;
-    float: right;
-    width: 80%;
-}
-
-#login-form label {
-    font-size: 20px;
-}
-
-#login-button-position {
-    padding-top: 60px;
-}
-
-#new-account:hover {
-    cursor: pointer;
-    text-decoration: underline;
-}
-
-#login-button {
-   margin: auto;
-   position: absolute;
-   bottom: -95%;
-   left: 35%;
-
-   height: 40px;
-   width: 200px;
-
-   background-color: lightblue;
-   border-radius: 4px;
-
-   font-size: 20px;
-}
-
-#login-button:hover {
-    cursor: pointer;
-}
-
-#registration-form {
-    text-align: left;
-    height: 250px;
-    position: relative;
-}
-
-#registration-form input {
-    font-size: 25px;
-    float: right;
-    width: 70%;
-}
-
-#registration-form label {
-    font-size: 20px;
-}
-
-.registration-position {
-   height: 400px;
-}
-
-#submit-button {
-    margin: auto;
-    position: absolute;
-    bottom: 10%;
-    left: 35%;
-    height: 40px;
-    width: 200px;
-    background-color: lightblue;
-    border-radius: 4px;
-    font-size: 20px;
-}
-
-.label-register {
-    height: 50px;
-    padding: 5px;
 }
  
 /** Media Queries */
@@ -491,13 +343,6 @@ body{
         margin-bottom: 5px;
         justify-content: center;
     }
-    .dropdown-content {
-        margin-left: 50px;
-        width: 90%;
-    }
-    .dropdown-content a {
-        padding: 8px 16px;
-    }
     #position-icons {
         border-top: none;
     }   
@@ -538,9 +383,6 @@ body{
     .number-pad-item {
         font-size: 30px;
     }
-    .select-difficulty {
-        padding: 20px 0;
-    }
     #buttons {
         padding-bottom: 20px;
     }
@@ -563,15 +405,6 @@ body{
     }
     #user-difficulty {
         padding-left: 60px;
-    }
-    .dropdown-content {
-        width: 100%;
-        margin-left: 0;
-        box-sizing: border-box;
-    }
-    .dropdown-content a {
-        padding: 2px 16px;
-        font-size: 18px;
     }
     .difficulty-selection {
         width: 30%;
@@ -597,9 +430,6 @@ body{
     }
     #buttons {
         padding-bottom: 15px;
-    }
-    .dropdown-content {
-        margin-top: 0;
     }
     .difficulty-selection {
         width: 25%;
