@@ -487,6 +487,7 @@ body{
         width: 100%;
     }
     #buttons{
+        margin-top: 15px;
         margin-bottom: 5px;
         justify-content: center;
     }
@@ -572,6 +573,15 @@ body{
         padding: 2px 16px;
         font-size: 18px;
     }
+    .difficulty-selection {
+        width: 30%;
+    }
+    #difficulty > h1 {
+        font-size: 23px;
+    }
+    .popup-box {
+        top: 42%;
+    }
 }
 
 @media screen and (max-width: 630px) {
@@ -590,6 +600,9 @@ body{
     }
     .dropdown-content {
         margin-top: 0;
+    }
+    .difficulty-selection {
+        width: 25%;
     }
 }
 
@@ -640,6 +653,9 @@ body{
     }
     #game-board {
         height: 680px;
+    }
+    #difficulty > h1 {
+        font-size: 17px;
     }
 }
 
