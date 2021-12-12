@@ -388,7 +388,7 @@ body{
         padding-bottom: 20px;
     }
     .popup-box {
-        width: 400px;
+        width: 425px;
     }
     #game-board {
         height: 800px;
@@ -432,13 +432,9 @@ body{
     .difficulty-selection {
         width: 30%;
     }
-    #instructionspopup p {
-        font-size: 15px;
-        line-height: 30px;
-    }
 }
 
-@media screen and (max-width: 525px) {
+@media screen and (max-width: 540px) {
     .number {
         height: 40px;
         width: 40px;
@@ -461,6 +457,10 @@ body{
     }
     #logo{
         padding-left: 20px;
+    }
+    #instructionspopup p {
+        font-size: 15px;
+        line-height: 25px;
     }
 }
 
