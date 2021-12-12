@@ -130,13 +130,13 @@ function runEasyGame(counter) {
                     squareClicked = event.target;
 
                     for (i=0; i < number.length; i++) {
-                        if (number[i].style.backgroundColor === 'red' && number[i].innerHTML === '') {
+                        if (number[i].style.backgroundColor = '#92C8C5' && number[i].innerHTML === '') {
                             number[i].style.backgroundColor = '#D2EEEF';
                         }
                     }
 
                     if (squareClicked.innerHTML === '') {
-                        squareClicked.style.backgroundColor = 'red';
+                        squareClicked.style.backgroundColor = '#92C8C5';
                     } else {
                         console.log("This square is already correct");
                     }
@@ -210,13 +210,13 @@ function runMediumGame(counter) {
                     squareClicked = event.target;
 
                     for (i=0; i < number.length; i++) {
-                        if (number[i].style.backgroundColor === 'red' && number[i].innerHTML === '') {
+                        if (number[i].style.backgroundColor = '#92C8C5' && number[i].innerHTML === '') {
                             number[i].style.backgroundColor = '#D2EEEF';
                         }
                     }
                        
                     if (squareClicked.innerHTML === '') {
-                        squareClicked.style.backgroundColor = 'red';
+                        squareClicked.style.backgroundColor = '#92C8C5';
                     } else {
                         console.log("This square is already correct");
                     }
@@ -290,13 +290,13 @@ function runHardGame(counter) {
                     squareClicked = event.target;
 
                     for (i=0; i < number.length; i++) {
-                        if (number[i].style.backgroundColor === 'red' && number[i].innerHTML === '') {
+                        if (number[i].style.backgroundColor = '#92C8C5' && number[i].innerHTML === '') {
                             number[i].style.backgroundColor = '#D2EEEF';
                         }
                     }
 
                     if (squareClicked.innerHTML === '') {
-                        squareClicked.style.backgroundColor = 'red';
+                        squareClicked.style.backgroundColor = '#92C8C5';
                     } else {
                         console.log("This square is already correct");
                     }
