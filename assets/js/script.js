@@ -32,36 +32,25 @@ document.addEventListener("DOMContentLoaded", function() {
     let playButton = document.getElementById("play");
     let resetButton = document.getElementById("reset");
     let difficultyDropdown = document.getElementById("dropdown-button");
-    let easy = document.getElementById("easy");
-    let medium = document.getElementById("medium");
-    let hard = document.getElementById("hard");
+    let easy = document.getElementById("easy-game");
+    let medium = document.getElementById("medium-game");
+    let hard = document.getElementById("hard-game");
     let userDifficulty = document.getElementById("user-difficulty");
-
-    difficultyDropdown.addEventListener("click", function() {
-         let dropdownOptions = document.getElementById("difficulty-dropdown");
-        dropdownOptions.classList.toggle("show");
-    });
-
-    window.onclick = function(event) {
-        if (!event.target.matches('#dropdown-button')) {
-           var dropdowns = document.getElementById("difficulty-dropdown");
-           var openDropdown = dropdowns;
-             if (dropdowns.classList.contains('show')) {
-                openDropdown.classList.remove('show');
-             }
-        }
-    };
+    let difficulty = document.getElementById("difficulty");
 
     easy.addEventListener("click", function (){
         userDifficulty.innerHTML = "Easy";
+        difficulty.style.zIndex = -1;
     });
 
     medium.addEventListener("click", function (){
         userDifficulty.innerHTML = "Medium";
+        difficulty.style.zIndex = -1;
     });
 
     hard.addEventListener("click", function (){
         userDifficulty.innerHTML = "Hard";
+        difficulty.style.zIndex = -1;
     });
 
     instructionsManual.addEventListener("click", function() {

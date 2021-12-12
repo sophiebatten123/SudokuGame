@@ -6,6 +6,10 @@ body{
     margin: auto;
 }
 
+#difficulty {
+    z-index: 1;
+}
+
 /** Header & Top section of the website*/
 
 #game-board-top {
@@ -57,7 +61,6 @@ body{
 
 #buttons{
     margin: 0 1%;
-    display: flex;
 }
 
 #dropdown-button:hover {
