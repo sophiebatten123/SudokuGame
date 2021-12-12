@@ -57,10 +57,11 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
 1. As a First Time Visitor, I should be able to easily navigate the website and create a game board based upon the difficulty selection.
 2. As a First Time Visitor, I should be able to read instructions on how to play Sudoku, these should be clear and easy to understand.
 3. As a First Time Visitor, I should be able to restart the sudoku game and try again.
+4. As a Returning Visitor, I should be able to play the game on any device
 
 ### Returning Visitor Goals:
-4. As a Returning Visitor, I should be able to see the time taken to complete the puzzle and be competing against my personal best.
-5. As a Returning Visitor, I should have the option to increase the difficulty of the sudoku game board.
+5. As a Returning Visitor, I should be able to see the time taken to complete the puzzle and be competing against my personal best.
+6. As a Returning Visitor, I should have the option to increase the difficulty of the sudoku game board.
 
 #
 # Design
@@ -92,7 +93,7 @@ The websites main text was written against a white background ensuring that the 
 
 A simple logo drawn to brighten up a plain page and allow the site to have a recognisable feature included within the header. This feature adds sophistication to the page and breaks up a plain background.
 
-The instructions manual icon was taken from [Font Awesome]( https://fontawesome.com/)improving accessibility for the user and allowing for text to be hidden when not in use. 
+The instructions manual icon was taken from [Font Awesome]( https://fontawesome.com/) improving accessibility for the user and allowing for text to be hidden when not in use. 
 
 These were the only images included on the site due to the nature of the site appealing to older audiences. The images chosen contribute towards the soft texture of the site, making the users experience more relaxing.
 
@@ -135,7 +136,6 @@ Some alterations were made from the original wireframe designs to improve User E
 
 - The difficulty selection was changed into a drop-down menu; replacing radio buttons. This was done due to the site containing looking too overcrowded and overwhelming for the user. It was imperative that the site remained simplistic and therefore this change was important.
 - An on-screen keypad was created to improve User Experience (UX) on a mobile device. After user testing it was apparent that using a mobile keypad to play the game was exhausting and therefore by creating an on-screen keypad it made the game easier to navigate.
-- Popup messaged 
 
 # Features
 
@@ -143,6 +143,7 @@ Some alterations were made from the original wireframe designs to improve User E
 
 - The game board consists of 81 squares which have then been separated into 9 sub boxes and styled using pastel shades.
 - Boxes are interactive for the user and change colour based on the input.
+- (User Story 1)
 
 <details>
     <summary>Sudoku Game Board - Click Here:</summary>
@@ -152,6 +153,7 @@ Some alterations were made from the original wireframe designs to improve User E
 ## Game Keypad
 
 - The keypad ensures that the game can easily be played on any device.
+- (User Story 4)
 
 <details>
     <summary>Sudoku Desktop Keypad - Click Here:</summary>
@@ -161,6 +163,7 @@ Some alterations were made from the original wireframe designs to improve User E
 ## Game Buttons
 
 - Allows the user to interact with the game.
+- (User Story 1 & User Story 6)
 
 <details>
     <summary>Sudoku Buttons - Click Here:</summary>
@@ -170,6 +173,7 @@ Some alterations were made from the original wireframe designs to improve User E
 ## Instructions
 
 - Explains to the user how to play the game with numbered and easy to read steps.
+- (User Story 2)
 
 <details>
     <summary>Instructions - Click Here:</summary>
@@ -179,6 +183,7 @@ Some alterations were made from the original wireframe designs to improve User E
 ## Game Complete
 
 - Displays a well-done message to the user telling them how long it took to complete the puzzle.
+- (User Story 5)
 
 <details>
     <summary>Well Done Message - Click Here:</summary>
@@ -231,33 +236,45 @@ A screenshot of the website from a mobile device can be seen above. Content was 
 - [JSHint](https://jshint.com/) - Used to check the JavaScript functionality of the code.
 - [W3C Markup Validation Service](https://validator.w3.org/) - Used to validate the HTML code.
 - [W3C Jigsaw CSS Validation Service](https://jigsaw.w3.org/css-validator/) - Used to validate the CSS code.
+- [Freesound](https://freesound.org/) - MP3 files were downloaded from this website.
 
 #
 # Testing
 
 ## Manual Testing
 
-Manual testing was completed throughout the entire project and the website was continually tested on different browsers and on different screen sizes. Dev tools was used to recognise and spot errors within the code allowing me to regularly use the ‘debugger’ tool to analyse logic functions. 
+Manual testing was completed throughout the entire project and the website was continually tested on different browsers and on different screen sizes. Dev tools was used to recognise and spot errors within the code. I used the 'debugger' tool regularly to analyse logic functions that were not working as expected. 
 
-Furthermore, I regularly generated lighthouse reports giving me an indication of how well the website was performing. Attached below is a screenshot of my lighthouse report at the deployment stage of my project:
+Alongside this, I regularly generated lighthouse reports giving me an indication of how well the website was performing. Attached below is a screenshot of the websites lighthouse report at the deployment stage of my project:
 
-![Lighthouse-Report](assets/images/lighthouse.PNG)
+<details>
+    <summary>Lighthouse Report - Click Here:</summary>
+    <img src="assets/images/lighthouse.PNG" width="500">
+</details>
 
+#
 ## Automatic Testing
 
-Automatic testing of the HTML and CSS code was checked using W3C Validator ensuring that there were no errors or warnings within the code. When the website was ran through the validator no warnings or errors were present when the site was deployed.
+Automatic testing of the HTML and CSS code was checked using W3C Validator ensuring that there were no errors or warnings within the code. When the website was ran through the validator no errors were present when the site was deployed.
 
-Attached below is a screenshot of the HTML and CSS Validator showing no errors or warnings when the website was deployed. 
+Attached below is a screenshot of the HTML and CSS Validator showing this:
 
-![HTML-Validator](assets/images/html-approved.PNG)
-![CSS-Validator](assets/images/css-approved.PNG)
-![JS-Validator]()
+<details>
+    <summary>HTML-Validator - Click Here:</summary>
+    <img src="assets/images/html-approved.PNG" width="500">
+</details>
 
+<details>
+    <summary>CSS-Validator - Click Here:</summary>
+    <img src="assets/images/css-approved.PNG" width="500">
+</details>
+
+#
 ## WAVE Testing
 
-WAVE was used to check the accessibility of ‘The Sudoku Game’ this was to ensure that the game was made accessible to users with disabilities. This tool highlighted errors and warnings that could prevent a disabled user using the site including: 
+WAVE was used to check the accessibility of ‘The Sudoku Game’ this was to ensure that the game features were accessible to users with disabilities. This tool highlighted errors and warnings that could prevent a disabled user using the site including: 
 
-- Underlined heading was removed to improve accessibility on the website for impaired readers.
+- Underlined heading - these were removed to improve accessibility on the website for impaired readers.
 
 Errors and warnings were removed before the website was deployed. 
 
