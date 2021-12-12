@@ -54,19 +54,20 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
 ## User Stories
 
 ### First Time Visitor Goals:
-- As a First Time Visitor, I should be able to easily navigate the website and create a game board based upon the difficulty selection.
-- As a First Time Visitor, I should be able to read instructions on how to play Sudoku, these should be clear and easy to understand.
+1. As a First Time Visitor, I should be able to easily navigate the website and create a game board based upon the difficulty selection.
+2. As a First Time Visitor, I should be able to read instructions on how to play Sudoku, these should be clear and easy to understand.
+3. As a First Time Visitor, I should be able to restart the sudoku game and try again.
 
 ### Returning Visitor Goals:
-- As a Returning Visitor, I should be able to see the time taken to complete the puzzle and be competing against my personal best.
-- As a Returning Visitor, I should have the option to increase the difficulty  of the sudoku game board.
+4. As a Returning Visitor, I should be able to see the time taken to complete the puzzle and be competing against my personal best.
+5. As a Returning Visitor, I should have the option to increase the difficulty of the sudoku game board.
 
 #
 # Design
 
 ## Colour Scheme
 
-The sites primary colours are blues and whites. The image above displays the original colour scheme chosen for the website. The colour palette was created using [coolors](https://coolors.co/). 
+The sites primary colours are blues and whites. The image below displays the original colour scheme chosen for the website. The colour palette was created using [coolors](https://coolors.co/). 
 
 These colours were chosen based on peace and tranquillity aiming to relax the user and prevent strain on their eyes during the game. Pastel shades were chosen to create a soft texture to the website; whilst ensuring text behind was readable.
 
@@ -80,7 +81,7 @@ These colours were chosen based on peace and tranquillity aiming to relax the us
 
 The websites main text was written against a white background ensuring that the text was clear and stood out to the user.
 
-‘Montserrat’ was the main font used on the website with ‘San Serif’ as a fallback font. This font was chosen based upon the curvature of the letters, creating a soft appearance against a harsh white background.
+‘Montserrat’ and ‘Goudy Bookletter 1911’ were the main fonts used on the website with ‘San Serif’ as a fall-back font. The word ‘SUDOKU’ in the header was emphasised using a different font making it stand out to the user. These fonts were chosen based upon the curvature of the letters, creating a soft appearance against a harsh white background.
 
 <details>
     <summary>Title Font - Click Here:</summary>
@@ -89,7 +90,11 @@ The websites main text was written against a white background ensuring that the 
 
 ## Imagery
 
-An instruction manual was chosen and a logo drawn to brighten up a plain page whilst also improving the accessibility of the site. These elements contributed towards the soft texture of the site, making the users experience more relaxing.
+A simple logo drawn to brighten up a plain page and allow the site to have a recognisable feature included within the header. This feature adds sophistication to the page and breaks up a plain background.
+
+The instructions manual icon was taken from [Font Awesome]( https://fontawesome.com/)improving accessibility for the user and allowing for text to be hidden when not in use. 
+
+These were the only images included on the site due to the nature of the site appealing to older audiences. The images chosen contribute towards the soft texture of the site, making the users experience more relaxing.
 
 <details>
     <summary>Logo - Click Here:</summary>
@@ -98,7 +103,7 @@ An instruction manual was chosen and a logo drawn to brighten up a plain page wh
 
 # Wireframes
 
--To ensure that I was being efficient in my coding I created wireframes before starting, this gave me an outline of what the website should look like and how I should incorporate logic functions into JavaScript. 
+To ensure that I was being efficient in my coding, wireframes were created before starting. This gave me an outline of what the website should look like and how I should incorporate logic functions into JavaScript. 
 
 The links to these can be found below for both desktop and mobile devices:
 
@@ -127,14 +132,16 @@ The links to these can be found below for both desktop and mobile devices:
 # Site Improvements
 
 Some alterations were made from the original wireframe designs to improve User Experience (UX) including: 
-- The difficulty selection was changed into a drop-down menu due to the site containing too much text and looking overcrowded. It was imperative that the site remaining simplistic and therefore this change was important.
-- An on-screen keypad was created to improve User Experience on a mobile device. After user testing it was apparent that using a mobile keypad to play the game was exhausting and therefore by creating an on-screen keypad it made the game easier to navigate.
+
+- The difficulty selection was changed into a drop-down menu; replacing radio buttons. This was done due to the site containing looking too overcrowded and overwhelming for the user. It was imperative that the site remained simplistic and therefore this change was important.
+- An on-screen keypad was created to improve User Experience (UX) on a mobile device. After user testing it was apparent that using a mobile keypad to play the game was exhausting and therefore by creating an on-screen keypad it made the game easier to navigate.
+- Popup messaged 
 
 # Features
 
 ## Game Board
 
-- The game board consists of 81 squares which have then been seperated into 9 sub boxes and styled using pastel shades.
+- The game board consists of 81 squares which have then been separated into 9 sub boxes and styled using pastel shades.
 - Boxes are interactive for the user and change colour based on the input.
 
 <details>
@@ -171,7 +178,7 @@ Some alterations were made from the original wireframe designs to improve User E
 
 ## Game Complete
 
-- Displays a well done message to the user telling them how long it took to complete the puzzle.
+- Displays a well-done message to the user telling them how long it took to complete the puzzle.
 
 <details>
     <summary>Well Done Message - Click Here:</summary>
@@ -288,4 +295,3 @@ The live link to the website can be found here:
 - Help and support was given by the Code Institute Tutors on some of the logic functions within the website. 
 
 Thank you to the tutors of code institute for the help given throughout this project.
-
