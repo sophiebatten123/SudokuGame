@@ -413,9 +413,6 @@ body{
     #difficulty > h1 {
         font-size: 23px;
     }
-    .popup-box {
-        top: 42%;
-    }
 }
 
 @media screen and (max-width: 630px) {
@@ -434,6 +431,10 @@ body{
     }
     .difficulty-selection {
         width: 30%;
+    }
+    #instructionspopup p {
+        font-size: 15px;
+        line-height: 30px;
     }
 }
 
