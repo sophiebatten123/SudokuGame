@@ -46,6 +46,8 @@ body{
 
 #difficulty {
     z-index: 1;
+    top: 57%;
+    left: 30%;
 }
 
 #easy-game{
@@ -213,6 +215,8 @@ body{
     z-index: -1;
     pointer-events: none;
     text-align: left;
+    top: 55%;
+    left: 30%;
 }
 
 #instructionspopup p {
@@ -240,8 +244,6 @@ body{
 
 .popup-box {
     position: absolute;
-    top: 50%;
-    left: 50%;
     transform: translate(-50%, -50%);
     border-radius: 5px;
     width: 650px;
@@ -347,6 +349,14 @@ body{
     #position-icons {
         border-top: none;
     }   
+    #difficulty {
+        top: 52%;
+        left: 50%;
+    }
+    #instructionspopup {
+        top: 50%;
+        left: 50%;
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -413,6 +423,13 @@ body{
     #difficulty > h1 {
         font-size: 23px;
     }
+    #difficulty {
+        top: 42%;
+    }
+    #instructionspopup p {
+        font-size: 17px;
+        line-height: 30px;
+    }
 }
 
 @media screen and (max-width: 630px) {
@@ -462,6 +479,9 @@ body{
         font-size: 15px;
         line-height: 25px;
     }
+    #difficulty {
+        top: 36%;
+    }
 }
 
 @media screen and (max-width: 425px) {
@@ -489,6 +509,9 @@ body{
     #difficulty > h1 {
         font-size: 17px;
     }
+    #difficulty {
+        top: 46%;
+    }
 }
 
 @media screen and (max-width: 375px) {
@@ -515,5 +538,8 @@ body{
     }
     #top-positioning {
         width: 100%;
+    }
+    #difficulty {
+        top: 49%;
     }
 }
