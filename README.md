@@ -119,14 +119,14 @@ The links to these can be found below for both desktop and mobile devices:
 
 <details>
     <summary>Sudoku Mobile Wireframe - Click Here:</summary>
-    <img src="assets/images/mobile.PNG" width="500">
+    <img src="assets/images/mobile.PNG" width="250">
 </details>
 
 ## Logic Function Wireframe
 
 <details>
     <summary>Sudoku Functions Wireframe - Click Here:</summary>
-    <img src="assets/images/functions.PNG" width="500">
+    <img src="assets/images/functions.PNG" width="700">
 </details>
 
 #
