@@ -162,12 +162,17 @@ Some alterations were made from the original wireframe designs to improve User E
 
 ## Game Buttons
 
-- Allows the user to interact with the game.
+- Allows the user to interact with the game and select the level of difficulty before starting.
 - (User Story 1 & User Story 6)
 
 <details>
-    <summary>Sudoku Buttons - Click Here:</summary>
-    <img src="assets/images/buttons.PNG" width="500">
+    <summary>Sudoku Difficulty Selection Buttons - Click Here:</summary>
+    <img src="assets/images/sudoku_difficulty.PNG" width="500">
+</details>
+
+<details>
+    <summary>Sudoku Start/Restart Buttons - Click Here:</summary>
+    <img src="assets/images/sudoku_start_restart.PNG" width="500">
 </details>
 
 ## Instructions
