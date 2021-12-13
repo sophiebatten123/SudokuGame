@@ -107,7 +107,7 @@ function runEasyGame(counter) {
         startTimer();
     }, 1000);
 
-    for (i=0; i < easyGame.length; i++) {
+    for (let i=0; i < easyGame.length; i++) {
         for (i=0; i < number.length; i++) {
             if (easyGame[i] === '' && number[i].innerHTML === '') {
                 number[i].classList.add("userInput");
