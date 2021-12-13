@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
     let instructionsManual = document.getElementById("instructions");
     let playButton = document.getElementById("play");
     let resetButton = document.getElementById("reset");
-    let difficultyDropdown = document.getElementById("dropdown-button");
     let easy = document.getElementById("easy-game");
     let medium = document.getElementById("medium-game");
     let hard = document.getElementById("hard-game");
@@ -248,7 +247,7 @@ function checkAnswersMedium(value, index, active) {
         }, 250);
 
         active.innerText = "";
-        IncorrectSound.play();
+        incorrectSound.play();
      }
 
      if (mediumUserInput.length === mediumGameSolution.length) {
