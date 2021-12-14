@@ -155,10 +155,7 @@ function runEasyGame(counter) {
 function checkAnswersEasy(value, index, active) {
     
     if (value == easyGameSolution[index]) {
-        active.style.backgroundColor = "#ACD8AA";
-        easyUserInput.push(value);
-        console.log(easyUserInput);
-        correctSound.play();
+        correctAnswer(value, active);
     } else {
         active.style.backgroundColor = "#E27A78";
 
@@ -235,10 +232,7 @@ function runMediumGame(counter) {
 function checkAnswersMedium(value, index, active) {
     
     if (value == mediumGameSolution[index]) {
-        active.style.backgroundColor = "#ACD8AA";
-        mediumUserInput.push(value);
-        console.log(easyUserInput);
-        correctSound.play();
+        correctAnswer(value, active)
      } else {
         active.style.backgroundColor = "#E27A78";
 
@@ -315,10 +309,7 @@ function runHardGame(counter) {
 function checkAnswersHard(value, index, active) {
 
     if (value == hardGameSolution[index]) {
-        active.style.backgroundColor = "#ACD8AA";
-        hardUserInput.push(value);
-        console.log(hardUserInput);
-        correctSound.play();
+        correctAnswer(value, active)
      } else {
         active.style.backgroundColor = "#E27A78";
 
@@ -336,6 +327,16 @@ function checkAnswersHard(value, index, active) {
         console.log("continue play");
      }
 }
+
+// Correct answer function
+
+function correctAnswer(value, active) {
+    active.style.backgroundColor = "#ACD8AA";
+        easyUserInput.push(value);
+        console.log(easyUserInput);
+        correctSound.play();
+}
+
 
 // Reset game will delete all previously inputtted numbers by reloading the window
 function resetGame() {
