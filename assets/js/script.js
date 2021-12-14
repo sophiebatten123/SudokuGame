@@ -138,7 +138,7 @@ function runEasyGame(counter) {
         
    let numberPad = document.getElementsByClassName("number-pad-item");
 
-   for (i=0; i < numberPad.length; i++) {
+   for (let i=0; i < numberPad.length; i++) {
         numberPad[i].addEventListener('click', function(e) {
             if (squareClicked.innerHTML === '') {
                 squareClicked.innerHTML = e.target.innerHTML;
@@ -186,7 +186,7 @@ function runMediumGame(counter) {
         startTimer();
     }, 1000);
 
-    for (i=0; i < mediumGame.length; i++) {
+    for (let i=0; i < mediumGame.length; i++) {
         for (i=0; i < number.length; i++) {
             if (mediumGame[i] === '' && number[i].innerHTML === '') {
                 number[i].classList.add("userInput");
@@ -218,7 +218,7 @@ function runMediumGame(counter) {
         
    let numberPad = document.getElementsByClassName("number-pad-item");
 
-   for (i=0; i < numberPad.length; i++) {
+   for (let i=0; i < numberPad.length; i++) {
         numberPad[i].addEventListener('click', function(e) {
             if (squareClicked.innerHTML === '') {
                 squareClicked.innerHTML = e.target.innerHTML;
@@ -266,7 +266,7 @@ function runHardGame(counter) {
         startTimer();
     }, 1000);
 
-    for (i=0; i < hardGame.length; i++) {
+    for (let i=0; i < hardGame.length; i++) {
         for (i=0; i < number.length; i++) {
             if (hardGame[i] === '' && number[i].innerHTML === '') {
                 number[i].classList.add("userInput");
@@ -298,7 +298,7 @@ function runHardGame(counter) {
         
    let numberPad = document.getElementsByClassName("number-pad-item");
 
-   for (i=0; i < numberPad.length; i++) {
+   for (let i=0; i < numberPad.length; i++) {
         numberPad[i].addEventListener('click', function(e) {
             if (squareClicked.innerHTML === '') {
                 squareClicked.innerHTML = e.target.innerHTML;

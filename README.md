@@ -134,7 +134,7 @@ The links to these can be found below for both desktop and mobile devices:
 
 Some alterations were made from the original wireframe designs to improve User Experience (UX) including: 
 
-- The difficulty selection was changed into a drop-down menu; replacing radio buttons. This was done due to the site containing looking too overcrowded and overwhelming for the user. It was imperative that the site remained simplistic and therefore this change was important.
+- The difficulty selection was changed to appear on the screen immediately when the game started. This was to avoid any confusion on how to start the game and changed based upon user testing.
 - An on-screen keypad was created to improve User Experience (UX) on a mobile device. After user testing it was apparent that using a mobile keypad to play the game was exhausting and therefore by creating an on-screen keypad it made the game easier to navigate.
 
 # Features
