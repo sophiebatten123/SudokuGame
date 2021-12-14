@@ -114,7 +114,6 @@ function runEasyGame(counter) {
                 number[i].dataset.index = ++counter;
                 number[i].style.backgroundColor = '#D2EEEF';
                 number[i].addEventListener('click', function(event) {
-                    console.log("Im inside the square");
                     squareClicked = event.target;
 
                     for (i=0; i < number.length; i++) {
@@ -126,7 +125,7 @@ function runEasyGame(counter) {
                     if (squareClicked.innerHTML === '') {
                         squareClicked.style.backgroundColor = '#92C8C5';
                     } else {
-                        console.log("This square is already correct");
+                        return;
                     }
                 });
             } else {
@@ -144,7 +143,7 @@ function runEasyGame(counter) {
                 squareClicked.innerHTML = e.target.innerHTML;
                 checkAnswersEasy(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
             } else {
-                console.log("This square already has a number");
+                return;
             }
         });
     }
@@ -157,20 +156,13 @@ function checkAnswersEasy(value, index, active) {
     if (value == easyGameSolution[index]) {
         correctAnswer(value, active);
     } else {
-        active.style.backgroundColor = "#E27A78";
-
-        setTimeout(function () {
-        active.style.backgroundColor = "#D2EEEF";
-        }, 250);
-
-        active.innerText = "";
-        incorrectSound.play();
-       }
+        incorrectAnswer(active);
+    }
 
     if (easyUserInput.length === easyGameSolution.length) {
         wellDone();
     } else {
-        console.log("continue play");
+        return;
     }
 }
 
@@ -191,7 +183,6 @@ function runMediumGame(counter) {
                 number[i].style.backgroundColor = '#D2EEEF';
 
                 number[i].addEventListener('click', function(event) {
-                    console.log("Im inside the square");
                     squareClicked = event.target;
 
                     for (i=0; i < number.length; i++) {
@@ -203,7 +194,7 @@ function runMediumGame(counter) {
                     if (squareClicked.innerHTML === '') {
                         squareClicked.style.backgroundColor = '#92C8C5';
                     } else {
-                        console.log("This square is already correct");
+                        return;
                     }
                 });
             } else {
@@ -221,7 +212,7 @@ function runMediumGame(counter) {
                 squareClicked.innerHTML = e.target.innerHTML;
                 checkAnswersMedium(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
             } else {
-                console.log("This square already has a number");
+                return;
             }
         });
     }
@@ -232,22 +223,15 @@ function runMediumGame(counter) {
 function checkAnswersMedium(value, index, active) {
     
     if (value == mediumGameSolution[index]) {
-        correctAnswer(value, active)
+        correctAnswer(value, active);
      } else {
-        active.style.backgroundColor = "#E27A78";
-
-        setTimeout(function () {
-        active.style.backgroundColor = "#D2EEEF";
-        }, 250);
-
-        active.innerText = "";
-        incorrectSound.play();
+        incorrectAnswer(active);
      }
 
      if (mediumUserInput.length === mediumGameSolution.length) {
         wellDone();
      } else {
-        console.log("continue play");
+        return;
      }
 }
 
@@ -268,7 +252,6 @@ function runHardGame(counter) {
                 number[i].style.backgroundColor = '#D2EEEF';
 
                 number[i].addEventListener('click', function(event) {
-                    console.log("Im inside the square");
                     squareClicked = event.target;
 
                     for (i=0; i < number.length; i++) {
@@ -280,7 +263,7 @@ function runHardGame(counter) {
                     if (squareClicked.innerHTML === '') {
                         squareClicked.style.backgroundColor = '#92C8C5';
                     } else {
-                        console.log("This square is already correct");
+                        return;
                     }
                 });
             } else {
@@ -298,7 +281,7 @@ function runHardGame(counter) {
                 squareClicked.innerHTML = e.target.innerHTML;
                 checkAnswersHard(e.target.innerHTML, squareClicked.dataset.index, squareClicked);
             } else {
-                console.log("This square already has a number");
+                return;
             }
         });
     }
@@ -309,22 +292,15 @@ function runHardGame(counter) {
 function checkAnswersHard(value, index, active) {
 
     if (value == hardGameSolution[index]) {
-        correctAnswer(value, active)
+        correctAnswer(value, active);
      } else {
-        active.style.backgroundColor = "#E27A78";
-
-        setTimeout(function () {
-        active.style.backgroundColor = "#D2EEEF";
-        }, 250);
-
-        active.innerText = "";
-        incorrectSound.play();
+        incorrectAnswer(active);
      }
 
      if (hardUserInput.length === hardGameSolution.length) {
         wellDone();
      } else {
-        console.log("continue play");
+        return;
      }
 }
 
@@ -333,10 +309,19 @@ function checkAnswersHard(value, index, active) {
 function correctAnswer(value, active) {
     active.style.backgroundColor = "#ACD8AA";
         easyUserInput.push(value);
-        console.log(easyUserInput);
         correctSound.play();
 }
 
+// Incorrect answer function
+
+function incorrectAnswer(active) {
+    setTimeout(function () {
+    active.style.backgroundColor = "#D2EEEF";
+    }, 250);
+    active.style.backgroundColor = "#E27A78";
+    active.innerText = "";
+    incorrectSound.play();
+}
 
 // Reset game will delete all previously inputtted numbers by reloading the window
 function resetGame() {
