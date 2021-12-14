@@ -370,8 +370,6 @@ function wellDone() {
         congratulationsPopUp.style.zIndex = -1;
     });
 
-    console.log("Well done you have won! You completed the sudoku in " + lastGameTime);
-
     replayGame.addEventListener("click", function () {
         resetGame();
     });
