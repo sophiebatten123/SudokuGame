@@ -60,7 +60,7 @@ The site itself is fully responsive and is designed in a simplistic and easy to 
 4. As a Returning Visitor, I should be able to play the game on any device
 
 ### Returning Visitor Goals:
-5. As a Returning Visitor, I should be able to see the time taken to complete the puzzle and be competing against my personal best.
+5. As a Returning Visitor, I should be able to see the time taken to complete the puzzle.
 6. As a Returning Visitor, I should have the option to increase the difficulty of the sudoku game board.
 
 #
