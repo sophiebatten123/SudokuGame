@@ -545,3 +545,35 @@ body{
         top: 49%;
     }
 }
+
+@media screen and (max-width: 320px) {
+    .number {
+        height: 25px;
+        width: 25px;
+    }
+    #board {
+        height: 225px;
+        width: 225px;
+    }
+    .row {
+        height: 25px;
+    }
+    .difficulty-selection {
+        width: 30%;
+    }
+    .number-pad-item {
+        margin: 1px;
+        width: 5px;
+        height: 20px;
+        font-size: 15px;
+    }
+    #icons {
+        width: 100%;
+    }
+    .popup-box {
+        width: 219px;
+    }
+    .game-button {
+        font-size: 15px;
+    }
+}
